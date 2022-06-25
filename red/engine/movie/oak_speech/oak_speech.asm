@@ -75,8 +75,8 @@ OakSpeech:
 	call PrintText
 	call GBFadeOutToWhite
 	call ClearScreen
-	ld de, RedPicFront
-	lb bc, BANK(RedPicFront), $00
+	ld de, BluePicFront
+	lb bc, BANK(BluePicFront), $00
 	call IntroDisplayPicCenteredOrUpperRight
 	call MovePicLeft
 	ld hl, IntroducePlayerText
@@ -94,8 +94,8 @@ OakSpeech:
 .skipChoosingNames
 	call GBFadeOutToWhite
 	call ClearScreen
-	ld de, RedPicFront
-	lb bc, BANK(RedPicFront), $00
+	ld de, BluePicFront
+	lb bc, BANK(BluePicFront), $00
 	call IntroDisplayPicCenteredOrUpperRight
 	call GBFadeInFromWhite
 	ld a, [wd72d]

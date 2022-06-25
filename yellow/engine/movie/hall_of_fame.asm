@@ -197,8 +197,8 @@ HoFMonInfoText:
 	next "TYPE2/@"
 
 HoFLoadPlayerPics:
-	ld de, RedPicFront
-	ld a, BANK(RedPicFront)
+	ld de, BluePicFront
+	ld a, BANK(BluePicFront)
 	call UncompressSpriteFromDE
 	ld a, $0
 	call SwitchSRAMBankAndLatchClockData

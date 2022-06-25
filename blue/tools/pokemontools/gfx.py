@@ -935,4 +935,4 @@ def main():
     method(args.filenames)
 
 if __name__ == "__main__":
-    main()
+    export_png_to_2bpp('rival1.png')

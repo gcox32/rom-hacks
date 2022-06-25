@@ -90,7 +90,7 @@ DisplayTitleScreen:
 	dec b
 	jr nz, .pokemonLogoLastTileRowLoop
 
-	call DrawPlayerCharacter
+	; call DrawPlayerCharacter
 
 ; put a pokeball in the player's hand
 	ld hl, wOAMBuffer + $28
