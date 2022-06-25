@@ -1,0 +1,19 @@
+PrizeMonLevelDictionary:
+IF DEF(_RED)
+	db EEVEE,      10
+	db HITMONLEE,  20
+	db HITMONCHAN, 25
+
+	db DRATINI,  18
+	db CHANSEY,  24
+	db PORYGON,  18
+ENDC
+IF DEF(_BLUE)
+	db EEVEE,      10
+	db HITMONCHAN, 20
+	db HITMONLEE,  25
+
+	db DRATINI,   18
+	db CHANSEY,   24
+	db PORYGON,   18
+ENDC
