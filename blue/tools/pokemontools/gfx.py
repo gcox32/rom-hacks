@@ -553,8 +553,8 @@ def export_png_to_2bpp(filein, fileout=None, palout=None, **kwargs):
         'animate': False,
         'stupid_bitmask_hack': [],
     }
-    arguments.update(kwargs)
-    arguments.update(read_filename_arguments(filein))
+    # arguments.update(kwargs)
+    # arguments.update(read_filename_arguments(filein))
 
     image, arguments = png_to_2bpp(filein, **arguments)
 
@@ -935,4 +935,6 @@ def main():
     method(args.filenames)
 
 if __name__ == "__main__":
-    export_png_to_2bpp('rival1.png')
+    # main()
+    image, arguments = png_to_2bpp(filein='../../gfx/title/player.png')
+    print image
