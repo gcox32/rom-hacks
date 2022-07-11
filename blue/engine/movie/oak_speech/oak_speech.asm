@@ -113,9 +113,9 @@ OakSpeech:
 	ld [MBC1RomBank], a
 	ld c, 4
 	call DelayFrames
-	ld de, RedSprite
+	ld de, BlueSprite
 	ld hl, vSprites
-	lb bc, BANK(RedSprite), $0C
+	lb bc, BANK(BlueSprite), $0C
 	call CopyVideoData
 	ld de, ShrinkPic1
 	lb bc, BANK(ShrinkPic1), $00

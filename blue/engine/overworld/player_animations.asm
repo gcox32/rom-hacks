@@ -380,9 +380,9 @@ FishingAnim:
 	call DelayFrames
 	ld hl, wd736
 	set 6, [hl] ; reserve the last 4 OAM entries
-	ld de, RedSprite
+	ld de, BlueSprite
 	ld hl, vNPCSprites tile $00
-	lb bc, BANK(RedSprite), 12
+	lb bc, BANK(BlueSprite), 12
 	call CopyVideoData
 	ld a, $4
 	ld hl, RedFishingTiles

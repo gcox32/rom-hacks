@@ -5,6 +5,7 @@
 
 import os
 import argparse
+from blue.tools.pokemontools.gfx import export_png_to_2bpp
 
 from pokemontools import gfx, lz
 
@@ -69,7 +70,7 @@ def get_animation_frames(path=None, w=7, h=7, bitmask_path=None, frame_path=None
             value = line.split('\tdb ')[1].strip().replace('%', '0b')
             value = int(value, 0)
             #print line.strip(), value, len(bitmasks), len(bitmask)
-            for bit in xrange(8):
+            for bit in range(8):
                 bitmask += [(value >> bit) & 1]
                 if len(bitmask) >= bitmask_length:
                     bitmasks += [bitmask]
@@ -131,7 +132,7 @@ def get_animated_graphics(path, w=7, h=7, bitmask_path=None, frame_path=None):
         for tile in frame:
             new_tiles += [tiles[tile]]
     new_graphic = gfx.connect(new_tiles)
-    print new_path, list(new_graphic)
+    # print new_path list(new_graphic)
     open(new_path, 'wb').write(bytearray(new_graphic))
     return new_path
 

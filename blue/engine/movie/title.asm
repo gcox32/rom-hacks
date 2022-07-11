@@ -81,7 +81,7 @@ DisplayTitleScreen:
 	jr nz, .pokemonLogoTileLoop
 
 ; place tiles for the last row of the pokemon logo
-	hlcoord 2, 7
+	hlcoord 2, 7 ; from 7
 	ld a, $31
 	ld b, $10
 .pokemonLogoLastTileRowLoop
@@ -90,7 +90,7 @@ DisplayTitleScreen:
 	dec b
 	jr nz, .pokemonLogoLastTileRowLoop
 
-	; call DrawPlayerCharacter
+	call DrawPlayerCharacter
 
 ; put a pokeball in the player's hand
 	ld hl, wOAMBuffer + $28
@@ -327,7 +327,7 @@ DrawPlayerCharacter:
 	ld b, 7
 .loop
 	push de
-	ld c, 5
+	ld c, 5 ; from 5
 .innerLoop
 	ld a, d
 	ld [hli], a ; Y
