@@ -1726,7 +1726,7 @@ _OakSpeechText2B::
 
 _IntroducePlayerText::
 	text "First, remind me"
-	line "your name, grandson."
+	line "your name."
 	prompt
 
 _IntroduceRivalText::
