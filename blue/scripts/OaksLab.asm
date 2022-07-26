@@ -193,10 +193,10 @@ OaksLabScript7:
 OaksLabScript8:
 	ld a, [wPlayerStarter]
 	cp STARTER1
-	jr z, .Charmander
-	cp STARTER2
 	jr z, .Squirtle
-	jr .Bulbasaur
+	cp STARTER2
+	jr z, .Bulbasaur
+	jr .Charmander
 .Charmander
 	ld de, .MiddleBallMovement1
 	ld a, [wYCoord]

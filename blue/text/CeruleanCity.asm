@@ -1,10 +1,9 @@
 _CeruleanCityText_19668::
-	text "<RIVAL>: Yo!"
+	text "<RIVAL>: Hey,"
 	line "<PLAYER>!"
 
-	para "You're still"
-	line "struggling along"
-	cont "back here?"
+	para "How long have"
+	line "you been here?"
 
 	para "I'm doing great!"
 	line "I caught a bunch"
@@ -23,39 +22,27 @@ _CeruleanCityText_1966d::
 	prompt
 
 _CeruleanCityText_19672::
-	text "Heh!"
-	line "You're no match"
-	cont "for my genius!"
+	text "My #MON!"
+	line "I knew they could"
+	cont "do it!"
 	prompt
 
 _CeruleanCityText_19677::
-	text "<RIVAL>: Hey,"
-	line "guess what?"
+	text "<RIVAL>: Any idea"
+	line "where Bill lives?"
 
-	para "I went to BILL's"
-	line "and got him to"
-	cont "show me his rare"
-	cont "#MON!"
-
-	para "That added a lot"
-	line "of pages to my"
-	cont "#DEX!"
-
-	para "After all, BILL's"
-	line "world famous as a"
+	para "BILL's supposed to"
+	line "be a world famous"
 	cont "#MANIAC!"
 
 	para "He invented the"
 	line "#MON Storage"
 	cont "System on PC!"
 
-	para "Since you're using"
-	line "his system, go"
-	cont "thank him!"
-
-	para "Well, I better"
-	line "get rolling!"
-	cont "Smell ya later!"
+	para "Since I'm using"
+	line "his system, I"
+	line "ought to go thank"
+	cont "him..."
 	done
 
 _CeruleanCityText_196d9::

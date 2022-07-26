@@ -59,10 +59,8 @@ _GaryVictoryText::
 	para "You did well to"
 	line "even reach me,"
 	cont "<RIVAL>, the"
-	cont "#MON genius!"
+	cont "#MON champion!"
 
-	para "Nice try, loser!"
-	line "Hahaha!"
 	prompt
 
 _GaryText_76103::
@@ -76,9 +74,6 @@ _GaryText_76103::
 	para "Darn it! You're"
 	line "the new #MON"
 	cont "LEAGUE champion!"
-
-	para "Although I don't"
-	line "like to admit it."
 	done
 
 _GaryText2::
@@ -131,7 +126,6 @@ _GaryText_76125::
 
 _GaryText_7612a::
 	text "OAK: <PLAYER>!"
-
 	para "You understand"
 	line "that your victory"
 	cont "was not just your"

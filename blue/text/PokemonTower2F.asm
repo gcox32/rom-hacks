@@ -2,34 +2,35 @@ _PokemonTower2Text_6062d::
 	text "<RIVAL>: Hey,"
 	line "<PLAYER>! What"
 	cont "brings you here?"
-	cont "Your #MON"
-	cont "don't look dead!"
+	cont "This place gives"
+	cont "me the creeps..."
 
-	para "I can at least"
-	line "make them faint!"
-	cont "Let's go, pal!"
+	para "Let's have a"
+	line "#MON battle to"
+	cont "shake things up!"
 	done
 
 _PokemonTower2Text_60632::
-	text "What?"
-	line "You stinker!"
+	text "Wow!"
+	line "Not again!"
 
-	para "I took it easy on"
-	line "you too!"
+	para "I thought I was"
+	line "getting better!"
 	prompt
 
 _PokemonTower2Text_60637::
 	text "<RIVAL>: Well,"
-	line "look at all your"
-	cont "wimpy #MON!"
+	line "it looks like I"
+	cont "really am getting"
+	cont "better."
 
-	para "Toughen them up a"
-	line "bit more!"
+	para "I knew I could"
+	line "count on my #MON"
 	prompt
 
 _PokemonTower2Text_6063c::
 	text "How's your #DEX"
-	line "coming, pal?"
+	line "coming along?"
 	cont "I just caught a"
 	cont "CUBONE!"
 
@@ -42,8 +43,6 @@ _PokemonTower2Text_6063c::
 	cont "better get going!"
 	cont "I've got a lot to"
 	cont "accomplish, pal!"
-
-	para "Smell ya later!"
 	done
 
 _PokemonTower2Text2::

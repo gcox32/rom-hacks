@@ -6,6 +6,7 @@ BluesHouse_Object:
 	warp_event  3,  7, LAST_MAP, 2
 
 	def_bg_events
+	; bg_event  3,  1, 2 ; RedsHouse1FTVText
 
 	def_object_events
 	object_event  2,  3, SPRITE_DAISY, STAY, RIGHT, 1

@@ -150,15 +150,16 @@ _SilphCo7Text_51ebe::
 	done
 
 _SilphCo7Text_51ec3::
-	text "<RIVAL>: Hahaha!"
-	line "I thought you'd"
+	text "<RIVAL>: No way!"
+	line "I knew it was"
+	cont "that you might"
 	cont "turn up if I"
-	cont "waited here!"
+	cont "waited here."
 
-	para "I guess TEAM"
-	line "ROCKET slowed you"
-	cont "down! Not that I"
-	cont "care!"
+	para "Did TEAM"
+	line "ROCKET slow you"
+	cont "down? Those guys"
+	cont "are everywhere!"
 
 	para "I saw you in"
 	line "SAFFRON, so I"

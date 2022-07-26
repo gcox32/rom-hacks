@@ -4,15 +4,16 @@ _MomWakeUpText::
 	cont "home some day."
 	cont "It said so on TV."
 
-	para "PROF.OAK, next"
-	line "door, is looking"
-	cont "for you."
+	para "Your Grandpa"
+	line "is looking for you"
+	cont "and <RIVAL> in his"
+	cont "lab, I believe."
 	done
 
 _MomHealText1::
 	text "MOM: <PLAYER>!"
-	line "You should take a"
-	cont "quick rest."
+	line "Why don't you take"
+	cont "a quick rest, sweetie?"
 	prompt
 
 _MomHealText2::

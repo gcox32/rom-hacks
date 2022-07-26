@@ -5,9 +5,9 @@ _Route22RivalBeforeBattleText1::
 	para "You're going to"
 	line "#MON LEAGUE?"
 
-	para "Forget it! You"
-	line "probably don't"
-	cont "have any BADGEs!"
+	para "Can you even get"
+	line "in without any"
+	cont "BADGEs?"
 
 	para "The guard won't"
 	line "let you through!"
@@ -26,15 +26,14 @@ _Route22RivalAfterBattleText1::
 	line "out how to get"
 	cont "past them!"
 
-	para "You should quit"
-	line "dawdling and get"
-	cont "a move on!"
+	para "I'm destined to be"
+	line "a #MON champion one"
+	cont "day!"
 	done
 
 _Route22RivalDefeatedText1::
-	text "Awww!"
-	line "You just lucked"
-	cont "out!"
+	text "Wow..."
+	line "I wasn't even close."
 	prompt
 
 _Route22Text_511bc::
@@ -48,21 +47,20 @@ _Route22Text_511bc::
 
 _Route22RivalBeforeBattleText2::
 	text "<RIVAL>: What?"
-	line "<PLAYER>! What a"
-	cont "surprise to see"
-	cont "you here!"
+	line "<PLAYER>! You're"
+	cont "here too?"
 
-	para "So you're going to"
+	para "Are you going to"
 	line "#MON LEAGUE?"
 
 	para "You collected all"
 	line "the BADGEs too?"
 	cont "That's cool!"
 
-	para "Then I'll whip you"
-	line "<PLAYER> as a"
-	cont "warm up for"
-	cont "#MON LEAGUE!"
+	para "I'll show you how"
+	line "far I've come!"
+	cont "This won't be like"
+	cont "last time!"
 
 	para "Come on!"
 	done
@@ -72,30 +70,25 @@ _Route22RivalAfterBattleText2::
 	line "up! I'm ready for"
 	cont "#MON LEAGUE!"
 
-	para "<PLAYER>, you need"
-	line "more practice!"
-
-	para "But hey, you know"
-	line "that! I'm out of"
-	cont "here. Smell ya!"
+	para "I'll be stronger than"
+	line "ever the next time you"
+	cont "see me!"
 	done
 
 _Route22RivalDefeatedText2::
 	text "What!?"
 
-	para "I was just"
-	line "careless!"
+	para "How could I"
+	line "lose!"
 	prompt
 
 _Route22Text_511d0::
-	text "<RIVAL>: Hahaha!"
-	line "<PLAYER>! That's"
-	cont "your best? You're"
-	cont "nowhere near as"
-	cont "good as me, pal!"
+	text "<RIVAL>: Unreal!"
+	line "I actually won?"
+	cont "I didn't realize"
+	cont "how much better than"
+	cont "you I'd become!"
 
-	para "Go train some"
-	line "more! You loser!"
 	prompt
 
 _Route22FrontGateText::

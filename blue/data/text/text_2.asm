@@ -1725,15 +1725,15 @@ _OakSpeechText2B::
 	prompt
 
 _IntroducePlayerText::
-	text "First, what is"
-	line "your name?"
+	text "First, remind me"
+	line "your name, grandson."
 	prompt
 
 _IntroduceRivalText::
-	text "This is my grand-"
-	line "son. He's been"
-	cont "your rival since"
-	cont "you were a baby."
+	text "This is your"
+	line "rival. He isn't"
+	cont "terribly bright"
+	cont "but he means well."
 
 	para "...Erm, what is"
 	line "his name again?"

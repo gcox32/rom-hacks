@@ -1,22 +1,23 @@
 _OaksLabGaryText1::
-	text "<RIVAL>: Yo"
-	line "<PLAYER>! Gramps"
-	cont "isn't around!"
+	text "<RIVAL>: Hey"
+	line "<PLAYER>. The"
+	cont "professor isn't"
+	cont "around..."
 	done
 
 _OaksLabText40::
-	text "<RIVAL>: Heh, I"
-	line "don't need to be"
-	cont "greedy like you!"
+	text "<RIVAL>: You go"
+	line "ahead. I over"
+	cont "slept..."
 
 	para "Go ahead and"
-	line "choose, <PLAYER>!"
+	line "choose, <PLAYER>."
 	done
 
 _OaksLabText41::
 	text "<RIVAL>: My"
-	line "#MON looks a"
-	cont "lot stronger."
+	line "#MON looks"
+	cont "pretty strong."
 	done
 
 _OaksLabText39::
@@ -185,9 +186,9 @@ _OaksLabText_1d340::
 	done
 
 _OaksLabRivalWaitingText::
-	text "<RIVAL>: Gramps!"
-	line "I'm fed up with"
-	cont "waiting!"
+	text "<RIVAL>: I have"
+	line "no idea how I'll"
+	cont "choose!"
 	done
 
 _OaksLabChooseMonText::
@@ -219,15 +220,17 @@ _OaksLabChooseMonText::
 	done
 
 _OaksLabRivalInterjectionText::
-	text "<RIVAL>: Hey!"
-	line "Gramps! What"
-	cont "about me?"
+	text "<RIVAL>: And"
+	line "What about me,"
+	cont "professor?"
 	done
 
 _OaksLabBePatientText::
-	text "OAK: Be patient!"
-	line "<RIVAL>, you can"
-	cont "have one too!"
+	text "OAK: Maybe if"
+	line "you hadn't"
+	cont "overslept, you'd"
+	cont "have a #MON"
+	cont "by now."
 	done
 
 _OaksLabLeavingText::
@@ -253,39 +256,40 @@ _OaksLabRivalChallengeText::
 	cont "Let's check out"
 	cont "our #MON!"
 
-	para "Come on, I'll take"
-	line "you on!"
+	para "It can't be that"
+	line "hard, right?"
 	done
 
 _OaksLabText_1d3be::
-	text "WHAT?"
-	line "Unbelievable!"
-	cont "I picked the"
-	cont "wrong #MON!"
+	text "Wow."
+	line "This is harder"
+	cont "than I thought."
 	prompt
 
 _OaksLabText_1d3c3::
-	text "<RIVAL>: Yeah! Am"
-	line "I great or what?"
+	text "<RIVAL>: Wow!"
+	line "This is"
+	line "easier than I"
+	line "thought!"
 	prompt
 
 _OaksLabRivalToughenUpText::
 	text "<RIVAL>: Okay!"
-	line "I'll make my"
-	cont "#MON fight to"
-	cont "toughen it up!"
+	line "I'm not going to"
+	cont "give up on my"
+	cont "#MON!"
 
-	para "<PLAYER>! Gramps!"
-	line "Smell you later!"
+	para "I'll get you"
+	line "next time, <PLAYER>!"
 	done
 
 _OaksLabText21::
-	text "<RIVAL>: Gramps!"
+	text "<RIVAL>: Professor!"
 	done
 
 _OaksLabText22::
-	text "<RIVAL>: What did"
-	line "you call me for?"
+	text "<RIVAL>: Why did"
+	line "you call me?"
 	done
 
 _OaksLabText23::
@@ -342,20 +346,16 @@ _OaksLabText26::
 
 _OaksLabText27::
 	text "<RIVAL>: Alright"
-	line "Gramps! Leave it"
-	cont "all to me!"
+	line "Professor! I"
+	cont "won't let you down."
 
-	para "<PLAYER>, I hate to"
-	line "say it, but I"
-	cont "don't need you!"
+	para "<PLAYER>, I'm sure"
+	line "our paths will"
+	cont "cross soon!"
 
-	para "I know! I'll"
-	line "borrow a TOWN MAP"
-	cont "from my sis!"
-
-	para "I'll tell her not"
-	line "to lend you one,"
-	cont "<PLAYER>! Hahaha!"
+	para "I'll bet your"
+	line "sister has a town"
+	cont "map for you."
 	done
 
 _OaksLabText_1d405::

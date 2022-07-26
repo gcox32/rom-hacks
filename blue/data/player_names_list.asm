@@ -1,9 +1,9 @@
 IF DEF(_RED)
 DefaultNamesPlayerList:
 	db "NEW NAME@"
-	db "GRANT@"
-	db "ASH@"
 	db "RED@"
+	db "ASH@"
+	db "GRANT@"
 
 DefaultNamesRivalList:
 	db "NEW NAME@"
@@ -15,9 +15,9 @@ ENDC
 IF DEF(_BLUE)
 DefaultNamesPlayerList:
 	db "NEW NAME@"
-	db "GRANT@"
-	db "GARY@"
 	db "BLUE@"
+	db "GARY@"
+	db "GRANT@"
 
 DefaultNamesRivalList:
 	db "NEW NAME@"

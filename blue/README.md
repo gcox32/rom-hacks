@@ -12,6 +12,11 @@ It builds the following ROMs:
 
 To set up the repository, see [**INSTALL.md**](INSTALL.md).
 
+## TODO
+
+- More text role-swapping:
+    - Champions room
+    - Rival battles post Route 22
 
 ## See also
 

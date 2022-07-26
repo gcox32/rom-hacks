@@ -1,7 +1,7 @@
 _DaisyInitialText::
-	text "Hi <PLAYER>!"
-	line "<RIVAL> is out at"
-	cont "Grandpa's lab."
+	text "Hey <PLAYER>."
+	line "Granpa must be"
+	cont "in his lab."
 	done
 
 _DaisyOfferMapText::

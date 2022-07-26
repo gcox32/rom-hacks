@@ -22,7 +22,7 @@ _SSAnneRivalBeforeBattleText::
 	line "#DEX coming?"
 
 	para "I already caught"
-	line "40 kinds, pal!"
+	line "40 kinds!"
 
 	para "Different kinds"
 	line "are everywhere!"
@@ -52,12 +52,9 @@ _SSAnneRivalCaptainText::
 	line "there was a CUT"
 	cont "master on board."
 
-	para "But, he was just a"
-	line "seasick, old man!"
-
-	para "But, CUT itself is"
-	line "really useful!"
+	para "The CUT technique"
+	line "is really useful!"
 
 	para "You should go see"
-	line "him! Smell ya!"
+	line "him!"
 	done
