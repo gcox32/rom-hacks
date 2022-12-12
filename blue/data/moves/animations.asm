@@ -115,8 +115,8 @@ AttackAnimationPointers:
 	dw LightScreenAnim
 	dw HazeAnim
 	dw ReflectAnim
-	dw FocusEnergyAnim
-	dw BideAnim
+	dw ShadowBallAnim ; FocusEnergyAnim
+	dw RollTackleAnim ; BideAnim
 	dw MetronomeAnim
 	dw MirrorMoveAnim
 	dw SelfdestructAnim
@@ -877,12 +877,21 @@ ReflectAnim:
 	battle_anim NO_MOVE, SE_RESET_SCREEN_PALETTE
 	db -1 ; end
 
-FocusEnergyAnim:
-	battle_anim FOCUS_ENERGY, SE_SPIRAL_BALLS_INWARD
+ShadowBallAnim: ; FocusEnergyAnim
+	battle_anim NO_MOVE, SE_DARK_SCREEN_PALETTE
+	battle_anim BARRAGE, SUBANIM_41, 1, 3
+	battle_anim NO_MOVE, SUBANIM_55, 0, 5
+	battle_anim NO_MOVE, SE_RESET_SCREEN_PALETTE
 	db -1 ; end
 
-BideAnim:
-	battle_anim BIDE, SUBANIM_04, 1, 6
+RollTackleAnim: ; BideAnim
+	battle_anim DEFENSE_CURL, SE_LIGHT_SCREEN_PALETTE
+	battle_anim NO_MOVE, SUBANIM_43, 0, 6
+	battle_anim NO_MOVE, SE_DARK_SCREEN_FLASH
+	battle_anim NO_MOVE, SE_RESET_SCREEN_PALETTE
+	battle_anim QUICK_ATTACK, SE_SLIDE_MON_OFF
+	battle_anim NO_MOVE, SUBANIM_04, 1, 6
+	battle_anim NO_MOVE, SE_SHOW_MON_PIC
 	db -1 ; end
 
 MetronomeAnim:

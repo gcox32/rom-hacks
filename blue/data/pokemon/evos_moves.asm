@@ -359,7 +359,9 @@ GengarEvosMoves:
 ; Learnset
 	db 23, NIGHT_SHADE
 	db 29, HYPNOSIS
-	db 38, DREAM_EATER
+	db 33, DREAM_EATER
+	db 36, SHADOW_BALL
+	db 41, HAZE
 	db 0
 
 NidoranFEvosMoves:
@@ -436,9 +438,19 @@ MewEvosMoves:
 	db 0
 ; Learnset
 	db 10, TRANSFORM
-	db 20, MEGA_PUNCH
+	db 15, BUBBLEBEAM
+	db 20, DOUBLE_EDGE
+	db 25, TELEPORT
 	db 30, METRONOME
+	db 35, SOFTBOILED
 	db 40, PSYCHIC_M
+	db 45, REFLECT
+	db 50, LIGHT_SCREEN
+	db 55, AMNESIA
+	db 60, MIST
+	db 65, MIRROR_MOVE
+	db 70, EXPLOSION
+	db 75, HYPER_BEAM
 	db 0
 
 GyaradosEvosMoves:
@@ -488,6 +500,8 @@ GastlyEvosMoves:
 	db 23, NIGHT_SHADE
 	db 27, HYPNOSIS
 	db 31, DREAM_EATER
+	db 34, SHADOW_BALL
+	db 38, HAZE
 	db 0
 
 ScytherEvosMoves:
@@ -649,6 +663,7 @@ GravelerEvosMoves:
 	db EV_LEVEL, 40, GOLEM
 	db 0
 ; Learnset
+	db 9,  ROLL_TACKLE
 	db 11, DEFENSE_CURL
 	db 16, ROCK_THROW
 	db 21, SELFDESTRUCT
@@ -768,6 +783,7 @@ GolemEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
+	db 9,  ROLL_TACKLE
 	db 11, DEFENSE_CURL
 	db 16, ROCK_THROW
 	db 21, SELFDESTRUCT
@@ -1293,7 +1309,7 @@ JigglypuffEvosMoves:
 
 WigglytuffEvosMoves:
 ; Evolutions
-	db 0
+	db 30, SOFTBOILED
 ; Learnset
 	db 0
 
@@ -1765,7 +1781,9 @@ HaunterEvosMoves:
 ; Learnset
 	db 23, NIGHT_SHADE
 	db 29, HYPNOSIS
-	db 36, DREAM_EATER
+	db 33, DREAM_EATER
+	db 36, SHADOW_BALL
+	db 41, HAZE
 	db 0
 
 AbraEvosMoves:
@@ -1993,6 +2011,7 @@ GeodudeEvosMoves:
 	db EV_LEVEL, 25, GRAVELER
 	db 0
 ; Learnset
+	db 9,  ROLL_TACKLE
 	db 11, DEFENSE_CURL
 	db 16, ROCK_THROW
 	db 21, SELFDESTRUCT

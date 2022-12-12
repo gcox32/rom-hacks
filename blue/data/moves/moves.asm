@@ -125,12 +125,12 @@ Moves:
 	move LIGHT_SCREEN, LIGHT_SCREEN_EFFECT,          0, PSYCHIC_TYPE, 100, 30
 	move HAZE,         HAZE_EFFECT,                  0, ICE,          100, 30
 	move REFLECT,      REFLECT_EFFECT,               0, PSYCHIC_TYPE, 100, 20
-	move FOCUS_ENERGY, FOCUS_ENERGY_EFFECT,          0, NORMAL,       100, 30
-	move BIDE,         BIDE_EFFECT,                  0, NORMAL,       100, 10
+	move SHADOW_BALL,  DEFENSE_DOWN_SIDE_EFFECT,    80, GHOST,        100, 20
+	move ROLL_TACKLE,  NO_ADDITIONAL_EFFECT,        65, ROCK,         100, 10
 	move METRONOME,    METRONOME_EFFECT,             0, NORMAL,       100, 10
 	move MIRROR_MOVE,  MIRROR_MOVE_EFFECT,           0, FLYING,       100, 20
 	move SELFDESTRUCT, EXPLODE_EFFECT,             130, NORMAL,       100,  5
-	move EGG_BOMB,     NO_ADDITIONAL_EFFECT,       100, NORMAL,        75, 10
+	move EGG_BOMB,     CONFUSION_SIDE_EFFECT,      100, NORMAL,        75, 10
 	move LICK,         PARALYZE_SIDE_EFFECT2,       50, GHOST,        100, 30
 	move SMOG,         POISON_SIDE_EFFECT2,         20, POISON,        90, 20
 	move SLUDGE,       POISON_SIDE_EFFECT2,         65, POISON,       100, 20

@@ -3512,7 +3512,7 @@ CheckPlayerStatusConditions:
 	xor a
 	ld [hli], a
 	ld [hl], a
-	ld a, BIDE
+	ld a, ROLL_TACKLE ; BIDE
 	ld [wPlayerMoveNum], a
 	ld hl, handleIfPlayerMoveMissed ; skip damage calculation, DecrementPP and MoveHitTest
 	jp .returnToHL
@@ -6017,7 +6017,7 @@ CheckEnemyStatusConditions:
 	xor a
 	ld [hli], a
 	ld [hl], a
-	ld a, BIDE
+	ld a, ROLL_TACKLE ; BIDE
 	ld [wEnemyMoveNum], a
 	call SwapPlayerAndEnemyLevels
 	ld hl, handleIfEnemyMoveMissed ; skip damage calculation, DecrementPP and MoveHitTest

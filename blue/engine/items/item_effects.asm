@@ -2240,7 +2240,8 @@ ItemUseTMHM:
 	ld a, [wcf91]
 	call IsItemHM
 	ret c
-	jp RemoveUsedItem
+	ret
+	; jp RemoveUsedItem ; keep TM in bag
 
 BootedUpTMText:
 	text_far _BootedUpTMText

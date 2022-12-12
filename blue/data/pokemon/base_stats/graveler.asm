@@ -18,7 +18,7 @@
 	     SUBMISSION,   COUNTER,      SEISMIC_TOSS, RAGE,         EARTHQUAKE,   \
 	     FISSURE,      DIG,          MIMIC,        DOUBLE_TEAM,           \
 	     METRONOME,    SELFDESTRUCT, FIRE_BLAST,   REST,         EXPLOSION,    \
-	     ROCK_SLIDE,   SUBSTITUTE,   STRENGTH
+	     ROCK_SLIDE,   SUBSTITUTE,   STRENGTH,	   ROLL_TACKLE
 	; end
 
 	db 0 ; padding

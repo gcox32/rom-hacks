@@ -10,14 +10,14 @@
 	INCBIN "gfx/pokemon/front/voltorb.pic", 0, 1 ; sprite dimensions
 	dw VoltorbPicFront, VoltorbPicBack
 
-	db TACKLE, SCREECH, NO_MOVE, NO_MOVE ; level 1 learnset
+	db ROLL_TACKLE, SCREECH, NO_MOVE, NO_MOVE ; level 1 learnset
 	db GROWTH_MEDIUM_FAST ; growth rate
 
 	; tm/hm learnset
 	tmhm TOXIC,        TAKE_DOWN,    RAGE,         THUNDERBOLT,  THUNDER,      \
 	     TELEPORT,     MIMIC,        DOUBLE_TEAM,  REFLECT,                    \
 	     SELFDESTRUCT, SWIFT,        REST,         THUNDER_WAVE, EXPLOSION,    \
-	     SUBSTITUTE,   FLASH
+	     SUBSTITUTE,   FLASH,        ROLL_TACKLE
 	; end
 
 	db 0 ; padding

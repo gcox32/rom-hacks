@@ -30,7 +30,7 @@
 	const EVASION_DOWN1_EFFECT       ; $17
 	const CONVERSION_EFFECT          ; $18
 	const HAZE_EFFECT                ; $19
-	const BIDE_EFFECT                ; $1A
+	const BIDE_EFFECT         ; $1A ; BIDE_EFFECT
 	const THRASH_PETAL_DANCE_EFFECT  ; $1B
 	const SWITCH_AND_TELEPORT_EFFECT ; $1C
 	const TWO_TO_FIVE_ATTACKS_EFFECT ; $1D

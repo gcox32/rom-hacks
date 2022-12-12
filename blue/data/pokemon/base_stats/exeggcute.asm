@@ -17,7 +17,7 @@
 	tmhm TOXIC,        TAKE_DOWN,    DOUBLE_EDGE,  RAGE,         PSYCHIC_M,    \
 	     TELEPORT,     MIMIC,        DOUBLE_TEAM,  REFLECT,               \
 	     SELFDESTRUCT, EGG_BOMB,     REST,               EXPLOSION,    \
-	     SUBSTITUTE
+	     SUBSTITUTE,   ROLL_TACKLE
 	; end
 
 	db 0 ; padding

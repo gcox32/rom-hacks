@@ -38,12 +38,11 @@ _TM34ExplanationText::
 	cont "carefully!"
 
 	para "TM34 contains"
-	line "BIDE!"
+	line "ROLL TACKLE!"
 
 	para "Your #MON will"
-	line "absorb damage in"
-	cont "battle then pay"
-	cont "it back double!"
+	line "hit harder every"
+	cont "turn!"
 	done
 
 _TM34NoRoomText::
