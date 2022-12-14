@@ -1,5 +1,5 @@
 make --dry-run --always-make --keep-going --print-directory
-gcc -O3 -flto -std=c11 -Wall -Wextra -pedantic -o gfx gfx.c gcc -O3 -flto -std=c11 -Wall -Wextra -pedantic -o make_patch make_patch.c gcc -O3 -flto -std=c11 -Wall -Wextra -pedantic -o pkmncompress pkmncompress.c gcc -O3 -flto -std=c11 -Wall -Wextra -pedantic -o scan_includes scan_includes.c
+
  
 make: Entering directory `/Users/grantcox/Documents/Projects/rom-hacks/red'
 rgbasm -o rgbdscheck.o rgbdscheck.asm
@@ -57,7 +57,6 @@ tools/pkmncompress gfx/pokemon/front/ivysaur.2bpp gfx/pokemon/front/ivysaur.pic
 rgbgfx  -o gfx/pokemon/front/venusaur.2bpp gfx/pokemon/front/venusaur.png
 tools/pkmncompress gfx/pokemon/front/venusaur.2bpp gfx/pokemon/front/venusaur.pic
 rgbgfx  -o gfx/pokemon/front/charmander.2bpp gfx/pokemon/front/charmander.png
- 
 tools/pkmncompress gfx/pokemon/front/charmander.2bpp gfx/pokemon/front/charmander.pic
 rgbgfx  -o gfx/pokemon/front/charmeleon.2bpp gfx/pokemon/front/charmeleon.png
 tools/pkmncompress gfx/pokemon/front/charmeleon.2bpp gfx/pokemon/front/charmeleon.pic
@@ -71,6 +70,7 @@ rgbgfx  -o gfx/pokemon/front/blastoise.2bpp gfx/pokemon/front/blastoise.png
 tools/pkmncompress gfx/pokemon/front/blastoise.2bpp gfx/pokemon/front/blastoise.pic
 rgbgfx  -o gfx/pokemon/front/caterpie.2bpp gfx/pokemon/front/caterpie.png
 tools/pkmncompress gfx/pokemon/front/caterpie.2bpp gfx/pokemon/front/caterpie.pic
+ 
 rgbgfx  -o gfx/pokemon/front/metapod.2bpp gfx/pokemon/front/metapod.png
 tools/pkmncompress gfx/pokemon/front/metapod.2bpp gfx/pokemon/front/metapod.pic
 rgbgfx  -o gfx/pokemon/front/butterfree.2bpp gfx/pokemon/front/butterfree.png
@@ -96,7 +96,6 @@ tools/pkmncompress gfx/pokemon/front/spearow.2bpp gfx/pokemon/front/spearow.pic
 rgbgfx  -o gfx/pokemon/front/fearow.2bpp gfx/pokemon/front/fearow.png
 tools/pkmncompress gfx/pokemon/front/fearow.2bpp gfx/pokemon/front/fearow.pic
 rgbgfx  -o gfx/pokemon/front/ekans.2bpp gfx/pokemon/front/ekans.png
- 
 tools/pkmncompress gfx/pokemon/front/ekans.2bpp gfx/pokemon/front/ekans.pic
 rgbgfx  -o gfx/pokemon/front/arbok.2bpp gfx/pokemon/front/arbok.png
 tools/pkmncompress gfx/pokemon/front/arbok.2bpp gfx/pokemon/front/arbok.pic
@@ -115,7 +114,6 @@ tools/pkmncompress gfx/pokemon/front/nidorina.2bpp gfx/pokemon/front/nidorina.pi
 rgbgfx  -o gfx/pokemon/front/nidoqueen.2bpp gfx/pokemon/front/nidoqueen.png
 tools/pkmncompress gfx/pokemon/front/nidoqueen.2bpp gfx/pokemon/front/nidoqueen.pic
 rgbgfx  -o gfx/pokemon/front/nidoranm.2bpp gfx/pokemon/front/nidoranm.png
- 
 tools/pkmncompress gfx/pokemon/front/nidoranm.2bpp gfx/pokemon/front/nidoranm.pic
 rgbgfx  -o gfx/pokemon/front/nidorino.2bpp gfx/pokemon/front/nidorino.png
 tools/pkmncompress gfx/pokemon/front/nidorino.2bpp gfx/pokemon/front/nidorino.pic
@@ -140,11 +138,11 @@ tools/pkmncompress gfx/pokemon/front/golbat.2bpp gfx/pokemon/front/golbat.pic
 rgbgfx  -o gfx/pokemon/front/oddish.2bpp gfx/pokemon/front/oddish.png
 tools/pkmncompress gfx/pokemon/front/oddish.2bpp gfx/pokemon/front/oddish.pic
 rgbgfx  -o gfx/pokemon/front/gloom.2bpp gfx/pokemon/front/gloom.png
- 
 tools/pkmncompress gfx/pokemon/front/gloom.2bpp gfx/pokemon/front/gloom.pic
 rgbgfx  -o gfx/pokemon/front/vileplume.2bpp gfx/pokemon/front/vileplume.png
 tools/pkmncompress gfx/pokemon/front/vileplume.2bpp gfx/pokemon/front/vileplume.pic
 rgbgfx  -o gfx/pokemon/front/paras.2bpp gfx/pokemon/front/paras.png
+ 
 tools/pkmncompress gfx/pokemon/front/paras.2bpp gfx/pokemon/front/paras.pic
 rgbgfx  -o gfx/pokemon/front/parasect.2bpp gfx/pokemon/front/parasect.png
 tools/pkmncompress gfx/pokemon/front/parasect.2bpp gfx/pokemon/front/parasect.pic
@@ -158,7 +156,6 @@ rgbgfx  -o gfx/pokemon/front/dugtrio.2bpp gfx/pokemon/front/dugtrio.png
 tools/pkmncompress gfx/pokemon/front/dugtrio.2bpp gfx/pokemon/front/dugtrio.pic
 rgbgfx  -o gfx/pokemon/front/meowth.2bpp gfx/pokemon/front/meowth.png
 tools/pkmncompress gfx/pokemon/front/meowth.2bpp gfx/pokemon/front/meowth.pic
- 
 rgbgfx  -o gfx/pokemon/front/persian.2bpp gfx/pokemon/front/persian.png
 tools/pkmncompress gfx/pokemon/front/persian.2bpp gfx/pokemon/front/persian.pic
 rgbgfx  -o gfx/pokemon/front/psyduck.2bpp gfx/pokemon/front/psyduck.png
@@ -174,12 +171,12 @@ tools/pkmncompress gfx/pokemon/front/growlithe.2bpp gfx/pokemon/front/growlithe.
 rgbgfx  -o gfx/pokemon/front/arcanine.2bpp gfx/pokemon/front/arcanine.png
 tools/pkmncompress gfx/pokemon/front/arcanine.2bpp gfx/pokemon/front/arcanine.pic
 rgbgfx  -o gfx/pokemon/front/poliwag.2bpp gfx/pokemon/front/poliwag.png
- 
 tools/pkmncompress gfx/pokemon/front/poliwag.2bpp gfx/pokemon/front/poliwag.pic
 rgbgfx  -o gfx/pokemon/front/poliwhirl.2bpp gfx/pokemon/front/poliwhirl.png
 tools/pkmncompress gfx/pokemon/front/poliwhirl.2bpp gfx/pokemon/front/poliwhirl.pic
 rgbgfx  -o gfx/pokemon/front/poliwrath.2bpp gfx/pokemon/front/poliwrath.png
 tools/pkmncompress gfx/pokemon/front/poliwrath.2bpp gfx/pokemon/front/poliwrath.pic
+ 
 rgbgfx  -o gfx/pokemon/front/abra.2bpp gfx/pokemon/front/abra.png
 tools/pkmncompress gfx/pokemon/front/abra.2bpp gfx/pokemon/front/abra.pic
 rgbgfx  -o gfx/pokemon/front/kadabra.2bpp gfx/pokemon/front/kadabra.png
@@ -201,7 +198,6 @@ tools/pkmncompress gfx/pokemon/front/victreebel.2bpp gfx/pokemon/front/victreebe
 rgbgfx  -o gfx/pokemon/front/tentacool.2bpp gfx/pokemon/front/tentacool.png
 tools/pkmncompress gfx/pokemon/front/tentacool.2bpp gfx/pokemon/front/tentacool.pic
 rgbgfx  -o gfx/pokemon/front/tentacruel.2bpp gfx/pokemon/front/tentacruel.png
- 
 tools/pkmncompress gfx/pokemon/front/tentacruel.2bpp gfx/pokemon/front/tentacruel.pic
 rgbgfx  -o gfx/pokemon/front/geodude.2bpp gfx/pokemon/front/geodude.png
 tools/pkmncompress gfx/pokemon/front/geodude.2bpp gfx/pokemon/front/geodude.pic
@@ -212,6 +208,7 @@ tools/pkmncompress gfx/pokemon/front/golem.2bpp gfx/pokemon/front/golem.pic
 rgbgfx  -o gfx/pokemon/front/ponyta.2bpp gfx/pokemon/front/ponyta.png
 tools/pkmncompress gfx/pokemon/front/ponyta.2bpp gfx/pokemon/front/ponyta.pic
 rgbgfx  -o gfx/pokemon/front/rapidash.2bpp gfx/pokemon/front/rapidash.png
+ 
 tools/pkmncompress gfx/pokemon/front/rapidash.2bpp gfx/pokemon/front/rapidash.pic
 rgbgfx  -o gfx/pokemon/front/slowpoke.2bpp gfx/pokemon/front/slowpoke.png
 tools/pkmncompress gfx/pokemon/front/slowpoke.2bpp gfx/pokemon/front/slowpoke.pic
@@ -230,6 +227,7 @@ tools/pkmncompress gfx/pokemon/front/dodrio.2bpp gfx/pokemon/front/dodrio.pic
 rgbgfx  -o gfx/pokemon/front/seel.2bpp gfx/pokemon/front/seel.png
 tools/pkmncompress gfx/pokemon/front/seel.2bpp gfx/pokemon/front/seel.pic
 rgbgfx  -o gfx/pokemon/front/dewgong.2bpp gfx/pokemon/front/dewgong.png
+ 
 tools/pkmncompress gfx/pokemon/front/dewgong.2bpp gfx/pokemon/front/dewgong.pic
 rgbgfx  -o gfx/pokemon/front/grimer.2bpp gfx/pokemon/front/grimer.png
 tools/pkmncompress gfx/pokemon/front/grimer.2bpp gfx/pokemon/front/grimer.pic
@@ -248,12 +246,12 @@ tools/pkmncompress gfx/pokemon/front/gengar.2bpp gfx/pokemon/front/gengar.pic
 rgbgfx  -o gfx/pokemon/front/onix.2bpp gfx/pokemon/front/onix.png
 tools/pkmncompress gfx/pokemon/front/onix.2bpp gfx/pokemon/front/onix.pic
 rgbgfx  -o gfx/pokemon/front/drowzee.2bpp gfx/pokemon/front/drowzee.png
- 
 tools/pkmncompress gfx/pokemon/front/drowzee.2bpp gfx/pokemon/front/drowzee.pic
 rgbgfx  -o gfx/pokemon/front/hypno.2bpp gfx/pokemon/front/hypno.png
 tools/pkmncompress gfx/pokemon/front/hypno.2bpp gfx/pokemon/front/hypno.pic
 rgbgfx  -o gfx/pokemon/front/krabby.2bpp gfx/pokemon/front/krabby.png
 tools/pkmncompress gfx/pokemon/front/krabby.2bpp gfx/pokemon/front/krabby.pic
+ 
 rgbgfx  -o gfx/pokemon/front/kingler.2bpp gfx/pokemon/front/kingler.png
 tools/pkmncompress gfx/pokemon/front/kingler.2bpp gfx/pokemon/front/kingler.pic
 rgbgfx  -o gfx/pokemon/front/voltorb.2bpp gfx/pokemon/front/voltorb.png
@@ -279,12 +277,12 @@ tools/pkmncompress gfx/pokemon/front/koffing.2bpp gfx/pokemon/front/koffing.pic
 rgbgfx  -o gfx/pokemon/front/weezing.2bpp gfx/pokemon/front/weezing.png
 tools/pkmncompress gfx/pokemon/front/weezing.2bpp gfx/pokemon/front/weezing.pic
 rgbgfx  -o gfx/pokemon/front/rhyhorn.2bpp gfx/pokemon/front/rhyhorn.png
- 
 tools/pkmncompress gfx/pokemon/front/rhyhorn.2bpp gfx/pokemon/front/rhyhorn.pic
 rgbgfx  -o gfx/pokemon/front/rhydon.2bpp gfx/pokemon/front/rhydon.png
 tools/pkmncompress gfx/pokemon/front/rhydon.2bpp gfx/pokemon/front/rhydon.pic
 rgbgfx  -o gfx/pokemon/front/chansey.2bpp gfx/pokemon/front/chansey.png
 tools/pkmncompress gfx/pokemon/front/chansey.2bpp gfx/pokemon/front/chansey.pic
+ 
 rgbgfx  -o gfx/pokemon/front/tangela.2bpp gfx/pokemon/front/tangela.png
 tools/pkmncompress gfx/pokemon/front/tangela.2bpp gfx/pokemon/front/tangela.pic
 rgbgfx  -o gfx/pokemon/front/kangaskhan.2bpp gfx/pokemon/front/kangaskhan.png
@@ -305,7 +303,6 @@ rgbgfx  -o gfx/pokemon/front/mr.mime.2bpp gfx/pokemon/front/mr.mime.png
 tools/pkmncompress gfx/pokemon/front/mr.mime.2bpp gfx/pokemon/front/mr.mime.pic
 rgbgfx  -o gfx/pokemon/front/scyther.2bpp gfx/pokemon/front/scyther.png
 tools/pkmncompress gfx/pokemon/front/scyther.2bpp gfx/pokemon/front/scyther.pic
- 
 rgbgfx  -o gfx/pokemon/front/jynx.2bpp gfx/pokemon/front/jynx.png
 tools/pkmncompress gfx/pokemon/front/jynx.2bpp gfx/pokemon/front/jynx.pic
 rgbgfx  -o gfx/pokemon/front/electabuzz.2bpp gfx/pokemon/front/electabuzz.png
@@ -330,7 +327,6 @@ rgbgfx  -o gfx/pokemon/front/vaporeon.2bpp gfx/pokemon/front/vaporeon.png
 tools/pkmncompress gfx/pokemon/front/vaporeon.2bpp gfx/pokemon/front/vaporeon.pic
 rgbgfx  -o gfx/pokemon/front/jolteon.2bpp gfx/pokemon/front/jolteon.png
 tools/pkmncompress gfx/pokemon/front/jolteon.2bpp gfx/pokemon/front/jolteon.pic
- 
 rgbgfx  -o gfx/pokemon/front/flareon.2bpp gfx/pokemon/front/flareon.png
 tools/pkmncompress gfx/pokemon/front/flareon.2bpp gfx/pokemon/front/flareon.pic
 rgbgfx  -o gfx/pokemon/front/porygon.2bpp gfx/pokemon/front/porygon.png
@@ -345,7 +341,6 @@ rgbgfx  -o gfx/pokemon/front/kabutops.2bpp gfx/pokemon/front/kabutops.png
 tools/pkmncompress gfx/pokemon/front/kabutops.2bpp gfx/pokemon/front/kabutops.pic
 rgbgfx  -o gfx/pokemon/front/aerodactyl.2bpp gfx/pokemon/front/aerodactyl.png
 tools/pkmncompress gfx/pokemon/front/aerodactyl.2bpp gfx/pokemon/front/aerodactyl.pic
- 
 rgbgfx  -o gfx/pokemon/front/snorlax.2bpp gfx/pokemon/front/snorlax.png
 tools/pkmncompress gfx/pokemon/front/snorlax.2bpp gfx/pokemon/front/snorlax.pic
 rgbgfx  -o gfx/pokemon/front/articuno.2bpp gfx/pokemon/front/articuno.png
@@ -357,6 +352,7 @@ tools/pkmncompress gfx/pokemon/front/moltres.2bpp gfx/pokemon/front/moltres.pic
 rgbgfx  -o gfx/pokemon/front/dratini.2bpp gfx/pokemon/front/dratini.png
 tools/pkmncompress gfx/pokemon/front/dratini.2bpp gfx/pokemon/front/dratini.pic
 rgbgfx  -o gfx/pokemon/front/dragonair.2bpp gfx/pokemon/front/dragonair.png
+ 
 tools/pkmncompress gfx/pokemon/front/dragonair.2bpp gfx/pokemon/front/dragonair.pic
 rgbgfx  -o gfx/pokemon/front/dragonite.2bpp gfx/pokemon/front/dragonite.png
 tools/pkmncompress gfx/pokemon/front/dragonite.2bpp gfx/pokemon/front/dragonite.pic
@@ -366,7 +362,6 @@ rgbgfx  -o gfx/battle/balls.2bpp gfx/battle/balls.png
 rgbgfx  -o gfx/trade/game_boy.2bpp gfx/trade/game_boy.png
 tools/gfx --remove-duplicates -o gfx/trade/game_boy.2bpp gfx/trade/game_boy.2bpp
 rgbgfx  -o gfx/trade/link_cable.2bpp gfx/trade/link_cable.png
- 
 rgbgfx  -o gfx/trade/cable_ball.2bpp gfx/trade/cable_ball.png
 rgbgfx  -o gfx/splash/gamefreak_presents.2bpp gfx/splash/gamefreak_presents.png
 rgbgfx  -o gfx/splash/gamefreak_logo.2bpp gfx/splash/gamefreak_logo.png
@@ -377,30 +372,29 @@ rgbgfx -h -o gfx/intro/red_nidorino_2.2bpp gfx/intro/red_nidorino_2.png
 rgbgfx -h -o gfx/intro/red_nidorino_3.2bpp gfx/intro/red_nidorino_3.png
 rgbgfx -h -o gfx/intro/blue_jigglypuff_1.2bpp gfx/intro/blue_jigglypuff_1.png
 rgbgfx -h -o gfx/intro/blue_jigglypuff_2.2bpp gfx/intro/blue_jigglypuff_2.png
- 
 rgbgfx -h -o gfx/intro/blue_jigglypuff_3.2bpp gfx/intro/blue_jigglypuff_3.png
 rgbgfx  -d1 -o gfx/title/red_version.1bpp gfx/title/red_version.png
 rgbgfx  -d1 -o gfx/title/blue_version.1bpp gfx/title/blue_version.png
 rgbgfx  -o gfx/splash/falling_star.2bpp gfx/splash/falling_star.png
 rgbgfx  -o gfx/overworld/heal_machine.2bpp gfx/overworld/heal_machine.png
+ 
 rgbgfx  -o gfx/overworld/battle_transition.2bpp gfx/overworld/battle_transition.png
 rgbgfx  -d1 -o gfx/town_map/town_map_cursor.1bpp gfx/town_map/town_map_cursor.png
 rgbgfx  -d1 -o gfx/town_map/up_arrow.1bpp gfx/town_map/up_arrow.png
 rgbgfx  -d1 -o gfx/town_map/mon_nest_icon.1bpp gfx/town_map/mon_nest_icon.png
 rgbgfx  -o gfx/icons/bug.2bpp gfx/icons/bug.png
- 
 rgbgfx  -o gfx/icons/plant.2bpp gfx/icons/plant.png
 rgbgfx  -o gfx/icons/snake.2bpp gfx/icons/snake.png
 rgbgfx  -o gfx/icons/quadruped.2bpp gfx/icons/quadruped.png
 rgbgfx  -o gfx/trade/bubble.2bpp gfx/trade/bubble.png
 rgbgfx  -o gfx/sgb/red_border.2bpp gfx/sgb/red_border.png
 rgbgfx  -o gfx/sgb/blue_border.2bpp gfx/sgb/blue_border.png
+ 
 rgbgfx  -o gfx/credits/the_end.2bpp gfx/credits/the_end.png
 tools/gfx --interleave --png=gfx/credits/the_end.png -o gfx/credits/the_end.2bpp gfx/credits/the_end.2bpp
 rgbgfx  -o gfx/battle/attack_anim_1.2bpp gfx/battle/attack_anim_1.png
 tools/gfx --trim-whitespace -o gfx/battle/attack_anim_1.2bpp gfx/battle/attack_anim_1.2bpp
 rgbgfx  -o gfx/battle/attack_anim_2.2bpp gfx/battle/attack_anim_2.png
- 
 tools/gfx --trim-whitespace -o gfx/battle/attack_anim_2.2bpp gfx/battle/attack_anim_2.2bpp
 rgbgfx  -o gfx/slots/red_slots_2.2bpp gfx/slots/red_slots_2.png
 rgbgfx  -o gfx/slots/blue_slots_2.2bpp gfx/slots/blue_slots_2.png
@@ -420,9 +414,9 @@ rgbasm -h -L -Weverything -Wnumeric-string=2 -Wtruncation=1 -D _RED -o wram_red.
 rgbgfx  -o gfx/pokemon/back/rhydonb.2bpp gfx/pokemon/back/rhydonb.png
 tools/pkmncompress gfx/pokemon/back/rhydonb.2bpp gfx/pokemon/back/rhydonb.pic
 rgbgfx  -o gfx/pokemon/back/kangaskhanb.2bpp gfx/pokemon/back/kangaskhanb.png
+ 
 tools/pkmncompress gfx/pokemon/back/kangaskhanb.2bpp gfx/pokemon/back/kangaskhanb.pic
 rgbgfx  -o gfx/pokemon/back/nidoranmb.2bpp gfx/pokemon/back/nidoranmb.png
- 
 tools/pkmncompress gfx/pokemon/back/nidoranmb.2bpp gfx/pokemon/back/nidoranmb.pic
 rgbgfx  -o gfx/pokemon/back/clefairyb.2bpp gfx/pokemon/back/clefairyb.png
 tools/pkmncompress gfx/pokemon/back/clefairyb.2bpp gfx/pokemon/back/clefairyb.pic
@@ -432,11 +426,11 @@ rgbgfx  -o gfx/pokemon/back/voltorbb.2bpp gfx/pokemon/back/voltorbb.png
 tools/pkmncompress gfx/pokemon/back/voltorbb.2bpp gfx/pokemon/back/voltorbb.pic
 rgbgfx  -o gfx/pokemon/back/nidokingb.2bpp gfx/pokemon/back/nidokingb.png
 tools/pkmncompress gfx/pokemon/back/nidokingb.2bpp gfx/pokemon/back/nidokingb.pic
+ 
 rgbgfx  -o gfx/pokemon/back/slowbrob.2bpp gfx/pokemon/back/slowbrob.png
 tools/pkmncompress gfx/pokemon/back/slowbrob.2bpp gfx/pokemon/back/slowbrob.pic
 rgbgfx  -o gfx/pokemon/back/ivysaurb.2bpp gfx/pokemon/back/ivysaurb.png
 tools/pkmncompress gfx/pokemon/back/ivysaurb.2bpp gfx/pokemon/back/ivysaurb.pic
- 
 rgbgfx  -o gfx/pokemon/back/exeggutorb.2bpp gfx/pokemon/back/exeggutorb.png
 tools/pkmncompress gfx/pokemon/back/exeggutorb.2bpp gfx/pokemon/back/exeggutorb.pic
 rgbgfx  -o gfx/pokemon/back/lickitungb.2bpp gfx/pokemon/back/lickitungb.png
@@ -444,6 +438,7 @@ tools/pkmncompress gfx/pokemon/back/lickitungb.2bpp gfx/pokemon/back/lickitungb.
 rgbgfx  -o gfx/pokemon/back/exeggcuteb.2bpp gfx/pokemon/back/exeggcuteb.png
 tools/pkmncompress gfx/pokemon/back/exeggcuteb.2bpp gfx/pokemon/back/exeggcuteb.pic
 rgbgfx  -o gfx/pokemon/back/grimerb.2bpp gfx/pokemon/back/grimerb.png
+ 
 tools/pkmncompress gfx/pokemon/back/grimerb.2bpp gfx/pokemon/back/grimerb.pic
 rgbgfx  -o gfx/pokemon/back/gengarb.2bpp gfx/pokemon/back/gengarb.png
 tools/pkmncompress gfx/pokemon/back/gengarb.2bpp gfx/pokemon/back/gengarb.pic
@@ -452,10 +447,10 @@ tools/pkmncompress gfx/pokemon/back/nidoranfb.2bpp gfx/pokemon/back/nidoranfb.pi
 rgbgfx  -o gfx/pokemon/back/nidoqueenb.2bpp gfx/pokemon/back/nidoqueenb.png
 tools/pkmncompress gfx/pokemon/back/nidoqueenb.2bpp gfx/pokemon/back/nidoqueenb.pic
 rgbgfx  -o gfx/pokemon/back/cuboneb.2bpp gfx/pokemon/back/cuboneb.png
- 
 tools/pkmncompress gfx/pokemon/back/cuboneb.2bpp gfx/pokemon/back/cuboneb.pic
 rgbgfx  -o gfx/pokemon/back/rhyhornb.2bpp gfx/pokemon/back/rhyhornb.png
 tools/pkmncompress gfx/pokemon/back/rhyhornb.2bpp gfx/pokemon/back/rhyhornb.pic
+ 
 rgbgfx  -o gfx/pokemon/back/laprasb.2bpp gfx/pokemon/back/laprasb.png
 tools/pkmncompress gfx/pokemon/back/laprasb.2bpp gfx/pokemon/back/laprasb.pic
 rgbgfx  -o gfx/pokemon/back/arcanineb.2bpp gfx/pokemon/back/arcanineb.png
@@ -466,8 +461,8 @@ rgbgfx  -o gfx/pokemon/back/shellderb.2bpp gfx/pokemon/back/shellderb.png
 tools/pkmncompress gfx/pokemon/back/shellderb.2bpp gfx/pokemon/back/shellderb.pic
 rgbgfx  -o gfx/pokemon/back/tentacoolb.2bpp gfx/pokemon/back/tentacoolb.png
 tools/pkmncompress gfx/pokemon/back/tentacoolb.2bpp gfx/pokemon/back/tentacoolb.pic
- 
 rgbgfx  -o gfx/pokemon/back/gastlyb.2bpp gfx/pokemon/back/gastlyb.png
+ 
 tools/pkmncompress gfx/pokemon/back/gastlyb.2bpp gfx/pokemon/back/gastlyb.pic
 rgbgfx  -o gfx/pokemon/back/scytherb.2bpp gfx/pokemon/back/scytherb.png
 tools/pkmncompress gfx/pokemon/back/scytherb.2bpp gfx/pokemon/back/scytherb.pic
@@ -491,7 +486,6 @@ rgbgfx  -o gfx/pokemon/back/slowpokeb.2bpp gfx/pokemon/back/slowpokeb.png
 tools/pkmncompress gfx/pokemon/back/slowpokeb.2bpp gfx/pokemon/back/slowpokeb.pic
 rgbgfx  -o gfx/pokemon/back/kadabrab.2bpp gfx/pokemon/back/kadabrab.png
 tools/pkmncompress gfx/pokemon/back/kadabrab.2bpp gfx/pokemon/back/kadabrab.pic
- 
 rgbgfx  -o gfx/pokemon/back/gravelerb.2bpp gfx/pokemon/back/gravelerb.png
 tools/pkmncompress gfx/pokemon/back/gravelerb.2bpp gfx/pokemon/back/gravelerb.pic
 rgbgfx  -o gfx/pokemon/back/chanseyb.2bpp gfx/pokemon/back/chanseyb.png
@@ -503,10 +497,10 @@ tools/pkmncompress gfx/pokemon/back/mr.mimeb.2bpp gfx/pokemon/back/mr.mimeb.pic
 rgbgfx  -o gfx/pokemon/back/hitmonleeb.2bpp gfx/pokemon/back/hitmonleeb.png
 tools/pkmncompress gfx/pokemon/back/hitmonleeb.2bpp gfx/pokemon/back/hitmonleeb.pic
 rgbgfx  -o gfx/pokemon/back/hitmonchanb.2bpp gfx/pokemon/back/hitmonchanb.png
+ 
 tools/pkmncompress gfx/pokemon/back/hitmonchanb.2bpp gfx/pokemon/back/hitmonchanb.pic
 rgbgfx  -o gfx/pokemon/back/arbokb.2bpp gfx/pokemon/back/arbokb.png
 tools/pkmncompress gfx/pokemon/back/arbokb.2bpp gfx/pokemon/back/arbokb.pic
- 
 rgbgfx  -o gfx/pokemon/back/parasectb.2bpp gfx/pokemon/back/parasectb.png
 tools/pkmncompress gfx/pokemon/back/parasectb.2bpp gfx/pokemon/back/parasectb.pic
 rgbgfx  -o gfx/pokemon/back/psyduckb.2bpp gfx/pokemon/back/psyduckb.png
@@ -538,11 +532,11 @@ rgbgfx  -o gfx/pokemon/back/venonatb.2bpp gfx/pokemon/back/venonatb.png
 tools/pkmncompress gfx/pokemon/back/venonatb.2bpp gfx/pokemon/back/venonatb.pic
 rgbgfx  -o gfx/pokemon/back/dragoniteb.2bpp gfx/pokemon/back/dragoniteb.png
 tools/pkmncompress gfx/pokemon/back/dragoniteb.2bpp gfx/pokemon/back/dragoniteb.pic
+ 
 rgbgfx  -o gfx/pokemon/back/doduob.2bpp gfx/pokemon/back/doduob.png
 tools/pkmncompress gfx/pokemon/back/doduob.2bpp gfx/pokemon/back/doduob.pic
 rgbgfx  -o gfx/pokemon/back/poliwagb.2bpp gfx/pokemon/back/poliwagb.png
 tools/pkmncompress gfx/pokemon/back/poliwagb.2bpp gfx/pokemon/back/poliwagb.pic
- 
 rgbgfx  -o gfx/pokemon/back/jynxb.2bpp gfx/pokemon/back/jynxb.png
 tools/pkmncompress gfx/pokemon/back/jynxb.2bpp gfx/pokemon/back/jynxb.pic
 rgbgfx  -o gfx/pokemon/back/moltresb.2bpp gfx/pokemon/back/moltresb.png
@@ -551,18 +545,19 @@ rgbgfx  -o gfx/pokemon/back/articunob.2bpp gfx/pokemon/back/articunob.png
 tools/pkmncompress gfx/pokemon/back/articunob.2bpp gfx/pokemon/back/articunob.pic
 rgbgfx  -o gfx/pokemon/back/zapdosb.2bpp gfx/pokemon/back/zapdosb.png
 tools/pkmncompress gfx/pokemon/back/zapdosb.2bpp gfx/pokemon/back/zapdosb.pic
+ 
 rgbgfx  -o gfx/pokemon/back/dittob.2bpp gfx/pokemon/back/dittob.png
 tools/pkmncompress gfx/pokemon/back/dittob.2bpp gfx/pokemon/back/dittob.pic
 rgbgfx  -o gfx/pokemon/back/meowthb.2bpp gfx/pokemon/back/meowthb.png
 tools/pkmncompress gfx/pokemon/back/meowthb.2bpp gfx/pokemon/back/meowthb.pic
 rgbgfx  -o gfx/pokemon/back/krabbyb.2bpp gfx/pokemon/back/krabbyb.png
 tools/pkmncompress gfx/pokemon/back/krabbyb.2bpp gfx/pokemon/back/krabbyb.pic
- 
 rgbgfx  -o gfx/pokemon/back/vulpixb.2bpp gfx/pokemon/back/vulpixb.png
 tools/pkmncompress gfx/pokemon/back/vulpixb.2bpp gfx/pokemon/back/vulpixb.pic
 rgbgfx  -o gfx/pokemon/back/ninetalesb.2bpp gfx/pokemon/back/ninetalesb.png
 tools/pkmncompress gfx/pokemon/back/ninetalesb.2bpp gfx/pokemon/back/ninetalesb.pic
 rgbgfx  -o gfx/pokemon/back/pikachub.2bpp gfx/pokemon/back/pikachub.png
+ 
 tools/pkmncompress gfx/pokemon/back/pikachub.2bpp gfx/pokemon/back/pikachub.pic
 rgbgfx  -o gfx/pokemon/back/raichub.2bpp gfx/pokemon/back/raichub.png
 tools/pkmncompress gfx/pokemon/back/raichub.2bpp gfx/pokemon/back/raichub.pic
@@ -572,9 +567,9 @@ rgbgfx  -o gfx/pokemon/back/dragonairb.2bpp gfx/pokemon/back/dragonairb.png
 tools/pkmncompress gfx/pokemon/back/dragonairb.2bpp gfx/pokemon/back/dragonairb.pic
 rgbgfx  -o gfx/pokemon/back/kabutob.2bpp gfx/pokemon/back/kabutob.png
 tools/pkmncompress gfx/pokemon/back/kabutob.2bpp gfx/pokemon/back/kabutob.pic
- 
 rgbgfx  -o gfx/pokemon/back/kabutopsb.2bpp gfx/pokemon/back/kabutopsb.png
 tools/pkmncompress gfx/pokemon/back/kabutopsb.2bpp gfx/pokemon/back/kabutopsb.pic
+ 
 rgbgfx  -o gfx/pokemon/back/horseab.2bpp gfx/pokemon/back/horseab.png
 tools/pkmncompress gfx/pokemon/back/horseab.2bpp gfx/pokemon/back/horseab.pic
 rgbgfx  -o gfx/pokemon/back/seadrab.2bpp gfx/pokemon/back/seadrab.png
@@ -608,7 +603,6 @@ rgbgfx  -o gfx/pokemon/back/ekansb.2bpp gfx/pokemon/back/ekansb.png
 tools/pkmncompress gfx/pokemon/back/ekansb.2bpp gfx/pokemon/back/ekansb.pic
 rgbgfx  -o gfx/pokemon/back/parasb.2bpp gfx/pokemon/back/parasb.png
 tools/pkmncompress gfx/pokemon/back/parasb.2bpp gfx/pokemon/back/parasb.pic
- 
 rgbgfx  -o gfx/pokemon/back/poliwhirlb.2bpp gfx/pokemon/back/poliwhirlb.png
 tools/pkmncompress gfx/pokemon/back/poliwhirlb.2bpp gfx/pokemon/back/poliwhirlb.pic
 rgbgfx  -o gfx/pokemon/back/poliwrathb.2bpp gfx/pokemon/back/poliwrathb.png
@@ -621,8 +615,8 @@ rgbgfx  -o gfx/pokemon/back/beedrillb.2bpp gfx/pokemon/back/beedrillb.png
 tools/pkmncompress gfx/pokemon/back/beedrillb.2bpp gfx/pokemon/back/beedrillb.pic
 rgbgfx  -o gfx/pokemon/front/fossilkabutops.2bpp gfx/pokemon/front/fossilkabutops.png
 tools/pkmncompress gfx/pokemon/front/fossilkabutops.2bpp gfx/pokemon/front/fossilkabutops.pic
-rgbgfx  -o gfx/pokemon/back/dodriob.2bpp gfx/pokemon/back/dodriob.png
  
+rgbgfx  -o gfx/pokemon/back/dodriob.2bpp gfx/pokemon/back/dodriob.png
 tools/pkmncompress gfx/pokemon/back/dodriob.2bpp gfx/pokemon/back/dodriob.pic
 rgbgfx  -o gfx/pokemon/back/primeapeb.2bpp gfx/pokemon/back/primeapeb.png
 tools/pkmncompress gfx/pokemon/back/primeapeb.2bpp gfx/pokemon/back/primeapeb.pic
@@ -634,9 +628,9 @@ rgbgfx  -o gfx/pokemon/back/dewgongb.2bpp gfx/pokemon/back/dewgongb.png
 tools/pkmncompress gfx/pokemon/back/dewgongb.2bpp gfx/pokemon/back/dewgongb.pic
 rgbgfx  -o gfx/pokemon/back/caterpieb.2bpp gfx/pokemon/back/caterpieb.png
 tools/pkmncompress gfx/pokemon/back/caterpieb.2bpp gfx/pokemon/back/caterpieb.pic
+ 
 rgbgfx  -o gfx/pokemon/back/metapodb.2bpp gfx/pokemon/back/metapodb.png
 tools/pkmncompress gfx/pokemon/back/metapodb.2bpp gfx/pokemon/back/metapodb.pic
- 
 rgbgfx  -o gfx/pokemon/back/butterfreeb.2bpp gfx/pokemon/back/butterfreeb.png
 tools/pkmncompress gfx/pokemon/back/butterfreeb.2bpp gfx/pokemon/back/butterfreeb.pic
 rgbgfx  -o gfx/pokemon/back/machampb.2bpp gfx/pokemon/back/machampb.png
@@ -652,6 +646,7 @@ tools/pkmncompress gfx/pokemon/back/mewtwob.2bpp gfx/pokemon/back/mewtwob.pic
 rgbgfx  -o gfx/pokemon/back/snorlaxb.2bpp gfx/pokemon/back/snorlaxb.png
 tools/pkmncompress gfx/pokemon/back/snorlaxb.2bpp gfx/pokemon/back/snorlaxb.pic
 rgbgfx  -o gfx/pokemon/back/magikarpb.2bpp gfx/pokemon/back/magikarpb.png
+ 
 tools/pkmncompress gfx/pokemon/back/magikarpb.2bpp gfx/pokemon/back/magikarpb.pic
 rgbgfx  -o gfx/pokemon/back/mukb.2bpp gfx/pokemon/back/mukb.png
 tools/pkmncompress gfx/pokemon/back/mukb.2bpp gfx/pokemon/back/mukb.pic
@@ -665,10 +660,10 @@ rgbgfx  -o gfx/pokemon/back/clefableb.2bpp gfx/pokemon/back/clefableb.png
 tools/pkmncompress gfx/pokemon/back/clefableb.2bpp gfx/pokemon/back/clefableb.pic
 rgbgfx  -o gfx/pokemon/back/weezingb.2bpp gfx/pokemon/back/weezingb.png
 tools/pkmncompress gfx/pokemon/back/weezingb.2bpp gfx/pokemon/back/weezingb.pic
+ 
 rgbgfx  -o gfx/pokemon/back/persianb.2bpp gfx/pokemon/back/persianb.png
 tools/pkmncompress gfx/pokemon/back/persianb.2bpp gfx/pokemon/back/persianb.pic
 rgbgfx  -o gfx/pokemon/back/marowakb.2bpp gfx/pokemon/back/marowakb.png
- 
 tools/pkmncompress gfx/pokemon/back/marowakb.2bpp gfx/pokemon/back/marowakb.pic
 rgbgfx  -o gfx/pokemon/back/haunterb.2bpp gfx/pokemon/back/haunterb.png
 tools/pkmncompress gfx/pokemon/back/haunterb.2bpp gfx/pokemon/back/haunterb.pic
@@ -679,11 +674,11 @@ tools/pkmncompress gfx/pokemon/back/alakazamb.2bpp gfx/pokemon/back/alakazamb.pi
 rgbgfx  -o gfx/pokemon/back/pidgeottob.2bpp gfx/pokemon/back/pidgeottob.png
 tools/pkmncompress gfx/pokemon/back/pidgeottob.2bpp gfx/pokemon/back/pidgeottob.pic
 rgbgfx  -o gfx/pokemon/back/pidgeotb.2bpp gfx/pokemon/back/pidgeotb.png
+ 
 tools/pkmncompress gfx/pokemon/back/pidgeotb.2bpp gfx/pokemon/back/pidgeotb.pic
 rgbgfx  -o gfx/pokemon/back/starmieb.2bpp gfx/pokemon/back/starmieb.png
 tools/pkmncompress gfx/pokemon/back/starmieb.2bpp gfx/pokemon/back/starmieb.pic
 rgbgfx  -o gfx/player/redb.2bpp gfx/player/redb.png
- 
 tools/pkmncompress gfx/player/redb.2bpp gfx/player/redb.pic
 rgbgfx  -o gfx/battle/oldmanb.2bpp gfx/battle/oldmanb.png
 tools/pkmncompress gfx/battle/oldmanb.2bpp gfx/battle/oldmanb.pic
@@ -692,6 +687,7 @@ tools/pkmncompress gfx/pokemon/back/bulbasaurb.2bpp gfx/pokemon/back/bulbasaurb.
 rgbgfx  -o gfx/pokemon/back/venusaurb.2bpp gfx/pokemon/back/venusaurb.png
 tools/pkmncompress gfx/pokemon/back/venusaurb.2bpp gfx/pokemon/back/venusaurb.pic
 rgbgfx  -o gfx/pokemon/back/tentacruelb.2bpp gfx/pokemon/back/tentacruelb.png
+ 
 tools/pkmncompress gfx/pokemon/back/tentacruelb.2bpp gfx/pokemon/back/tentacruelb.pic
 rgbgfx  -o gfx/pokemon/back/goldeenb.2bpp gfx/pokemon/back/goldeenb.png
 tools/pkmncompress gfx/pokemon/back/goldeenb.2bpp gfx/pokemon/back/goldeenb.pic
@@ -706,31 +702,30 @@ tools/pkmncompress gfx/pokemon/back/rattatab.2bpp gfx/pokemon/back/rattatab.pic
 rgbgfx  -o gfx/pokemon/back/raticateb.2bpp gfx/pokemon/back/raticateb.png
 tools/pkmncompress gfx/pokemon/back/raticateb.2bpp gfx/pokemon/back/raticateb.pic
 rgbgfx  -o gfx/pokemon/back/nidorinob.2bpp gfx/pokemon/back/nidorinob.png
- 
 tools/pkmncompress gfx/pokemon/back/nidorinob.2bpp gfx/pokemon/back/nidorinob.pic
 rgbgfx  -o gfx/pokemon/back/nidorinab.2bpp gfx/pokemon/back/nidorinab.png
 tools/pkmncompress gfx/pokemon/back/nidorinab.2bpp gfx/pokemon/back/nidorinab.pic
 rgbgfx  -o gfx/pokemon/back/geodudeb.2bpp gfx/pokemon/back/geodudeb.png
 tools/pkmncompress gfx/pokemon/back/geodudeb.2bpp gfx/pokemon/back/geodudeb.pic
 rgbgfx  -o gfx/pokemon/back/porygonb.2bpp gfx/pokemon/back/porygonb.png
+ 
 tools/pkmncompress gfx/pokemon/back/porygonb.2bpp gfx/pokemon/back/porygonb.pic
 rgbgfx  -o gfx/pokemon/back/aerodactylb.2bpp gfx/pokemon/back/aerodactylb.png
 tools/pkmncompress gfx/pokemon/back/aerodactylb.2bpp gfx/pokemon/back/aerodactylb.pic
 rgbgfx  -o gfx/pokemon/back/magnemiteb.2bpp gfx/pokemon/back/magnemiteb.png
 tools/pkmncompress gfx/pokemon/back/magnemiteb.2bpp gfx/pokemon/back/magnemiteb.pic
 rgbgfx  -o gfx/pokemon/back/charmanderb.2bpp gfx/pokemon/back/charmanderb.png
- 
 tools/pkmncompress gfx/pokemon/back/charmanderb.2bpp gfx/pokemon/back/charmanderb.pic
 rgbgfx  -o gfx/pokemon/back/squirtleb.2bpp gfx/pokemon/back/squirtleb.png
 tools/pkmncompress gfx/pokemon/back/squirtleb.2bpp gfx/pokemon/back/squirtleb.pic
 rgbgfx  -o gfx/pokemon/back/charmeleonb.2bpp gfx/pokemon/back/charmeleonb.png
 tools/pkmncompress gfx/pokemon/back/charmeleonb.2bpp gfx/pokemon/back/charmeleonb.pic
 rgbgfx  -o gfx/pokemon/back/wartortleb.2bpp gfx/pokemon/back/wartortleb.png
+ 
 tools/pkmncompress gfx/pokemon/back/wartortleb.2bpp gfx/pokemon/back/wartortleb.pic
 rgbgfx  -o gfx/pokemon/back/charizardb.2bpp gfx/pokemon/back/charizardb.png
 tools/pkmncompress gfx/pokemon/back/charizardb.2bpp gfx/pokemon/back/charizardb.pic
 rgbgfx  -o gfx/pokemon/front/fossilaerodactyl.2bpp gfx/pokemon/front/fossilaerodactyl.png
- 
 tools/pkmncompress gfx/pokemon/front/fossilaerodactyl.2bpp gfx/pokemon/front/fossilaerodactyl.pic
 rgbgfx  -o gfx/battle/ghost.2bpp gfx/battle/ghost.png
 tools/pkmncompress gfx/battle/ghost.2bpp gfx/battle/ghost.pic
@@ -738,18 +733,19 @@ rgbgfx  -o gfx/pokemon/back/oddishb.2bpp gfx/pokemon/back/oddishb.png
 tools/pkmncompress gfx/pokemon/back/oddishb.2bpp gfx/pokemon/back/oddishb.pic
 rgbgfx  -o gfx/pokemon/back/gloomb.2bpp gfx/pokemon/back/gloomb.png
 tools/pkmncompress gfx/pokemon/back/gloomb.2bpp gfx/pokemon/back/gloomb.pic
+ 
 rgbgfx  -o gfx/pokemon/back/vileplumeb.2bpp gfx/pokemon/back/vileplumeb.png
 tools/pkmncompress gfx/pokemon/back/vileplumeb.2bpp gfx/pokemon/back/vileplumeb.pic
 rgbgfx  -o gfx/pokemon/back/bellsproutb.2bpp gfx/pokemon/back/bellsproutb.png
 tools/pkmncompress gfx/pokemon/back/bellsproutb.2bpp gfx/pokemon/back/bellsproutb.pic
 rgbgfx  -o gfx/pokemon/back/weepinbellb.2bpp gfx/pokemon/back/weepinbellb.png
- 
 tools/pkmncompress gfx/pokemon/back/weepinbellb.2bpp gfx/pokemon/back/weepinbellb.pic
 rgbgfx  -o gfx/pokemon/back/victreebelb.2bpp gfx/pokemon/back/victreebelb.png
 tools/pkmncompress gfx/pokemon/back/victreebelb.2bpp gfx/pokemon/back/victreebelb.pic
 rgbgfx  -o gfx/trainers/youngster.2bpp gfx/trainers/youngster.png
 tools/pkmncompress gfx/trainers/youngster.2bpp gfx/trainers/youngster.pic
 rgbgfx  -o gfx/trainers/bugcatcher.2bpp gfx/trainers/bugcatcher.png
+ 
 tools/pkmncompress gfx/trainers/bugcatcher.2bpp gfx/trainers/bugcatcher.pic
 rgbgfx  -o gfx/trainers/lass.2bpp gfx/trainers/lass.png
 tools/pkmncompress gfx/trainers/lass.2bpp gfx/trainers/lass.pic
@@ -761,26 +757,26 @@ rgbgfx  -o gfx/trainers/jr.trainerf.2bpp gfx/trainers/jr.trainerf.png
 tools/pkmncompress gfx/trainers/jr.trainerf.2bpp gfx/trainers/jr.trainerf.pic
 rgbgfx  -o gfx/trainers/pokemaniac.2bpp gfx/trainers/pokemaniac.png
 tools/pkmncompress gfx/trainers/pokemaniac.2bpp gfx/trainers/pokemaniac.pic
- 
 rgbgfx  -o gfx/trainers/supernerd.2bpp gfx/trainers/supernerd.png
 tools/pkmncompress gfx/trainers/supernerd.2bpp gfx/trainers/supernerd.pic
 rgbgfx  -o gfx/trainers/hiker.2bpp gfx/trainers/hiker.png
 tools/pkmncompress gfx/trainers/hiker.2bpp gfx/trainers/hiker.pic
 rgbgfx  -o gfx/trainers/biker.2bpp gfx/trainers/biker.png
 tools/pkmncompress gfx/trainers/biker.2bpp gfx/trainers/biker.pic
+ 
 rgbgfx  -o gfx/trainers/burglar.2bpp gfx/trainers/burglar.png
 tools/pkmncompress gfx/trainers/burglar.2bpp gfx/trainers/burglar.pic
 rgbgfx  -o gfx/trainers/engineer.2bpp gfx/trainers/engineer.png
 tools/pkmncompress gfx/trainers/engineer.2bpp gfx/trainers/engineer.pic
 rgbgfx  -o gfx/trainers/fisher.2bpp gfx/trainers/fisher.png
 tools/pkmncompress gfx/trainers/fisher.2bpp gfx/trainers/fisher.pic
- 
 rgbgfx  -o gfx/trainers/swimmer.2bpp gfx/trainers/swimmer.png
 tools/pkmncompress gfx/trainers/swimmer.2bpp gfx/trainers/swimmer.pic
 rgbgfx  -o gfx/trainers/cueball.2bpp gfx/trainers/cueball.png
 tools/pkmncompress gfx/trainers/cueball.2bpp gfx/trainers/cueball.pic
 rgbgfx  -o gfx/trainers/gambler.2bpp gfx/trainers/gambler.png
 tools/pkmncompress gfx/trainers/gambler.2bpp gfx/trainers/gambler.pic
+ 
 rgbgfx  -o gfx/trainers/beauty.2bpp gfx/trainers/beauty.png
 tools/pkmncompress gfx/trainers/beauty.2bpp gfx/trainers/beauty.pic
 rgbgfx  -o gfx/trainers/psychic.2bpp gfx/trainers/psychic.png
@@ -788,13 +784,13 @@ tools/pkmncompress gfx/trainers/psychic.2bpp gfx/trainers/psychic.pic
 rgbgfx  -o gfx/trainers/rocker.2bpp gfx/trainers/rocker.png
 tools/pkmncompress gfx/trainers/rocker.2bpp gfx/trainers/rocker.pic
 rgbgfx  -o gfx/trainers/juggler.2bpp gfx/trainers/juggler.png
- 
 tools/pkmncompress gfx/trainers/juggler.2bpp gfx/trainers/juggler.pic
 rgbgfx  -o gfx/trainers/tamer.2bpp gfx/trainers/tamer.png
 tools/pkmncompress gfx/trainers/tamer.2bpp gfx/trainers/tamer.pic
 rgbgfx  -o gfx/trainers/birdkeeper.2bpp gfx/trainers/birdkeeper.png
 tools/pkmncompress gfx/trainers/birdkeeper.2bpp gfx/trainers/birdkeeper.pic
 rgbgfx  -o gfx/trainers/blackbelt.2bpp gfx/trainers/blackbelt.png
+ 
 tools/pkmncompress gfx/trainers/blackbelt.2bpp gfx/trainers/blackbelt.pic
 rgbgfx  -o gfx/trainers/rival1.2bpp gfx/trainers/rival1.png
 tools/pkmncompress gfx/trainers/rival1.2bpp gfx/trainers/rival1.pic
@@ -802,7 +798,6 @@ rgbgfx  -o gfx/trainers/prof.oak.2bpp gfx/trainers/prof.oak.png
 tools/pkmncompress gfx/trainers/prof.oak.2bpp gfx/trainers/prof.oak.pic
 rgbgfx  -o gfx/trainers/scientist.2bpp gfx/trainers/scientist.png
 tools/pkmncompress gfx/trainers/scientist.2bpp gfx/trainers/scientist.pic
- 
 rgbgfx  -o gfx/trainers/giovanni.2bpp gfx/trainers/giovanni.png
 tools/pkmncompress gfx/trainers/giovanni.2bpp gfx/trainers/giovanni.pic
 rgbgfx  -o gfx/trainers/rocket.2bpp gfx/trainers/rocket.png
@@ -824,9 +819,9 @@ tools/pkmncompress gfx/trainers/erika.2bpp gfx/trainers/erika.pic
 rgbgfx  -o gfx/trainers/koga.2bpp gfx/trainers/koga.png
 tools/pkmncompress gfx/trainers/koga.2bpp gfx/trainers/koga.pic
 rgbgfx  -o gfx/trainers/blaine.2bpp gfx/trainers/blaine.png
- 
 tools/pkmncompress gfx/trainers/blaine.2bpp gfx/trainers/blaine.pic
 rgbgfx  -o gfx/trainers/sabrina.2bpp gfx/trainers/sabrina.png
+ 
 tools/pkmncompress gfx/trainers/sabrina.2bpp gfx/trainers/sabrina.pic
 rgbgfx  -o gfx/trainers/gentleman.2bpp gfx/trainers/gentleman.png
 tools/pkmncompress gfx/trainers/gentleman.2bpp gfx/trainers/gentleman.pic
@@ -838,7 +833,6 @@ rgbgfx  -o gfx/trainers/lorelei.2bpp gfx/trainers/lorelei.png
 tools/pkmncompress gfx/trainers/lorelei.2bpp gfx/trainers/lorelei.pic
 rgbgfx  -o gfx/trainers/channeler.2bpp gfx/trainers/channeler.png
 tools/pkmncompress gfx/trainers/channeler.2bpp gfx/trainers/channeler.pic
- 
 rgbgfx  -o gfx/trainers/agatha.2bpp gfx/trainers/agatha.png
 tools/pkmncompress gfx/trainers/agatha.2bpp gfx/trainers/agatha.pic
 rgbgfx  -o gfx/trainers/lance.2bpp gfx/trainers/lance.png
@@ -851,8 +845,8 @@ rgbgfx  -o gfx/sprites/swimmer.2bpp gfx/sprites/swimmer.png
 rgbgfx  -o gfx/sprites/safari_zone_worker.2bpp gfx/sprites/safari_zone_worker.png
 rgbgfx  -o gfx/sprites/gym_guide.2bpp gfx/sprites/gym_guide.png
 rgbgfx  -o gfx/sprites/gramps.2bpp gfx/sprites/gramps.png
- 
 rgbgfx  -o gfx/sprites/clerk.2bpp gfx/sprites/clerk.png
+ 
 rgbgfx  -o gfx/sprites/fishing_guru.2bpp gfx/sprites/fishing_guru.png
 rgbgfx  -o gfx/sprites/granny.2bpp gfx/sprites/granny.png
 rgbgfx  -o gfx/sprites/nurse.2bpp gfx/sprites/nurse.png
@@ -876,8 +870,8 @@ rgbgfx  -o gfx/sprites/old_amber.2bpp gfx/sprites/old_amber.png
 rgbgfx  -o gfx/sprites/gambler_asleep.2bpp gfx/sprites/gambler_asleep.png
 rgbgfx  -o gfx/sprites/red_bike.2bpp gfx/sprites/red_bike.png
 rgbgfx  -o gfx/sprites/red.2bpp gfx/sprites/red.png
-rgbgfx  -o gfx/sprites/blue.2bpp gfx/sprites/blue.png
  
+rgbgfx  -o gfx/sprites/blue.2bpp gfx/sprites/blue.png
 rgbgfx  -o gfx/sprites/oak.2bpp gfx/sprites/oak.png
 rgbgfx  -o gfx/sprites/youngster.2bpp gfx/sprites/youngster.png
 rgbgfx  -o gfx/sprites/monster.2bpp gfx/sprites/monster.png
@@ -894,10 +888,10 @@ rgbgfx  -o gfx/sprites/beauty.2bpp gfx/sprites/beauty.png
 rgbgfx  -o gfx/sprites/gentleman.2bpp gfx/sprites/gentleman.png
 rgbgfx  -o gfx/sprites/daisy.2bpp gfx/sprites/daisy.png
 rgbgfx  -o gfx/sprites/biker.2bpp gfx/sprites/biker.png
+ 
 rgbgfx  -o gfx/sprites/sailor.2bpp gfx/sprites/sailor.png
 rgbgfx  -o gfx/sprites/cook.2bpp gfx/sprites/cook.png
 rgbgfx  -o gfx/sprites/bike_shop_clerk.2bpp gfx/sprites/bike_shop_clerk.png
- 
 rgbgfx  -o gfx/sprites/mr_fuji.2bpp gfx/sprites/mr_fuji.png
 rgbgfx  -o gfx/sprites/giovanni.2bpp gfx/sprites/giovanni.png
 rgbgfx  -o gfx/sprites/rocket.2bpp gfx/sprites/rocket.png
@@ -906,26 +900,27 @@ rgbgfx  -o gfx/sprites/waiter.2bpp gfx/sprites/waiter.png
 rgbgfx  -o gfx/sprites/erika.2bpp gfx/sprites/erika.png
 rgbgfx  -o gfx/sprites/middle_aged_woman.2bpp gfx/sprites/middle_aged_woman.png
 rgbgfx  -o gfx/sprites/brunette_girl.2bpp gfx/sprites/brunette_girl.png
+ 
 rgbgfx  -o gfx/sprites/lance.2bpp gfx/sprites/lance.png
 rgbgfx  -o gfx/sprites/mom.2bpp gfx/sprites/mom.png
 rgbgfx  -o gfx/sprites/balding_guy.2bpp gfx/sprites/balding_guy.png
 rgbgfx  -o gfx/sprites/little_boy.2bpp gfx/sprites/little_boy.png
- 
 rgbgfx  -o gfx/sprites/gameboy_kid.2bpp gfx/sprites/gameboy_kid.png
 rgbgfx  -o gfx/sprites/fairy.2bpp gfx/sprites/fairy.png
 rgbgfx  -o gfx/sprites/agatha.2bpp gfx/sprites/agatha.png
 rgbgfx  -o gfx/sprites/bruno.2bpp gfx/sprites/bruno.png
 rgbgfx  -o gfx/sprites/lorelei.2bpp gfx/sprites/lorelei.png
 rgbgfx  -o gfx/sprites/seel.2bpp gfx/sprites/seel.png
+ 
 rgbasm -h -L -Weverything -Wnumeric-string=2 -Wtruncation=1 -D _RED -o gfx/sprites_red.o gfx/sprites.asm
 rgbgfx  -o gfx/tilesets/overworld.2bpp gfx/tilesets/overworld.png
 tools/gfx --trim-whitespace -o gfx/tilesets/overworld.2bpp gfx/tilesets/overworld.2bpp
- 
 rgbgfx  -o gfx/tilesets/reds_house.2bpp gfx/tilesets/reds_house.png
 tools/gfx --trim-whitespace --preserve=0x48 -o gfx/tilesets/reds_house.2bpp gfx/tilesets/reds_house.2bpp
 rgbgfx  -o gfx/tilesets/house.2bpp gfx/tilesets/house.png
 tools/gfx --trim-whitespace -o gfx/tilesets/house.2bpp gfx/tilesets/house.2bpp
 rgbgfx  -o gfx/tilesets/mansion.2bpp gfx/tilesets/mansion.png
+ 
 tools/gfx --trim-whitespace -o gfx/tilesets/mansion.2bpp gfx/tilesets/mansion.2bpp
 rgbgfx  -o gfx/tilesets/ship_port.2bpp gfx/tilesets/ship_port.png
 tools/gfx --trim-whitespace -o gfx/tilesets/ship_port.2bpp gfx/tilesets/ship_port.2bpp
@@ -938,8 +933,8 @@ tools/gfx --trim-whitespace -o gfx/tilesets/gym.2bpp gfx/tilesets/gym.2bpp
 rgbgfx  -o gfx/tilesets/pokecenter.2bpp gfx/tilesets/pokecenter.png
 tools/gfx --trim-whitespace -o gfx/tilesets/pokecenter.2bpp gfx/tilesets/pokecenter.2bpp
 rgbgfx  -o gfx/tilesets/gate.2bpp gfx/tilesets/gate.png
- 
 tools/gfx --trim-whitespace -o gfx/tilesets/gate.2bpp gfx/tilesets/gate.2bpp
+ 
 rgbgfx  -o gfx/tilesets/forest.2bpp gfx/tilesets/forest.png
 tools/gfx --trim-whitespace -o gfx/tilesets/forest.2bpp gfx/tilesets/forest.2bpp
 rgbgfx  -o gfx/tilesets/facility.2bpp gfx/tilesets/facility.png
@@ -953,13 +948,13 @@ tools/gfx --trim-whitespace -o gfx/tilesets/lobby.2bpp gfx/tilesets/lobby.2bpp
 rgbgfx  -o gfx/tilesets/ship.2bpp gfx/tilesets/ship.png
 tools/gfx --trim-whitespace -o gfx/tilesets/ship.2bpp gfx/tilesets/ship.2bpp
 rgbgfx  -o gfx/tilesets/lab.2bpp gfx/tilesets/lab.png
+ 
 tools/gfx --trim-whitespace -o gfx/tilesets/lab.2bpp gfx/tilesets/lab.2bpp
 rgbgfx  -o gfx/tilesets/club.2bpp gfx/tilesets/club.png
 tools/gfx --trim-whitespace -o gfx/tilesets/club.2bpp gfx/tilesets/club.2bpp
 rgbgfx  -o gfx/tilesets/underground.2bpp gfx/tilesets/underground.png
 tools/gfx --trim-whitespace -o gfx/tilesets/underground.2bpp gfx/tilesets/underground.2bpp
 rgbasm -h -L -Weverything -Wnumeric-string=2 -Wtruncation=1 -D _RED -o gfx/tilesets_red.o gfx/tilesets.asm
- 
 rgblink -p 0x00 -d -m pokered.map -n pokered.sym -l layout.link -o pokered.gbc audio_red.o home_red.o main_red.o maps_red.o text_red.o wram_red.o gfx/pics_red.o gfx/sprites_red.o gfx/tilesets_red.o
 rgbfix -p 0x00 -jsv -n 0 -k 01 -l 0x33 -m 0x13 -r 03 -t "POKEMON RED" pokered.gbc
  
@@ -976,8 +971,8 @@ rgbasm -h -L -Weverything -Wnumeric-string=2 -Wtruncation=1 -D _BLUE -o text_blu
 rgbasm -h -L -Weverything -Wnumeric-string=2 -Wtruncation=1 -D _BLUE -o wram_blue.o wram.asm
  
 rgbasm -h -L -Weverything -Wnumeric-string=2 -Wtruncation=1 -D _BLUE -o gfx/pics_blue.o gfx/pics.asm
-rgbasm -h -L -Weverything -Wnumeric-string=2 -Wtruncation=1 -D _BLUE -o gfx/sprites_blue.o gfx/sprites.asm
  
+rgbasm -h -L -Weverything -Wnumeric-string=2 -Wtruncation=1 -D _BLUE -o gfx/sprites_blue.o gfx/sprites.asm
 rgbasm -h -L -Weverything -Wnumeric-string=2 -Wtruncation=1 -D _BLUE -o gfx/tilesets_blue.o gfx/tilesets.asm
 rgblink -p 0x00 -d -m pokeblue.map -n pokeblue.sym -l layout.link -o pokeblue.gbc audio_blue.o home_blue.o main_blue.o maps_blue.o text_blue.o wram_blue.o gfx/pics_blue.o gfx/sprites_blue.o gfx/tilesets_blue.o
 rgbfix -p 0x00 -jsv -n 0 -k 01 -l 0x33 -m 0x13 -r 03 -t "POKEMON BLUE" pokeblue.gbc
@@ -995,8 +990,8 @@ rgbasm -h -L -Weverything -Wnumeric-string=2 -Wtruncation=1 -D _BLUE -D _DEBUG -
 rgbasm -h -L -Weverything -Wnumeric-string=2 -Wtruncation=1 -D _BLUE -D _DEBUG -o wram_blue_debug.o wram.asm
  
 rgbasm -h -L -Weverything -Wnumeric-string=2 -Wtruncation=1 -D _BLUE -D _DEBUG -o gfx/pics_blue_debug.o gfx/pics.asm
-rgbasm -h -L -Weverything -Wnumeric-string=2 -Wtruncation=1 -D _BLUE -D _DEBUG -o gfx/sprites_blue_debug.o gfx/sprites.asm
  
+rgbasm -h -L -Weverything -Wnumeric-string=2 -Wtruncation=1 -D _BLUE -D _DEBUG -o gfx/sprites_blue_debug.o gfx/sprites.asm
 rgbasm -h -L -Weverything -Wnumeric-string=2 -Wtruncation=1 -D _BLUE -D _DEBUG -o gfx/tilesets_blue_debug.o gfx/tilesets.asm
 rgblink -p 0xff -d -m pokeblue_debug.map -n pokeblue_debug.sym -l layout.link -o pokeblue_debug.gbc audio_blue_debug.o home_blue_debug.o main_blue_debug.o maps_blue_debug.o text_blue_debug.o wram_blue_debug.o gfx/pics_blue_debug.o gfx/sprites_blue_debug.o gfx/tilesets_blue_debug.o
 rgbfix -p 0xff -jsv -n 0 -k 01 -l 0x33 -m 0x13 -r 03 -t "POKEMON BLUE" pokeblue_debug.gbc

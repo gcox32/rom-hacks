@@ -193,10 +193,11 @@ OaksLabScript7:
 OaksLabScript8:
 	ld a, [wPlayerStarter]
 	cp STARTER1
-	jr z, .Charmander
-	cp STARTER2
 	jr z, .Squirtle
-	jr .Bulbasaur
+	cp STARTER2
+	jr z, .Bulbasaur
+	jr .Charmander
+	
 .Charmander
 	ld de, .MiddleBallMovement1
 	ld a, [wYCoord]
@@ -305,15 +306,18 @@ OaksLabScript9:
 	ld a, [wRivalStarterBallSpriteIndex]
 	cp $2
 	jr nz, .rivalDidNotChoseBall1
-	ld a, HS_STARTER_BALL_1
+	ld a, HS_STARTER_BALL_2
 	jr .hideBallAndContinue
+
 .rivalDidNotChoseBall1
 	cp $3
 	jr nz, .rivalChoseBall3
-	ld a, HS_STARTER_BALL_2
-	jr .hideBallAndContinue
-.rivalChoseBall3
 	ld a, HS_STARTER_BALL_3
+	jr .hideBallAndContinue
+
+.rivalChoseBall3
+	ld a, HS_STARTER_BALL_1
+	
 .hideBallAndContinue
 	ld [wMissableObjectIndex], a
 	predef HideObject
@@ -386,15 +390,15 @@ OaksLabScript11:
 	ld a, [wRivalStarter]
 	cp STARTER2
 	jr nz, .NotSquirtle
-	ld a, $1
+	ld a, $3
 	jr .done
 .NotSquirtle
 	cp STARTER3
 	jr nz, .Charmander
-	ld a, $2
+	ld a, $1
 	jr .done
 .Charmander
-	ld a, $3
+	ld a, $2
 .done
 	ld [wTrainerNo], a
 	ld a, $1
@@ -792,9 +796,9 @@ OaksLabText41:
 	text_far _OaksLabText41
 	text_end
 
-OaksLabText2:
+OaksLabText2: ; JUMP HERE FOR NEW LOGIC
 	text_asm
-	ld a, STARTER2
+	ld a, STARTER3
 	ld [wRivalStarterTemp], a
 	ld a, $3
 	ld [wRivalStarterBallSpriteIndex], a
@@ -804,7 +808,7 @@ OaksLabText2:
 
 OaksLabText3:
 	text_asm
-	ld a, STARTER3
+	ld a, STARTER1
 	ld [wRivalStarterTemp], a
 	ld a, $4
 	ld [wRivalStarterBallSpriteIndex], a
@@ -814,7 +818,7 @@ OaksLabText3:
 
 OaksLabText4:
 	text_asm
-	ld a, STARTER1
+	ld a, STARTER2
 	ld [wRivalStarterTemp], a
 	ld a, $2
 	ld [wRivalStarterBallSpriteIndex], a
