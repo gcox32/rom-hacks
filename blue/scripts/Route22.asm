@@ -223,11 +223,11 @@ Route22Script3:
 	ret nz
 	xor a
 	ld [wJoyIgnore], a
-	ld a, HS_ROUTE_22_RIVAL_1
-	ld [wMissableObjectIndex], a
-	predef HideObject
+	ld a, HS_ROUTE_22_RIVAL_1 ;
+	ld [wMissableObjectIndex], a ;
+	predef HideObject ;
 	call PlayDefaultMusic
-	ResetEvents EVENT_1ST_ROUTE22_RIVAL_BATTLE, EVENT_ROUTE22_RIVAL_WANTS_BATTLE
+	ResetEvents EVENT_ROUTE22_RIVAL_WANTS_BATTLE
 	ld a, $0
 	ld [wRoute22CurScript], a
 	ret

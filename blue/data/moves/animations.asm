@@ -889,9 +889,8 @@ RollTackleAnim: ; BideAnim
 	battle_anim NO_MOVE, SUBANIM_43, 0, 6
 	battle_anim NO_MOVE, SE_DARK_SCREEN_FLASH
 	battle_anim NO_MOVE, SE_RESET_SCREEN_PALETTE
-	battle_anim QUICK_ATTACK, SE_SLIDE_MON_OFF
-	battle_anim NO_MOVE, SUBANIM_04, 1, 6
-	battle_anim NO_MOVE, SE_SHOW_MON_PIC
+	battle_anim LEECH_SEED, SE_MOVE_MON_HORIZONTALLY
+	battle_anim NO_MOVE, SE_RESET_MON_POSITION
 	db -1 ; end
 
 MetronomeAnim:

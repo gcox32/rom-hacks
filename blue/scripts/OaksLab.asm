@@ -636,12 +636,12 @@ OaksLabScript17:
 	ld a, HS_OAKS_LAB_RIVAL
 	ld [wMissableObjectIndex], a
 	predef HideObject
-	SetEvent EVENT_1ST_ROUTE22_RIVAL_BATTLE
+	; SetEvent EVENT_1ST_ROUTE22_RIVAL_BATTLE ; instead set upon talking to victory road guard
 	ResetEventReuseHL EVENT_2ND_ROUTE22_RIVAL_BATTLE
-	SetEventReuseHL EVENT_ROUTE22_RIVAL_WANTS_BATTLE
-	ld a, HS_ROUTE_22_RIVAL_1
-	ld [wMissableObjectIndex], a
-	predef ShowObject
+	; SetEventReuseHL EVENT_ROUTE22_RIVAL_WANTS_BATTLE
+	; ld a, HS_ROUTE_22_RIVAL_1
+	; ld [wMissableObjectIndex], a
+	; predef ShowObject
 	ld a, $5
 	ld [wPalletTownCurScript], a
 	xor a

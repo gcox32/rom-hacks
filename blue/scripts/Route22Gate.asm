@@ -78,6 +78,18 @@ Route22GateText_1e704:
 	text_far _Route22GateText_1e704
 	text_asm
 	ld a, SFX_DENIED
+	CheckEvent EVENT_BEAT_ROUTE22_RIVAL_1ST_BATTLE
+	jr nz, .dont_reset_rival_battle
+	SetEvent EVENT_1ST_ROUTE22_RIVAL_BATTLE ; insert Rival2 event set here, starting here
+	SetEventReuseHL EVENT_ROUTE22_RIVAL_WANTS_BATTLE
+	ld a, HS_ROUTE_22_RIVAL_1
+	ld [wMissableObjectIndex], a
+	predef ShowObject ; through here
+	call PlaySoundWaitForCurrent
+	call WaitForSoundToFinish
+	ld hl, Route22GateText_1e715
+	ret
+.dont_reset_rival_battle
 	call PlaySoundWaitForCurrent
 	call WaitForSoundToFinish
 	ld hl, Route22GateText_1e715
