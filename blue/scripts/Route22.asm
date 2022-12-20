@@ -75,8 +75,8 @@ Route22Script0:
 	ret
 
 .Route22RivalBattleCoords
-	dbmapcoord 29,  4
-	dbmapcoord 29,  5
+	dbmapcoord 25,  4
+	dbmapcoord 25,  5
 	db -1 ; end
 
 .firstRivalBattle
@@ -196,12 +196,16 @@ Route22MoveRival1:
 
 Route22RivalExitMovementData1:
 	db NPC_MOVEMENT_RIGHT
+	db NPC_MOVEMENT_RIGHT ; UPDATE 4 more steps right to accommodate new position
 	db NPC_MOVEMENT_RIGHT
-	db NPC_MOVEMENT_DOWN
-	db NPC_MOVEMENT_DOWN
-	db NPC_MOVEMENT_DOWN
-	db NPC_MOVEMENT_DOWN
-	db NPC_MOVEMENT_DOWN
+	db NPC_MOVEMENT_RIGHT
+	db NPC_MOVEMENT_RIGHT
+	db NPC_MOVEMENT_RIGHT
+	; db NPC_MOVEMENT_DOWN
+	; db NPC_MOVEMENT_DOWN
+	; db NPC_MOVEMENT_DOWN
+	; db NPC_MOVEMENT_DOWN
+	; db NPC_MOVEMENT_DOWN
 	db -1 ; end
 
 Route22RivalExitMovementData2:
@@ -209,12 +213,16 @@ Route22RivalExitMovementData2:
 	db NPC_MOVEMENT_RIGHT
 	db NPC_MOVEMENT_RIGHT
 	db NPC_MOVEMENT_RIGHT
-	db NPC_MOVEMENT_DOWN
-	db NPC_MOVEMENT_DOWN
-	db NPC_MOVEMENT_DOWN
-	db NPC_MOVEMENT_DOWN
-	db NPC_MOVEMENT_DOWN
-	db NPC_MOVEMENT_DOWN
+	db NPC_MOVEMENT_RIGHT
+	db NPC_MOVEMENT_RIGHT
+	db NPC_MOVEMENT_RIGHT
+	db NPC_MOVEMENT_RIGHT
+	; db NPC_MOVEMENT_DOWN ; UPDATE movement to accomodate new position
+	; db NPC_MOVEMENT_DOWN
+	; db NPC_MOVEMENT_DOWN
+	; db NPC_MOVEMENT_DOWN
+	; db NPC_MOVEMENT_DOWN
+	; db NPC_MOVEMENT_DOWN
 	db -1 ; end
 
 Route22Script3:
