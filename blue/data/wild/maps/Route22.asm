@@ -14,14 +14,14 @@ IF DEF(_RED)
 ENDC
 IF DEF(_BLUE)
 	db  3, NIDORAN_F
-	db  4, RATTATA
+	db  3, RATTATA
 	db  4, NIDORAN_F
-	db  2, RATTATA
-	db  2, NIDORAN_F
-	db  3, SPEAROW
-	db  5, SPEAROW
-	db  3, NIDORAN_M
+	db  4, RATTATA
 	db  4, NIDORAN_M
+	db  3, MANKEY
+	db  5, SPEAROW
+	db  5, NIDORAN_F
+	db  5, NIDORAN_M
 ENDC
 	end_grass_wildmons
 

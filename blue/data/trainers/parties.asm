@@ -488,7 +488,7 @@ Rival1Data: ; First battle has incongruent order because of the manipulations in
 	db 5, SQUIRTLE, 0
 ; Route 22
 	db $FF, 9, PIDGEOTTO, 5, CATERPIE, 10, SQUIRTLE, 0
-	db $FF, 9, PIDGEOTTO, 5, CATERPIE, 10, BULBASAUR, 0 ; UPDATE
+	db $FF, 9, PIDGEOTTO, 5, CATERPIE, 10, BULBASAUR, 0
 	db $FF, 9, PIDGEOTTO, 5, CATERPIE, 10, CHARMANDER, 0
 ; Cerulean City
 	db $FF, 21, PIDGEOTTO, 18, BUTTERFREE, 18, PIKACHU, 20, WARTORTLE, 0

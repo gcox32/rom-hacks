@@ -97,7 +97,7 @@ Route22Script0:
 	call PlayMusic
 	ld a, $1
 	ldh [hSpriteIndex], a
-	call Route22MoveRivalSprite
+	; call Route22MoveRivalSprite ; UPDATE don't move rival
 	ld a, $1
 	ld [wRoute22CurScript], a
 	ret
@@ -251,7 +251,7 @@ Route22Script_5104e:
 	farcall Music_RivalAlternateTempo
 	ld a, $2
 	ldh [hSpriteIndex], a
-	call Route22MoveRivalSprite
+	; call Route22MoveRivalSprite ; UPDATE don't move rival
 	ld a, $4
 	ld [wRoute22CurScript], a
 	ret

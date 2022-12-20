@@ -103,6 +103,7 @@ BillsHouseScript4:
 	ld [wJoyIgnore], a
 	SetEvent EVENT_MET_BILL_2 ; this event seems redundant
 	SetEvent EVENT_MET_BILL
+	predef HealParty ; UPDATE (so we can fight the rival with a healthy team)
 	ld a, $0
 	ld [wBillsHouseCurScript], a
 	ret
