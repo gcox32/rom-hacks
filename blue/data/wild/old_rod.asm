@@ -1,5 +1,5 @@
 ; random choice of 2 good rod encounters
-GoodRodMons:
+OldRodMons:
 	; level, species
+	db 10, MAGIKARP
 	db 10, GOLDEEN
-	db 10, POLIWAG
