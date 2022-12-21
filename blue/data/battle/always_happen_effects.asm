@@ -9,5 +9,5 @@ AlwaysHappenSideEffects:
 	db ATTACK_TWICE_EFFECT
 	db RECOIL_EFFECT
 	db TWINEEDLE_EFFECT
-	db RAGE_EFFECT
+	db ATTACK_UP_SIDE_EFFECT ; ADDED:
 	db -1 ; end

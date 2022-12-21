@@ -1654,7 +1654,11 @@ wSavedSpriteScreenX:: db
 wSavedSpriteMapY:: db
 wSavedSpriteMapX:: db
 
-	ds 5
+	ds 3 ; unused 3 bytes
+
+wWhatStat:: db ; contains the stat currently being modified by a stat changing move
+; bit 0 = set to 1 when we should mark a move as seen in the movedex flags on showing its animation, 0 otherwise
+; bit 1-7 = unused
 
 wWhichPrize:: db
 

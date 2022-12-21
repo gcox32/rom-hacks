@@ -30,7 +30,7 @@
 	const EVASION_DOWN1_EFFECT       ; $17
 	const CONVERSION_EFFECT          ; $18
 	const HAZE_EFFECT                ; $19
-	const BIDE_EFFECT         ; $1A ; BIDE_EFFECT
+	const BIDE_EFFECT                ; $1A ; BIDE_EFFECT
 	const THRASH_PETAL_DANCE_EFFECT  ; $1B
 	const SWITCH_AND_TELEPORT_EFFECT ; $1C
 	const TWO_TO_FIVE_ATTACKS_EFFECT ; $1D
@@ -39,7 +39,7 @@
 	const SLEEP_EFFECT               ; $20
 	const POISON_SIDE_EFFECT2        ; $21
 	const BURN_SIDE_EFFECT2          ; $22
-	const_skip                       ; $23
+	const SPEED_UP_SIDE_EFFECT       ; $23 ; ADDED: new effect
 	const PARALYZE_SIDE_EFFECT2      ; $24
 	const FLINCH_SIDE_EFFECT2        ; $25
 	const OHKO_EFFECT                ; $26 moves like Horn Drill
@@ -76,13 +76,13 @@
 	const DEFENSE_DOWN_SIDE_EFFECT   ; $45
 	const SPEED_DOWN_SIDE_EFFECT     ; $46
 	const SPECIAL_DOWN_SIDE_EFFECT   ; $47
-	const_skip                       ; $48
-	const_skip                       ; $49
-	const_skip                       ; $4A
+	const ATTACK_UP_SIDE_EFFECT      ; $48 ; ADDED
+	const ATTACK_ACCURACY_UP1_EFFECT ; $49 ; ADDED
+	const ATTACK_DEFENSE_UP1_EFFECT  ; $4A ; ADDED
 	const_skip                       ; $4B
 	const CONFUSION_SIDE_EFFECT      ; $4C
 	const TWINEEDLE_EFFECT           ; $4D
-	const_skip                       ; $4E
+	const ATTACK_SPECIAL_SPEED_UP1   ; $4E ; PureRGBnote: ADDED: new effect, used in meditate
 	const SUBSTITUTE_EFFECT          ; $4F
 	const HYPER_BEAM_EFFECT          ; $50
 	const RAGE_EFFECT                ; $51

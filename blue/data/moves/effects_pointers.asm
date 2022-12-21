@@ -72,13 +72,13 @@ MoveEffectPointerTable:
 	dw StatModifierDownEffect    ; DEFENSE_DOWN_SIDE_EFFECT
 	dw StatModifierDownEffect    ; SPEED_DOWN_SIDE_EFFECT
 	dw StatModifierDownEffect    ; SPECIAL_DOWN_SIDE_EFFECT
-	dw StatModifierDownEffect    ; unused effect
-	dw StatModifierDownEffect    ; unused effect
-	dw StatModifierDownEffect    ; unused effect
+	dw StatModifierUpEffect      ; ATTACK_UP_SIDE_EFFECT
+	dw AccuracyAttackUpEffect    ; ATTACK_ACCURACY_UP1_EFFECT
+	dw AttackDefenseUpEffect     ; ATTACK_DEFENSE_UP1_EFFECT
 	dw StatModifierDownEffect    ; unused effect
 	dw ConfusionSideEffect       ; CONFUSION_SIDE_EFFECT
 	dw TwoToFiveAttacksEffect    ; TWINEEDLE_EFFECT
-	dw NULL                      ; unused effect
+	dw AttackSpecialSpeedUpEffect; ATTACK_SPECIAL_SPEED_UP1
 	dw SubstituteEffect          ; SUBSTITUTE_EFFECT
 	dw HyperBeamEffect           ; HYPER_BEAM_EFFECT
 	dw RageEffect                ; RAGE_EFFECT

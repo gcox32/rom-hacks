@@ -348,6 +348,83 @@ FireDefrostedText:
 	text_far _FireDefrostedText
 	text_end
 
+; PureRGBnote: ADDED: increases attack, special, and speed as a move effect. Used with Meditate.
+AttackSpecialSpeedUpEffect:
+	;values for the enemy's turn
+	ld de, wPlayerMoveEffect
+	ldh a, [hWhoseTurn]
+	and a
+	jr z, .next
+	; values for the player's turn
+	ld de, wEnemyMoveEffect
+.next
+	ld a, SPECIAL_UP1_EFFECT
+	ld [de], a
+	push de
+	call StatModifierUpEffect ; stat modifier raising function
+	pop de
+	ld a, ATTACK_UP_SIDE_EFFECT
+	ld [de], a ; we do the side effect for the second+third stat because it won't run the animation
+	push de
+	call StatModifierUpEffect ; stat modifier raising function
+	pop de
+	ld a, SPEED_UP_SIDE_EFFECT
+	ld [de], a 
+	push de
+	call StatModifierUpEffect ; stat modifier raising function
+	pop de
+	ld a, ATTACK_SPECIAL_SPEED_UP1
+	ld [de], a
+	ret
+
+; PureRGBnote: ADDED: increases both attack and defense as a move effect, used with bide
+AttackDefenseUpEffect:
+	;values for the enemy's turn
+	ld de, wPlayerMoveEffect
+	ldh a, [hWhoseTurn]
+	and a
+	jr z, .next
+	; values for the player's turn
+	ld de, wEnemyMoveEffect
+.next
+	ld a, DEFENSE_UP1_EFFECT
+	ld [de], a
+	push de
+	call StatModifierUpEffect ; stat modifier raising function
+	pop de
+	ld a, ATTACK_UP_SIDE_EFFECT
+	ld [de], a ; we do the side effect for the second stat because it won't run the animation
+	push de
+	call StatModifierUpEffect ; stat modifier raising function
+	pop de
+	ld a, ATTACK_DEFENSE_UP1_EFFECT
+	ld [de], a
+	ret
+
+; PureRGBnote: ADDED: increases both accuracy and attack as a move effect, used with sharpen
+AccuracyAttackUpEffect:
+	;values for the enemy's turn
+	ld de, wPlayerMoveEffect
+	ldh a, [hWhoseTurn]
+	and a
+	jr z, .next
+	; values for the player's turn
+	ld de, wEnemyMoveEffect
+.next
+	ld a, ACCURACY_UP1_EFFECT
+	ld [de], a
+	push de
+	call StatModifierUpEffect ; stat modifier raising function
+	pop de
+	ld a, ATTACK_UP_SIDE_EFFECT
+	ld [de], a ; we do the side effect for the second stat because it won't run the animation
+	push de
+	call StatModifierUpEffect ; stat modifier raising function
+	pop de
+	ld a, ATTACK_ACCURACY_UP1_EFFECT
+	ld [de], a
+	ret
+	
 StatModifierUpEffect:
 	ld hl, wPlayerMonStatMods
 	ld de, wPlayerMoveEffect
@@ -358,6 +435,20 @@ StatModifierUpEffect:
 	ld de, wEnemyMoveEffect
 .statModifierUpEffect
 	ld a, [de]
+;;;;;;;;;; PureRGBnote: ADDED: need to decide which stat is being modified here and store it so we can apply correct badge boosts if necessary
+	push af
+	call MapEffectToStat
+	ld [wWhatStat], a
+	pop af
+	call MapSideEffectToStatMod
+	cp $ff
+	jr z, .loadDefault
+	jr .continue 
+.loadDefault
+	ld a, [de]
+.continue
+	ld d, a
+;;;;;;;;;;
 	sub ATTACK_UP1_EFFECT
 	cp EVASION_UP1_EFFECT + $3 - ATTACK_UP1_EFFECT ; covers all +1 effects
 	jr c, .incrementStatMod
@@ -371,7 +462,9 @@ StatModifierUpEffect:
 	ld a, $d
 	cp b ; can't raise stat past +6 ($d or 13)
 	jp c, PrintNothingHappenedText
-	ld a, [de]
+;;;;;;;;;; PureRGBnote: ADDED: need to decide which stat is being modified here and store it so we can apply correct badge boosts if necessary
+	ld a, d ; remapped stat mod
+;;;;;;;;;;
 	cp ATTACK_UP1_EFFECT + $8 ; is it a +2 effect?
 	jr c, .ok
 	inc b ; if so, increment stat mod again
@@ -468,6 +561,19 @@ UpdateStatDone:
 	ld de, wEnemyMoveNum
 	ld bc, wEnemyMonMinimized
 .playerTurn
+	push de
+	ld de, wPlayerMoveEffect
+	ldh a, [hWhoseTurn]
+	and a
+	jr z, .playerTurn2
+	ld de, wEnemyMoveEffect
+.playerTurn2
+	ld a, [de]
+	pop de
+	cp ATTACK_UP_SIDE_EFFECT
+	jr z, .skipAnimation
+	cp SPEED_UP_SIDE_EFFECT
+	jr z, .skipAnimation
 	ld a, [de]
 	cp MINIMIZE
 	jr nz, .notMinimize
@@ -483,6 +589,17 @@ UpdateStatDone:
 	pop de
 .notMinimize
 	call PlayCurrentMoveAnimation
+	ld a, [de]
+	cp MINIMIZE
+	jr nz, .applyBadgeBoostsAndStatusPenalties
+	pop bc
+	ld a, $1
+	ld [bc], a
+	ld hl, ReshowSubstituteAnim
+	ld b, BANK(ReshowSubstituteAnim)
+	pop af
+	call nz, Bankswitch
+.skipAnimation
 	ld a, [de]
 	cp MINIMIZE
 	jr nz, .applyBadgeBoostsAndStatusPenalties
@@ -523,8 +640,15 @@ MonsStatsRoseText:
 	jr z, .playerTurn
 	ld a, [wEnemyMoveEffect]
 .playerTurn
+	cp ATTACK_UP_SIDE_EFFECT
+	jp z, .rose
+	cp SPEED_UP_SIDE_EFFECT
+	jp z, .rose
 	cp ATTACK_DOWN1_EFFECT
 	ret nc
+	ld hl, RoseText
+	ret
+.rose
 	ld hl, RoseText
 	ret
 
@@ -758,8 +882,8 @@ PrintStatText:
 	jp CopyData
 
 INCLUDE "data/battle/stat_mod_names.asm"
-
 INCLUDE "data/battle/stat_modifiers.asm"
+INCLUDE "data/battle/stat_mod_stat_mapping.asm" ; ADDED
 
 BideEffect:
 	ld hl, wPlayerBattleStatus1
