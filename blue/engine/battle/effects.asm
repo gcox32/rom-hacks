@@ -424,7 +424,7 @@ AccuracyAttackUpEffect:
 	ld a, ATTACK_ACCURACY_UP1_EFFECT
 	ld [de], a
 	ret
-	
+
 StatModifierUpEffect:
 	ld hl, wPlayerMonStatMods
 	ld de, wPlayerMoveEffect
@@ -1157,18 +1157,18 @@ ChargeMoveEffectText:
 	text_far _ChargeMoveEffectText
 	text_asm
 	ld a, [wChargeMoveNum]
-	cp RAZOR_WIND
-	ld hl, MadeWhirlwindText
-	jr z, .gotText
+	; cp RAZOR_WIND
+	; ld hl, MadeWhirlwindText
+	; jr z, .gotText
 	cp SOLARBEAM
 	ld hl, TookInSunlightText
 	jr z, .gotText
-	cp SKULL_BASH
-	ld hl, LoweredItsHeadText
-	jr z, .gotText
-	cp SKY_ATTACK
-	ld hl, SkyAttackGlowingText
-	jr z, .gotText
+	; cp SKULL_BASH
+	; ld hl, LoweredItsHeadText
+	; jr z, .gotText
+	; cp SKY_ATTACK
+	; ld hl, SkyAttackGlowingText
+	; jr z, .gotText
 	cp FLY
 	ld hl, FlewUpHighText
 	jr z, .gotText

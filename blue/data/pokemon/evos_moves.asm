@@ -277,6 +277,7 @@ NidokingEvosMoves:
 	db 8, HORN_ATTACK
 	db 12, DOUBLE_KICK
 	db 23, THRASH
+	db 30, HYPER_BEAM
 	db 0
 
 SlowbroEvosMoves:
@@ -384,6 +385,7 @@ NidoqueenEvosMoves:
 	db 8, SCRATCH
 	db 12, DOUBLE_KICK
 	db 23, BODY_SLAM
+	db 30, HYPER_BEAM
 	db 0
 
 CuboneEvosMoves:
@@ -398,7 +400,7 @@ CuboneEvosMoves:
 	db 31, FURY_SWIPES
 	db 38, THRASH
 	db 43, BONEMERANG
-	db 46, RAGE
+	db 46, SKULL_BASH
 	db 0
 
 RhyhornEvosMoves:
@@ -1765,7 +1767,7 @@ MarowakEvosMoves:
 	db 33, FURY_SWIPES
 	db 41, THRASH
 	db 48, BONEMERANG
-	db 55, RAGE
+	db 55, SKULL_BASH
 	db 0
 
 MissingNo92EvosMoves:
