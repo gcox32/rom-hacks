@@ -1341,6 +1341,7 @@ SandslashEvosMoves:
 	db 36, SWIFT
 	db 40, PIN_MISSILE
 	db 47, FURY_SWIPES
+	db 51, SPIKE_CANNON
 	db 55, FISSURE
 	db 0
 
