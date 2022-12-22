@@ -1,6 +1,6 @@
 	db DEX_DITTO ; pokedex id
 
-	db  75,  75,  75,  75,  75
+	db  75,  75,  75, 150,  75
 	;   hp  atk  def  spd  spc
 
 	db NORMAL, NORMAL ; type
