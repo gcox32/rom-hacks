@@ -1061,6 +1061,7 @@ JynxEvosMoves:
 	db 23, DOUBLESLAP
 	db 31, ICE_PUNCH
 	db 39, BODY_SLAM
+	db 42, LOVELY_KISS
 	db 47, THRASH
 	db 58, BLIZZARD
 	db 0
@@ -1069,7 +1070,7 @@ MoltresEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
-	db 51, LEER
+	db 51, FIRE_BLAST
 	db 55, AGILITY
 	db 60, SKY_ATTACK
 	db 0
@@ -1080,7 +1081,7 @@ ArticunoEvosMoves:
 ; Learnset
 	db 51, BLIZZARD
 	db 55, AGILITY
-	db 60, MIST
+	db 60, WHIRLWIND
 	db 0
 
 ZapdosEvosMoves:
@@ -1089,7 +1090,7 @@ ZapdosEvosMoves:
 ; Learnset
 	db 51, THUNDER
 	db 55, AGILITY
-	db 60, LIGHT_SCREEN
+	db 60, SPIKE_CANNON
 	db 0
 
 DittoEvosMoves:
@@ -1146,17 +1147,34 @@ VulpixEvosMoves:
 	db EV_ITEM, FIRE_STONE, 1, NINETALES
 	db 0
 ; Learnset
+	db 9, LICK
+	db 12, DISABLE
 	db 16, QUICK_ATTACK
-	db 21, ROAR
-	db 28, CONFUSE_RAY
+	db 21, NIGHT_SHADE
+	db 23, CONFUSE_RAY
+	db 28, AURORA_BEAM
 	db 35, FLAMETHROWER
-	db 42, FIRE_SPIN
+	db 44, AMNESIA
+	db 50, PSYCHIC_M
+	db 56, SWIFT
+	db 60, FIRE_SPIN
 	db 0
 
 NinetalesEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
+	db 9, LICK
+	db 12, DISABLE
+	db 16, QUICK_ATTACK
+	db 21, NIGHT_SHADE
+	db 23, CONFUSE_RAY
+	db 28, AURORA_BEAM
+	db 35, FLAMETHROWER
+	db 44, AMNESIA
+	db 50, PSYCHIC_M
+	db 56, SWIFT
+	db 60, FIRE_SPIN
 	db 0
 
 PikachuEvosMoves:
@@ -1179,7 +1197,10 @@ RaichuEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
-	db 0
+	db 26, THUNDERBOLT
+	db 33, AGILITY
+	db 41, THUNDER
+	db 50, LIGHT_SCREEN
 
 MissingNo56EvosMoves:
 ; Evolutions
@@ -1230,24 +1251,28 @@ KabutoEvosMoves:
 	db EV_LEVEL, 40, KABUTOPS
 	db 0
 ; Learnset
+	db 18, LEECH_LIFE
 	db 24, WATER_GUN
 	db 29, ROCK_THROW
 	db 34, MEGA_DRAIN
 	db 39, SLASH
 	db 44, ROCK_SLIDE
 	db 49, HYDRO_PUMP
+	db 53, TWINEEDLE
 	db 0
 
 KabutopsEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
+	db 18, LEECH_LIFE
 	db 24, WATER_GUN
 	db 29, ROCK_THROW
 	db 34, MEGA_DRAIN
 	db 39, SLASH
 	db 46, ROCK_SLIDE
 	db 53, HYDRO_PUMP
+	db 57, TWINEEDLE
 	db 0
 
 HorseaEvosMoves:
@@ -1255,22 +1280,28 @@ HorseaEvosMoves:
 	db EV_LEVEL, 32, SEADRA
 	db 0
 ; Learnset
-	db 19, SMOKESCREEN
-	db 24, LEER
-	db 30, WATER_GUN
-	db 37, AGILITY
-	db 45, HYDRO_PUMP
+	db 14, WATER_GUN
+	db 17, SMOKESCREEN
+	db 21, BUBBLEBEAM
+	db 26, AGILITY
+	db 35, WATERFALL
+	db 39, LOVELY_KISS
+	db 44, DRAGON_RAGE
+	db 49, HYDRO_PUMP
 	db 0
 
 SeadraEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
-	db 19, SMOKESCREEN
-	db 24, LEER
-	db 30, WATER_GUN
-	db 41, AGILITY
-	db 52, HYDRO_PUMP
+	db 14, WATER_GUN
+	db 17, SMOKESCREEN
+	db 21, BUBBLEBEAM
+	db 26, AGILITY
+	db 35, WATERFALL
+	db 39, PIN_MISSILE
+	db 44, DRAGON_RAGE
+	db 49, HYDRO_PUMP
 	db 0
 
 MissingNo5EEvosMoves:
@@ -1308,6 +1339,7 @@ SandslashEvosMoves:
 	db 22, SLASH
 	db 27, POISON_STING
 	db 36, SWIFT
+	db 40, PIN_MISSILE
 	db 47, FURY_SWIPES
 	db 55, FISSURE
 	db 0
