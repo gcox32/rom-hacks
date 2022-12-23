@@ -7,7 +7,7 @@ PokemonTower3FWildMons:
 	db 19, GASTLY
 	db 18, GASTLY
 	db 24, GASTLY
-	db 20, CUBONE
+	db 20, VULPIX
 	db 22, CUBONE
 	db 25, HAUNTER
 	end_grass_wildmons
