@@ -8,7 +8,7 @@ OaksLab_Object:
 	def_bg_events
 
 	def_object_events
-	object_event  4,  3, SPRITE_BLUE, STAY, NONE, 1, OPP_RIVAL1, 1
+	object_event  4,  3, SPRITE_RED, STAY, NONE, 1, OPP_RIVAL1, 1
 	object_event  6,  3, SPRITE_POKE_BALL, STAY, NONE, 2 ; person
 	object_event  7,  3, SPRITE_POKE_BALL, STAY, NONE, 3 ; person
 	object_event  8,  3, SPRITE_POKE_BALL, STAY, NONE, 4 ; person

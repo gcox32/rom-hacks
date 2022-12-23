@@ -1987,7 +1987,7 @@ LoadSurfingPlayerSpriteGraphics::
 	jr LoadPlayerSpriteGraphicsCommon
 
 LoadBikePlayerSpriteGraphics::
-	ld de, RedBikeSprite
+	ld de, BlueBikeSprite
 	ld hl, vNPCSprites
 
 LoadPlayerSpriteGraphicsCommon::

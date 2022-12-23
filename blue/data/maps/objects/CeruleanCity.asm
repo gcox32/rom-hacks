@@ -22,7 +22,7 @@ CeruleanCity_Object:
 	bg_event 27, 21, 17 ; CeruleanCityText17
 
 	def_object_events
-	object_event 20,  2, SPRITE_BLUE, STAY, DOWN, 1 ; person
+	object_event 20,  2, SPRITE_RED, STAY, DOWN, 1 ; person ; UPDATE
 	object_event 30,  8, SPRITE_ROCKET, STAY, NONE, 2, OPP_ROCKET, 5
 	object_event 31, 20, SPRITE_COOLTRAINER_M, STAY, DOWN, 3 ; person
 	object_event 15, 18, SPRITE_SUPER_NERD, WALK, UP_DOWN, 4 ; person
