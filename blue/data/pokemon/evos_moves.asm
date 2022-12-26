@@ -693,9 +693,10 @@ GravelerEvosMoves:
 	db 11, DEFENSE_CURL
 	db 16, ROCK_THROW
 	db 21, SELFDESTRUCT
-	db 29, HARDEN
+	db 29, ROLL_TACKLE
 	db 36, EARTHQUAKE
-	db 43, EXPLOSION
+	db 43, ROCK_SLIDE
+	db 49, EXPLOSION
 	db 0
 
 ChanseyEvosMoves:
@@ -708,8 +709,7 @@ ChanseyEvosMoves:
 	db 38, MINIMIZE
 	db 44, SOFTBOILED
 	db 48, REFLECT
-	db 54, SEISMIC_TOSS
-	db 62, ICE_BEAM
+	db 54, EGG_BOMB
 	db 0
 
 MachokeEvosMoves:
@@ -719,9 +719,11 @@ MachokeEvosMoves:
 ; Learnset
 	db 20, LOW_KICK
 	db 25, MEDITATE
-	db 36, MEGA_PUNCH
+	db 29, HEADBUTT
+	db 36, SUBMISSION
 	db 44, SEISMIC_TOSS
-	db 52, SUBMISSION
+	db 52, MEGA_PUNCH
+	db 57, BODY_SLAM
 	db 0
 
 MrMimeEvosMoves:
@@ -752,10 +754,11 @@ HitmonchanEvosMoves:
 ; Learnset
 	db 28, DOUBLE_TEAM
 	db 33, FIRE_PUNCH
-	db 38, ICE_PUNCH
-	db 43, THUNDERPUNCH
+	db 37, ICE_PUNCH
+	db 41, THUNDERPUNCH
+	db 44, COUNTER
 	db 48, MEGA_PUNCH
-	db 53, COUNTER
+	db 53, SEISMIC_TOSS
 	db 0
 
 ArbokEvosMoves:
@@ -766,9 +769,8 @@ ArbokEvosMoves:
 	db 17, BITE
 	db 27, GLARE
 	db 31, HYPER_FANG
-	db 36, SCREECH
+	db 36, ACID
 	db 41, SUPER_FANG
-	db 47, ACID
 	db 0
 
 ParasectEvosMoves:
@@ -826,9 +828,10 @@ GolemEvosMoves:
 	db 11, DEFENSE_CURL
 	db 16, ROCK_THROW
 	db 21, SELFDESTRUCT
-	db 29, HARDEN
+	db 29, ROLL_TACKLE
 	db 36, EARTHQUAKE
-	db 43, EXPLOSION
+	db 43, ROCK_SLIDE
+	db 49, EXPLOSION
 	db 0
 
 MissingNo32EvosMoves:
@@ -1458,9 +1461,11 @@ MachopEvosMoves:
 ; Learnset
 	db 20, LOW_KICK
 	db 25, MEDITATE
-	db 32, MEGA_PUNCH
-	db 39, SEISMIC_TOSS
-	db 46, SUBMISSION
+	db 29, HEADBUTT
+	db 33, SUBMISSION
+	db 41, SEISMIC_TOSS
+	db 47, MEGA_PUNCH
+	db 50, BODY_SLAM
 	db 0
 
 ZubatEvosMoves:
@@ -1485,9 +1490,8 @@ EkansEvosMoves:
 	db 17, BITE
 	db 24, GLARE
 	db 28, HYPER_FANG
-	db 31, SCREECH
+	db 31, ACID
 	db 36, SUPER_FANG
-	db 38, ACID
 	db 0
 
 ParasEvosMoves:
@@ -1670,9 +1674,11 @@ MachampEvosMoves:
 ; Learnset
 	db 20, LOW_KICK
 	db 25, MEDITATE
-	db 36, MEGA_PUNCH
+	db 29, HEADBUTT
+	db 36, SUBMISSION
 	db 44, SEISMIC_TOSS
-	db 52, SUBMISSION
+	db 52, MEGA_PUNCH
+	db 57, BODY_SLAM
 	db 0
 
 MissingNo7FEvosMoves:
@@ -2121,9 +2127,10 @@ GeodudeEvosMoves:
 	db 11, DEFENSE_CURL
 	db 16, ROCK_THROW
 	db 21, SELFDESTRUCT
-	db 26, HARDEN
+	db 26, ROLL_TACKLE
 	db 31, EARTHQUAKE
-	db 36, EXPLOSION
+	db 35, ROCK_SLIDE
+	db 40, EXPLOSION
 	db 0
 
 PorygonEvosMoves:
