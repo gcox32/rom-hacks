@@ -2144,6 +2144,7 @@ AerodactylEvosMoves:
 ; Learnset
 	db 15, ROCK_THROW
 	db 22, TAKE_DOWN
+	db 26, SCREECH
 	db 33, SUPERSONIC
 	db 38, BITE
 	db 45, ROCK_SLIDE
