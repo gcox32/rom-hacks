@@ -239,7 +239,7 @@ ClefairyEvosMoves:
 ; Learnset
 	db 13, SING
 	db 18, DOUBLESLAP
-	db 24, MINIMIZE
+	db 24, DIZZY_PUNCH
 	db 31, METRONOME
 	db 39, DEFENSE_CURL
 	db 48, LIGHT_SCREEN
@@ -352,7 +352,7 @@ GrimerEvosMoves:
 	db 0
 ; Learnset
 	db 30, POISON_GAS
-	db 33, MINIMIZE
+	db 33, SLAM
 	db 37, SLUDGE
 	db 42, HARDEN
 	db 48, SCREECH
@@ -543,7 +543,7 @@ StaryuEvosMoves:
 	db 22, HARDEN
 	db 27, RECOVER
 	db 32, SWIFT
-	db 37, MINIMIZE
+	db 37, REFLECT
 	db 42, LIGHT_SCREEN
 	db 47, HYDRO_PUMP
 	db 0
@@ -706,7 +706,7 @@ ChanseyEvosMoves:
 	db 12, DOUBLESLAP
 	db 24, SING
 	db 30, GROWL
-	db 38, MINIMIZE
+	db 38, ICE_BEAM
 	db 44, SOFTBOILED
 	db 48, REFLECT
 	db 54, EGG_BOMB
@@ -1038,7 +1038,7 @@ DoduoEvosMoves:
 	db 20, GROWL
 	db 24, FURY_ATTACK
 	db 30, DRILL_PECK
-	db 36, RAGE
+	db 36, SCRATCH
 	db 40, TRI_ATTACK
 	db 44, AGILITY
 	db 0
@@ -1572,7 +1572,7 @@ DodrioEvosMoves:
 	db 20, GROWL
 	db 24, FURY_ATTACK
 	db 30, DRILL_PECK
-	db 39, RAGE
+	db 39, SCRATCH
 	db 45, TRI_ATTACK
 	db 51, AGILITY
 	db 0
@@ -1775,7 +1775,7 @@ MukEvosMoves:
 	db 0
 ; Learnset
 	db 30, POISON_GAS
-	db 33, MINIMIZE
+	db 33, SLAM
 	db 37, SLUDGE
 	db 45, HARDEN
 	db 53, SCREECH
@@ -2252,7 +2252,7 @@ CharizardEvosMoves:
 	db 0
 ; Learnset
 	db 9, EMBER
-	db 15, RAGE
+	db 15, BITE
 	db 24, FLAMETHROWER
 	db 36, WING_ATTACK
 	db 42, SEISMIC_TOSS

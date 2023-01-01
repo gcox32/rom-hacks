@@ -10,7 +10,7 @@
 	INCBIN "gfx/pokemon/front/clefable.pic", 0, 1 ; sprite dimensions
 	dw ClefablePicFront, ClefablePicBack
 
-	db SING, DOUBLESLAP, MINIMIZE, METRONOME ; level 1 learnset
+	db SING, DOUBLESLAP, DIZZY_PUNCH, METRONOME ; level 1 learnset
 	db GROWTH_FAST ; growth rate
 
 	; tm/hm learnset
@@ -18,7 +18,7 @@
 	     DOUBLE_EDGE,  BUBBLEBEAM,   WATER_GUN,    ICE_BEAM,     BLIZZARD,     \
 	     HYPER_BEAM,   SUBMISSION,   COUNTER,      SEISMIC_TOSS, RAGE,         \
 	     SOLARBEAM,    THUNDERBOLT,  THUNDER,      PSYCHIC_M,    TELEPORT,     \
-	     MIMIC,        DOUBLE_TEAM,  REFLECT,               METRONOME,    \
+	     MIMIC,        DOUBLE_TEAM,  REFLECT,      METRONOME,    \
 	     FIRE_BLAST,   SKULL_BASH,   REST,         THUNDER_WAVE,       \
 	     TRI_ATTACK,   SUBSTITUTE,   STRENGTH,     FLASH
 	; end
