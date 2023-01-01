@@ -157,9 +157,9 @@ WildDataPointers:
 	dw NothingWildMons
 	dw NothingWildMons
 	dw NothingWildMons
-	dw NothingWildMons
-	; dw NothingWildMons
 	dw FuchsiaGymWildMons ; addition
+	; dw NothingWildMons
+	dw  NothingWildMons
 	dw SeafoamIslandsB1FWildMons
 	dw SeafoamIslandsB2FWildMons
 	dw SeafoamIslandsB3FWildMons
