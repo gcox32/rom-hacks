@@ -46,7 +46,7 @@ MoveSoundTable:
 	db SFX_BATTLE_31,          $ff, $40 ; LEER
 	db SFX_BATTLE_1E,          $00, $80 ; BITE
 	db SFX_BATTLE_0B,          $00, $c0 ; GROWL
-	db SFX_BATTLE_0B,          $00, $40 ; ROAR
+	db SFX_NOT_VERY_EFFECTIVE, $00, $a0 ; X_SCISSOR (CUT) formerly ROAR
 	db SFX_BATTLE_35,          $00, $80 ; SING
 	db SFX_BATTLE_27,          $40, $60 ; SUPERSONIC
 	db SFX_BATTLE_27,          $00, $80 ; SONICBOOM
@@ -116,8 +116,8 @@ MoveSoundTable:
 	db SFX_BATTLE_0E,          $f0, $10 ; LIGHT_SCREEN
 	db SFX_BATTLE_0F,          $f8, $10 ; HAZE
 	db SFX_NOT_VERY_EFFECTIVE, $f0, $10 ; REFLECT
-	db SFX_BATTLE_25,          $00, $80 ; FOCUS_ENERGY
-	db SFX_BATTLE_18,          $00, $c0 ; BIDE
+	db SFX_NOT_VERY_EFFECTIVE, $10, $ff ; SHADOW_BALL (SMOG) formerly FOCUS_ENERGY
+	db SFX_BATTLE_26,          $1e, $20 ; ROLL_TACKLE (SKULL_BASH) formerly BIDE
 	db SFX_BATTLE_32,          $c0, $ff ; METRONOME
 	db SFX_BATTLE_09,          $f2, $20 ; MIRROR_MOVE
 	db SFX_BATTLE_34,          $00, $80 ; SELFDESTRUCT

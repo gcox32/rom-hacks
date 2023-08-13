@@ -527,7 +527,7 @@ ScytherEvosMoves:
 	db 17, SLASH
 	db 20, FURY_SWIPES
 	db 24, WING_ATTACK
-	db 29, TWINEEDLE
+	db 29, X_SCISSOR
 	db 35, SWORDS_DANCE
 	db 42, AGILITY
 	db 47, RAZOR_WIND
@@ -567,11 +567,11 @@ PinsirEvosMoves:
 	db 0
 ; Learnset
 	db 21, BIND
-	db 25, SEISMIC_TOSS
+	db 25, SUBMISSION
 	db 30, GUILLOTINE
 	db 36, PIN_MISSILE
 	db 43, HARDEN
-	db 49, SLASH
+	db 49, X_SCISSOR
 	db 54, SWORDS_DANCE
 	db 0
 
@@ -588,6 +588,7 @@ TangelaEvosMoves:
 	db 36, SLEEP_POWDER
 	db 40, SLAM
 	db 44, GROWTH
+	db 50, MEGA_DRAIN
 	db 0
 
 MissingNo1FEvosMoves:
@@ -654,6 +655,7 @@ PidgeyEvosMoves:
 	db 28, WING_ATTACK
 	db 36, AGILITY
 	db 44, MIRROR_MOVE
+	db 48, SKY_ATTACK
 	db 0
 
 SlowpokeEvosMoves:
@@ -696,6 +698,7 @@ GravelerEvosMoves:
 	db 29, ROLL_TACKLE
 	db 36, EARTHQUAKE
 	db 43, ROCK_SLIDE
+	db 46, HARDEN
 	db 49, EXPLOSION
 	db 0
 
@@ -831,6 +834,7 @@ GolemEvosMoves:
 	db 29, ROLL_TACKLE
 	db 36, EARTHQUAKE
 	db 43, ROCK_SLIDE
+	db 47, HARDEN
 	db 49, EXPLOSION
 	db 0
 
@@ -1065,7 +1069,7 @@ JynxEvosMoves:
 	db 31, ICE_PUNCH
 	db 39, BODY_SLAM
 	db 42, LOVELY_KISS
-	db 47, THRASH
+	db 47, DREAM_EATER
 	db 58, BLIZZARD
 	db 0
 
@@ -1920,6 +1924,7 @@ PidgeottoEvosMoves:
 	db 31, WING_ATTACK
 	db 40, AGILITY
 	db 49, MIRROR_MOVE
+	db 54, SKY_ATTACK
 	db 0
 
 PidgeotEvosMoves:
@@ -1932,6 +1937,7 @@ PidgeotEvosMoves:
 	db 31, WING_ATTACK
 	db 44, AGILITY
 	db 54, MIRROR_MOVE
+	db 58, SKY_ATTACK
 	db 0
 
 StarmieEvosMoves:
@@ -2130,6 +2136,7 @@ GeodudeEvosMoves:
 	db 26, ROLL_TACKLE
 	db 31, EARTHQUAKE
 	db 35, ROCK_SLIDE
+	db 37, HARDEN
 	db 40, EXPLOSION
 	db 0
 

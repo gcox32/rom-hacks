@@ -36,7 +36,7 @@ ExclamationPointMoveSets:
 	db LEER
 	db BITE
 	db GROWL
-	db ROAR
+	db X_SCISSOR
 	db SING
 	db PECK
 	db COUNTER

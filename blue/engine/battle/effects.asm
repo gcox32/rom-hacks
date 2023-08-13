@@ -301,6 +301,87 @@ FreezeBurnParalyzeEffect:
 	ld hl, FrozenText
 	jp PrintText
 
+TriAttackEffect:
+	xor a
+	ld [wAnimationType], a
+	call CheckTargetSubstitute ; test bit 4 of d063/d068 flags [target has substitute flag]
+	ret nz ; return if they have a substitute, can't effect them
+	ldh a, [hWhoseTurn]
+	and a
+	jp nz, .opponentAttacker
+	ld a, [wEnemyMonStatus]
+	and a
+	jp nz, CheckDefrost ; can't inflict status if opponent is already statused
+    call BattleRandom
+    cp 30 percent + 1   ; sum chance that one of the three effects happens (10+10+10) [it's 30+30+30 in the test phase]
+    ret nc              ; if the carry flag is not set, i.e. BattleRandom - 30 is NOT <0, i.e. rndm>=30, nothing happens
+    ; multi-step check: 0-9 is freeze, 10-19 is burn, 20-29 is paralysis (I may be messing up some units out of how the carry considers the = case?)
+    cp 10 percent + 1   ; 10, but 30 in test phase
+    jr c, .paralyze1
+    cp 20 percent + 1   ; 20, but 60 in test phase
+    jr c, .burn1
+    jr .freeze1
+.paralyze1
+	ld a, 1 << PAR
+	ld [wEnemyMonStatus], a
+	call QuarterSpeedDueToParalysis ; quarter speed of affected mon
+	ld a, ANIM_A9
+	call PlayBattleAnimation
+	jp PrintMayNotAttackText ; print paralysis text
+.burn1
+	ld a, 1 << BRN
+	ld [wEnemyMonStatus], a
+	call HalveAttackDueToBurn ; halve attack of affected mon
+	ld a, ANIM_A9
+	call PlayBattleAnimation
+	ld hl, BurnedText
+	jp PrintText
+.freeze1
+	call ClearHyperBeam ; resets hyper beam (recharge) condition from target
+	ld a, 1 << FRZ
+	ld [wEnemyMonStatus], a
+	ld a, ANIM_A9
+	call PlayBattleAnimation
+	ld hl, FrozenText
+	jp PrintText
+    ; here is basically just copy-and-paste of the "if player is attacking", modulo some different settings at the beginning
+.opponentAttacker
+	ld a, [wBattleMonStatus] ; mostly same as above with addresses swapped for opponent
+	and a
+	jp nz, CheckDefrost
+    call BattleRandom
+    cp 30 percent + 1   ; sum chance that one of the three effects happens (10+10+10)
+    ret nc              ; if the carry flag is not set, i.e. BattleRandom - 30 is NOT <0, i.e. rndm>=30, nothing happens
+    ; multi-step check: 0-9 is freeze, 10-19 is burn, 20-29 is paralysis (I may be messing up some units out of how the carry considers the = case?)
+    cp 10 percent + 1   ; 10, but 30 in test phase
+    jr c, .paralyze2
+    cp 20 percent + 1   ; 20, but 60 in test phase
+    jr c, .burn2
+    jr .freeze2
+.paralyze2
+	ld a, 1 << PAR
+	ld [wBattleMonStatus], a
+	call QuarterSpeedDueToParalysis
+	ld a, ANIM_C7
+	call PlayBattleAnimation2
+	jp PrintMayNotAttackText
+.burn2
+	ld a, 1 << BRN
+	ld [wBattleMonStatus], a
+	call HalveAttackDueToBurn
+	ld a, ANIM_C7
+	call PlayBattleAnimation2
+	ld hl, BurnedText
+	jp PrintText
+.freeze2
+; hyper beam bits aren't reseted for opponent's side
+	ld a, 1 << FRZ
+	ld [wBattleMonStatus], a
+	ld a, ANIM_C7
+	call PlayBattleAnimation2
+	ld hl, FrozenText
+	jp PrintText
+
 BurnedText:
 	text_far _BurnedText
 	text_end
@@ -422,6 +503,29 @@ AccuracyAttackUpEffect:
 	call StatModifierUpEffect ; stat modifier raising function
 	pop de
 	ld a, ATTACK_ACCURACY_UP1_EFFECT
+	ld [de], a
+	ret
+
+SpeedEvasionDownEffect:
+	;values for the enemy's turn
+	ld de, wPlayerMoveEffect
+	ldh a, [hWhoseTurn]
+	and a
+	jr z, .next
+	; values for the player's turn
+	ld de, wEnemyMoveEffect
+.next
+	ld a, SPEED_DOWN1_EFFECT
+	ld [de], a
+	push de
+	call StatModifierDownEffect
+	pop de
+	ld a, EVASION_DOWN_SIDE_EFFECT
+	ld [de], a
+	push de
+	call StatModifierDownEffect
+	pop de
+	ld a, SPEED_EVASION_DOWN1_EFFECT
 	ld [de], a
 	ret
 
@@ -670,6 +774,7 @@ StatModifierDownEffect:
 	ld hl, wPlayerMonStatMods
 	ld de, wEnemyMoveEffect
 	ld bc, wPlayerBattleStatus1
+	; 25% for opponent's stat reducing move to miss
 	ld a, [wLinkState]
 	cp LINK_STATE_BATTLING
 	jr z, .statModifierDownEffect
@@ -1027,9 +1132,9 @@ SwitchAndTeleportEffect:
 	ld hl, RanFromBattleText
 	cp TELEPORT
 	jr z, .printText
-	ld hl, RanAwayScaredText
-	cp ROAR
-	jr z, .printText
+	; ld hl, RanAwayScaredText
+	; cp ROAR
+	; jr z, .printText
 	ld hl, WasBlownAwayText
 .printText
 	jp PrintText

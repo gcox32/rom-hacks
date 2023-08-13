@@ -1,6 +1,6 @@
 FrameBlockPointers:
 	table_width 2, FrameBlockPointers
-	dw FrameBlock00
+	; dw FrameBlock00
 	dw FrameBlock01
 	dw FrameBlock02
 	dw FrameBlock03
@@ -48,7 +48,7 @@ FrameBlockPointers:
 	dw FrameBlock2d
 	dw FrameBlock2e
 	dw FrameBlock2f
-	dw FrameBlock30
+	; dw FrameBlock30
 	dw FrameBlock31
 	dw FrameBlock32
 	dw FrameBlock33
@@ -122,6 +122,7 @@ FrameBlockPointers:
 	dw FrameBlock77
 	dw FrameBlock78
 	dw FrameBlock79
+	dw FrameBlock2bspec
 	assert_table_length NUM_FRAMEBLOCKS
 
 FrameBlock01:
@@ -572,12 +573,12 @@ FrameBlock2f:
 	dbsprite  0,  1,  0,  0, $0c, OAM_VFLIP
 	dbsprite  1,  1,  0,  0, $0d, OAM_VFLIP
 
-FrameBlock30:
-	db 4 ; #
-	dbsprite  0,  0,  0,  0, $44, 0
-	dbsprite  1,  0,  0,  0, $44, OAM_HFLIP
-	dbsprite  0,  1,  0,  0, $44, OAM_VFLIP
-	dbsprite  1,  1,  0,  0, $44, OAM_HFLIP | OAM_VFLIP
+; FrameBlock30:
+; 	db 4 ; #
+; 	dbsprite  0,  0,  0,  0, $44, 0
+; 	dbsprite  1,  0,  0,  0, $44, OAM_HFLIP
+; 	dbsprite  0,  1,  0,  0, $44, OAM_VFLIP
+; 	dbsprite  1,  1,  0,  0, $44, OAM_HFLIP | OAM_VFLIP
 
 FrameBlock31:
 	db 1 ; #
@@ -1231,6 +1232,11 @@ FrameBlock78:
 FrameBlock79:
 	db 1 ; #
 	dbsprite  0,  0,  0,  0, $4e, 0
+
+FrameBlock2bspec:
+	db 2 ; #
+	dbsprite  0,  0,  0,  0, $47, OAM_HFLIP
+	dbsprite  0,  0,  4,  4, $47, OAM_HFLIP
 
 INCLUDE "data/battle_anims/base_coords.asm"
 

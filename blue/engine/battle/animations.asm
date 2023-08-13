@@ -2239,8 +2239,8 @@ IsCryMove:
 	ld a, [wAnimationID]
 	cp GROWL
 	jr z, .CryMove
-	cp ROAR
-	jr z, .CryMove
+	; cp ROAR
+	; jr z, .CryMove
 	and a ; clear carry
 	ret
 .CryMove

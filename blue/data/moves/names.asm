@@ -45,7 +45,7 @@ MoveNames::
 	li "LEER"
 	li "BITE"
 	li "GROWL"
-	li "ROAR"
+	li "X SCISSOR"
 	li "SING"
 	li "SUPERSONIC"
 	li "SONICBOOM"

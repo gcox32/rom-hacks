@@ -76,19 +76,22 @@
 	const DEFENSE_DOWN_SIDE_EFFECT   ; $45
 	const SPEED_DOWN_SIDE_EFFECT     ; $46
 	const SPECIAL_DOWN_SIDE_EFFECT   ; $47
-	const ATTACK_UP_SIDE_EFFECT      ; $48 ; ADDED
-	const ATTACK_ACCURACY_UP1_EFFECT ; $49 ; ADDED
+	const ACCURACY_DOWN_SIDE_EFFECT  ; $48 ; ADDED
+	const EVASION_DOWN_SIDE_EFFECT   ; $49 ; ADDED 
+	const ATTACK_ACCURACY_UP1_EFFECT ; $4B ; ADDED
 	const ATTACK_DEFENSE_UP1_EFFECT  ; $4A ; ADDED
-	const_skip                       ; $4B
-	const CONFUSION_SIDE_EFFECT      ; $4C
-	const TWINEEDLE_EFFECT           ; $4D
-	const ATTACK_SPECIAL_SPEED_UP1   ; $4E ; PureRGBnote: ADDED: new effect, used in meditate
-	const SUBSTITUTE_EFFECT          ; $4F
-	const HYPER_BEAM_EFFECT          ; $50
-	const RAGE_EFFECT                ; $51
-	const MIMIC_EFFECT               ; $52
-	const METRONOME_EFFECT           ; $53
-	const LEECH_SEED_EFFECT          ; $54
-	const SPLASH_EFFECT              ; $55
-	const DISABLE_EFFECT             ; $56
+	const ATTACK_UP_SIDE_EFFECT		 ; $4C ; ADDED
+	const CONFUSION_SIDE_EFFECT      ; $4D
+	const TWINEEDLE_EFFECT           ; $4E 
+	const ATTACK_SPECIAL_SPEED_UP1   ; $4F ; PureRGBnote: ADDED: new effect, used in meditate
+	const SUBSTITUTE_EFFECT          ; $50
+	const HYPER_BEAM_EFFECT          ; $51
+	const RAGE_EFFECT                ; $52
+	const MIMIC_EFFECT               ; $53
+	const METRONOME_EFFECT           ; $54
+	const LEECH_SEED_EFFECT          ; $55
+	const SPLASH_EFFECT              ; $56
+	const DISABLE_EFFECT             ; $57 
+	const SPEED_EVASION_DOWN1_EFFECT ; $58 ; ADDED: new effect
+	const TRIATTACK_EFFECT			 ; $59 ; ADDED: new effect
 DEF NUM_MOVE_EFFECTS EQU const_value - 1

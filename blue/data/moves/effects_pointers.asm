@@ -72,10 +72,11 @@ MoveEffectPointerTable:
 	dw StatModifierDownEffect    ; DEFENSE_DOWN_SIDE_EFFECT
 	dw StatModifierDownEffect    ; SPEED_DOWN_SIDE_EFFECT
 	dw StatModifierDownEffect    ; SPECIAL_DOWN_SIDE_EFFECT
-	dw StatModifierUpEffect      ; ATTACK_UP_SIDE_EFFECT
+	dw StatModifierDownEffect    ; ACCURACY_DOWN_SIDE_EFFECT
+	dw StatModifierDownEffect    ; EVASION_DOWN_SIDE_EFFECT
 	dw AccuracyAttackUpEffect    ; ATTACK_ACCURACY_UP1_EFFECT
 	dw AttackDefenseUpEffect     ; ATTACK_DEFENSE_UP1_EFFECT
-	dw StatModifierDownEffect    ; unused effect
+	dw StatModifierUpEffect      ; ATTACK_UP_SIDE_EFFECT
 	dw ConfusionSideEffect       ; CONFUSION_SIDE_EFFECT
 	dw TwoToFiveAttacksEffect    ; TWINEEDLE_EFFECT
 	dw AttackSpecialSpeedUpEffect; ATTACK_SPECIAL_SPEED_UP1
@@ -87,4 +88,7 @@ MoveEffectPointerTable:
 	dw LeechSeedEffect           ; LEECH_SEED_EFFECT
 	dw SplashEffect              ; SPLASH_EFFECT
 	dw DisableEffect             ; DISABLE_EFFECT
+	dw SpeedEvasionDownEffect    ; SPEED_EVASION_DOWN1_EFFECT (new STRING_SHOT)
+	dw TriAttackEffect			 ; TRIATTACK_EFFECT
+	
 	assert_table_length NUM_MOVE_EFFECTS

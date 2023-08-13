@@ -45,7 +45,7 @@ AttackAnimationPointers:
 	dw LeerAnim
 	dw BiteAnim
 	dw GrowlAnim
-	dw RoarAnim
+	dw XScissorAnim ; formerly Roar
 	dw SingAnim
 	dw SupersonicAnim
 	dw SonicBoomAnim
@@ -457,10 +457,11 @@ GrowlAnim:
 	battle_anim GROWL, SUBANIM_12, 1, 6
 	db -1 ; end
 
-RoarAnim:
-	battle_anim ROAR, SUBANIM_15, 1, 6
-	battle_anim ROAR, SUBANIM_15, 1, 6
-	battle_anim ROAR, SUBANIM_15, 1, 6
+XScissorAnim:
+	battle_anim CUT, SE_DARK_SCREEN_FLASH
+	battle_anim NO_MOVE, SUBANIM_56, 0, 4
+	battle_anim CUT, SE_DARK_SCREEN_FLASH
+	battle_anim NO_MOVE, SUBANIM_16, 0, 4
 	db -1 ; end
 
 SingAnim:
@@ -474,8 +475,8 @@ SupersonicAnim:
 	db -1 ; end
 
 SonicBoomAnim:
-	battle_anim ROAR, SUBANIM_15, 1, 6
-	battle_anim ROAR, SUBANIM_15, 1, 6
+	; battle_anim ROAR, SUBANIM_15, 1, 6
+	; battle_anim ROAR, SUBANIM_15, 1, 6
 	battle_anim GUST, SUBANIM_10, 1, 6
 	battle_anim NO_MOVE, SUBANIM_05, 1, 6
 	db -1 ; end
