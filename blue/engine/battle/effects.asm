@@ -774,13 +774,13 @@ StatModifierDownEffect:
 	ld hl, wPlayerMonStatMods
 	ld de, wEnemyMoveEffect
 	ld bc, wPlayerBattleStatus1
-	; 25% for opponent's stat reducing move to miss
-	ld a, [wLinkState]
-	cp LINK_STATE_BATTLING
-	jr z, .statModifierDownEffect
-	call BattleRandom
-	cp 25 percent + 1 ; chance to miss by in regular battle
-	jp c, MoveMissed
+	; 25% for opponent's stat reducing move to miss ; removed
+	; ld a, [wLinkState]
+	; cp LINK_STATE_BATTLING
+	; jr z, .statModifierDownEffect
+	; call BattleRandom
+	; cp 25 percent + 1 ; chance to miss by in regular battle
+	; jp c, MoveMissed
 .statModifierDownEffect
 	call CheckTargetSubstitute ; can't hit through substitute
 	jp nz, MoveMissed
