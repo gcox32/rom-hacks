@@ -525,7 +525,7 @@ ScytherEvosMoves:
 	db 0
 ; Learnset
 	db 17, SLASH
-	db 20, FURY_SWIPES
+	db 20, SHARPEN
 	db 24, WING_ATTACK
 	db 29, X_SCISSOR
 	db 35, SWORDS_DANCE
@@ -850,7 +850,7 @@ MagmarEvosMoves:
 ; Learnset
 	db 36, LEER
 	db 39, CONFUSE_RAY
-	db 43, FIRE_PUNCH
+	db 43, THUNDERPUNCH
 	db 48, SMOKESCREEN
 	db 52, SMOG
 	db 55, FLAMETHROWER
@@ -867,9 +867,9 @@ ElectabuzzEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
-	db 34, THUNDERSHOCK
+	db 34, THUNDERPUNCH
 	db 37, SCREECH
-	db 42, THUNDERPUNCH
+	db 42, ICE_PUNCH
 	db 49, LIGHT_SCREEN
 	db 54, THUNDER
 	db 0
@@ -1127,7 +1127,7 @@ KrabbyEvosMoves:
 	db 20, GUILLOTINE
 	db 25, STOMP
 	db 30, CRABHAMMER
-	db 35, HARDEN
+	db 35, SHARPEN
 	db 40, SWORDS_DANCE
 	db 0
 
@@ -1258,6 +1258,7 @@ KabutoEvosMoves:
 	db EV_LEVEL, 40, KABUTOPS
 	db 0
 ; Learnset
+	db 11, SHARPEN
 	db 18, LEECH_LIFE
 	db 24, WATER_GUN
 	db 29, ROCK_THROW
@@ -1272,6 +1273,7 @@ KabutopsEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
+	db 11, SHARPEN
 	db 18, LEECH_LIFE
 	db 24, WATER_GUN
 	db 29, ROCK_THROW
@@ -1279,7 +1281,7 @@ KabutopsEvosMoves:
 	db 39, SLASH
 	db 46, ROCK_SLIDE
 	db 53, HYDRO_PUMP
-	db 57, TWINEEDLE
+	db 57, X_SCISSOR
 	db 0
 
 HorseaEvosMoves:

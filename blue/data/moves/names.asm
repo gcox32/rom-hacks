@@ -17,7 +17,7 @@ MoveNames::
 	li "CUT"
 	li "GUST"
 	li "WING ATTACK"
-	li "WHIRLWIND"
+	li "ROOST" ; formerly WHIRLWIND
 	li "FLY"
 	li "BIND"
 	li "SLAM"
@@ -148,7 +148,7 @@ MoveNames::
 	li "DIZZY PUNCH"
 	li "SPORE"
 	li "FLASH"
-	li "PSYWAVE"
+	li "PSYWAVE" ; PSYWAVE > WILLOWISP
 	li "SPLASH"
 	li "ACID ARMOR"
 	li "CRABHAMMER"

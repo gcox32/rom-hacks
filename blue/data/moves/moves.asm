@@ -27,7 +27,7 @@ Moves:
 	move CUT,          NO_ADDITIONAL_EFFECT,        60, BUG,           95, 30
 	move GUST,         NO_ADDITIONAL_EFFECT,        40, FLYING,       100, 35
 	move WING_ATTACK,  NO_ADDITIONAL_EFFECT,        70, FLYING,       100, 35
-	move WHIRLWIND,    SWITCH_AND_TELEPORT_EFFECT,   0, FLYING,       100, 20
+	move WHIRLWIND,    HEAL_EFFECT,  				 0, FLYING,         0, 20 ; now "ROOST"
 	move FLY,          FLY_EFFECT,                  65, FLYING,        95, 15
 	move BIND,         TRAPPING_EFFECT,             15, NORMAL,        85, 20
 	move SLAM,         NO_ADDITIONAL_EFFECT,        80, NORMAL,        85, 20
@@ -129,7 +129,7 @@ Moves:
 	move ROLL_TACKLE,  ATTACK_UP_SIDE_EFFECT,       65, ROCK,         100, 15 ; new ; for Banner
 	move METRONOME,    METRONOME_EFFECT,             0, NORMAL,       100, 10
 	move MIRROR_MOVE,  MIRROR_MOVE_EFFECT,           0, FLYING,       100, 20
-	move SELFDESTRUCT, EXPLODE_EFFECT,             150, FIRE,         100,  5 ; update ; balancing for Eletrode line
+	move SELFDESTRUCT, EXPLODE_EFFECT,             150, FIRE,         100,  5 ; update ; balancing for Voltorb line
 	move EGG_BOMB,     CONFUSION_SIDE_EFFECT,      100, NORMAL,        75, 10
 	move LICK,         PARALYZE_SIDE_EFFECT2,       50, GHOST,        100, 30
 	move SMOG,         POISON_SIDE_EFFECT2,         40, POISON,        90, 20
@@ -158,11 +158,11 @@ Moves:
 	move DIZZY_PUNCH,  CONFUSION_SIDE_EFFECT,       70, NORMAL,       100, 10
 	move SPORE,        SLEEP_EFFECT,                 0, GRASS,        100, 15
 	move FLASH,        ACCURACY_DOWN2_EFFECT,        0, NORMAL,       100, 20
-	move PSYWAVE,      SPECIAL_DAMAGE_EFFECT,        1, PSYCHIC_TYPE,  80, 15
+	move PSYWAVE,      SPECIAL_DAMAGE_EFFECT,        1, PSYCHIC_TYPE,  80, 15 ; TODO swap this WILLOWISP
 	move SPLASH,       SPLASH_EFFECT,                0, WATER,        100, 40
 	move ACID_ARMOR,   DEFENSE_UP2_EFFECT,           0, POISON,       100, 40
 	move CRABHAMMER,   NO_ADDITIONAL_EFFECT,        90, WATER,         90, 10
-	move EXPLOSION,    EXPLODE_EFFECT,             180, FIRE,         100,  5 ; update ; balancing for Electrode line
+	move EXPLOSION,    EXPLODE_EFFECT,             180, FIRE,         100,  5 ; update ; balancing for VOLTORB line
 	move FURY_SWIPES,  TWO_TO_FIVE_ATTACKS_EFFECT,  25, NORMAL,        90, 15
 	move BONEMERANG,   ATTACK_TWICE_EFFECT,         50, GROUND,        90, 10
 	move REST,         HEAL_EFFECT,                  0, PSYCHIC_TYPE, 100, 10

@@ -17,7 +17,7 @@ AttackAnimationPointers:
 	dw CutAnim
 	dw GustAnim
 	dw WingAttackAnim
-	dw WhirlwindAnim
+	dw WhirlwindAnim ; RoostAnim
 	dw FlyAnim
 	dw BindAnim
 	dw SlamAnim
@@ -310,9 +310,13 @@ WingAttackAnim:
 	battle_anim WING_ATTACK, SUBANIM_04, 1, 6
 	db -1 ; end
 
-WhirlwindAnim:
-	battle_anim WHIRLWIND, SUBANIM_10, 1, 6
-	battle_anim NO_MOVE, SE_SLIDE_ENEMY_MON_OFF
+WhirlwindAnim: ; RoostAnim
+	; battle_anim WHIRLWIND, SUBANIM_10, 1, 6
+	; battle_anim NO_MOVE, SE_SLIDE_ENEMY_MON_OFF
+	battle_anim DEFENSE_CURL, SE_LIGHT_SCREEN_PALETTE
+	battle_anim NO_MOVE, SE_SLIDE_MON_DOWN
+	battle_anim NO_MOVE, SE_RESET_SCREEN_PALETTE
+	battle_anim NO_MOVE, SE_SHOW_MON_PIC
 	db -1 ; end
 
 FlyAnim:
