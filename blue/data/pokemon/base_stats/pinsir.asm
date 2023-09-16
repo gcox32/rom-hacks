@@ -14,7 +14,7 @@
 	db GROWTH_SLOW ; growth rate
 
 	; tm/hm learnset
-	tmhm SWORDS_DANCE, TOXIC,        BODY_SLAM,    TAKE_DOWN,    DOUBLE_EDGE,  \
+	tmhm SWORDS_DANCE, TOXIC,        BODY_SLAM,    DOUBLE_EDGE,  \
 	     HYPER_BEAM,   SUBMISSION,   SEISMIC_TOSS, RAGE,         MIMIC,        \
 	     DOUBLE_TEAM,  REST,         SUBSTITUTE,   CUT,          EARTHQUAKE,   \
 	     STRENGTH,     ROCK_SLIDE

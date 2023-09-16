@@ -157,15 +157,15 @@ MACRO add_tm
 ENDM
 
 DEF TM01 EQU const_value
-	add_tm MEGA_PUNCH   ; $C9
+	add_tm THUNDERPUNCH ; $C9 ; MEGA_PUNCH
 	add_tm RAZOR_WIND   ; $CA
 	add_tm SWORDS_DANCE ; $CB
 	add_tm WHIRLWIND    ; $CC ; ROOST
-	add_tm MEGA_KICK    ; $CD
+	add_tm ICE_PUNCH    ; $CD ; MEGA_KICK
 	add_tm TOXIC        ; $CE
 	add_tm HORN_DRILL   ; $CF
 	add_tm BODY_SLAM    ; $D0
-	add_tm TAKE_DOWN    ; $D1
+	add_tm FIRE_PUNCH   ; $D1 ; TAKE_DOWN
 	add_tm DOUBLE_EDGE  ; $D2
 	add_tm BUBBLEBEAM   ; $D3
 	add_tm WATER_GUN    ; $D4
@@ -174,9 +174,9 @@ DEF TM01 EQU const_value
 	add_tm HYPER_BEAM   ; $D7
 	add_tm PAY_DAY      ; $D8
 	add_tm SUBMISSION   ; $D9
-	add_tm COUNTER      ; $DA ; FIRE_PUNCH
+	add_tm COUNTER      ; $DA
 	add_tm SEISMIC_TOSS ; $DB
-	add_tm RAGE         ; $DC ; THUNDERPUNCH
+	add_tm RAGE         ; $DC
 	add_tm MEGA_DRAIN   ; $DD
 	add_tm SOLARBEAM    ; $DE
 	add_tm DRAGON_RAGE  ; $DF

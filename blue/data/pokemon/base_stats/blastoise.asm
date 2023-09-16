@@ -14,12 +14,12 @@
 	db GROWTH_MEDIUM_SLOW ; growth rate
 
 	; tm/hm learnset
-	tmhm MEGA_PUNCH,   MEGA_KICK,    TOXIC,        BODY_SLAM,    TAKE_DOWN,    \
+	tmhm  TOXIC,        BODY_SLAM,    \
 	     DOUBLE_EDGE,  BUBBLEBEAM,   WATER_GUN,    ICE_BEAM,     BLIZZARD,     \
 	     HYPER_BEAM,   SUBMISSION,   COUNTER,      SEISMIC_TOSS, RAGE,         \
 	     EARTHQUAKE,   FISSURE,      DIG,          MIMIC,        DOUBLE_TEAM,  \
 	     REFLECT,      ROLL_TACKLE,  SKULL_BASH,   REST,         SUBSTITUTE,   \
-	     SURF,         STRENGTH
+	     SURF,         STRENGTH,	 ICE_PUNCH
 	; end
 
 	db 0 ; padding

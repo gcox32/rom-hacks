@@ -14,9 +14,9 @@
 	db GROWTH_MEDIUM_SLOW ; growth rate
 
 	; tm/hm learnset
-	tmhm TOXIC,        RAGE,         MEGA_DRAIN,   THUNDERBOLT,  THUNDER,      \
-	     PSYCHIC_M,    MIMIC,        DOUBLE_TEAM,  SELFDESTRUCT, \
-	     DREAM_EATER,  REST,         EXPLOSION,    SUBSTITUTE
+	tmhm TOXIC,        FIRE_PUNCH,   MEGA_DRAIN,   THUNDERBOLT,  THUNDER,      \
+	     PSYCHIC_M,    MIMIC,        DOUBLE_TEAM,  SELFDESTRUCT, ICE_PUNCH,    \
+	     DREAM_EATER,  REST,         EXPLOSION,    SUBSTITUTE,   THUNDERPUNCH  \
 	; end
 
 	db 0 ; padding

@@ -369,15 +369,22 @@ MainInBattleLoop:
 .noLinkBattle
 	ld a, [wPlayerSelectedMove]
 	cp QUICK_ATTACK
-	jr nz, .playerDidNotUseQuickAttack
+	jr nz, .playerDidNotUsePriority
+	cp TRANSFORM
+	jr nz, .playerDidNotUsePriority
 	ld a, [wEnemySelectedMove]
 	cp QUICK_ATTACK
 	jr z, .compareSpeed  ; if both used Quick Attack
 	jp .playerMovesFirst ; if player used Quick Attack and enemy didn't
-.playerDidNotUseQuickAttack
+	cp TRANSFORM
+	jr z, .compareSpeed  ; if both used Transform
+	jp .playerMovesFirst ; if player used Transform and enemy didn't
+.playerDidNotUsePriority
 	ld a, [wEnemySelectedMove]
 	cp QUICK_ATTACK
 	jr z, .enemyMovesFirst ; if enemy used Quick Attack and player didn't
+	cp TRANSFORM
+	jr z, .enemyMovesFirst ; if enemy used Transform and player didn't
 	ld a, [wPlayerSelectedMove]
 	cp COUNTER
 	jr nz, .playerDidNotUseCounter
