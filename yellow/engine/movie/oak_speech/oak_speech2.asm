@@ -15,13 +15,13 @@ ChoosePlayerName:
 	xor a ; NAME_PLAYER_SCREEN
 	ld [wNamingScreenType], a
 	call DisplayNamingScreen
-	ld a, [wcf4b]
+	ld a, [wStringBuffer]
 	cp "@"
 	jr z, .customName
 	call ClearScreen
 	call Delay3
-	ld de, BluePicFront
-	ld b, BANK(BluePicFront)
+	ld de, RedPicFront
+	ld b, BANK(RedPicFront)
 	call IntroDisplayPicCenteredOrUpperRight
 .done
 	ld hl, YourNameIsText
@@ -48,7 +48,7 @@ ChooseRivalName:
 	ld a, NAME_RIVAL_SCREEN
 	ld [wNamingScreenType], a
 	call DisplayNamingScreen
-	ld a, [wcf4b]
+	ld a, [wStringBuffer]
 	cp "@"
 	jr z, .customName
 	call ClearScreen

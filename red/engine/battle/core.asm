@@ -105,7 +105,7 @@ SlidePlayerAndEnemySilhouettesOnScreen:
 ; instead, the enemy pic is part of the background and uses the scroll register, while the player's head is a sprite and is slid by changing its X coordinates in a loop
 SlidePlayerHeadLeft:
 	push bc
-	ld hl, wOAMBuffer + $01
+	ld hl, wShadowOAMSprite00XCoord
 	ld c, $15 ; number of OAM entries
 	ld de, $4 ; size of OAM entry
 .loop
@@ -308,7 +308,7 @@ MainInBattleLoop:
 	and a
 	ret nz ; return if pokedoll was used to escape from battle
 	ld a, [wBattleMonStatus]
-	and (1 << FRZ) | SLP ; is mon frozen or asleep?
+	and (1 << FRZ) | SLP_MASK
 	jr nz, .selectEnemyMove ; if so, jump
 	ld a, [wPlayerBattleStatus1]
 	and (1 << STORING_ENERGY) | (1 << USING_TRAPPING_MOVE) ; check player is using Bide or using a multi-turn attack like wrap
@@ -782,7 +782,7 @@ FaintEnemyPokemon:
 	ld a, SFX_FAINT_FALL
 	call PlaySoundWaitForCurrent
 .sfxwait
-	ld a, [wChannelSoundIDs + Ch5]
+	ld a, [wChannelSoundIDs + CHAN5]
 	cp SFX_FAINT_FALL
 	jr z, .sfxwait
 	ld a, SFX_FAINT_THUD
@@ -866,7 +866,7 @@ EndLowHealthAlarm:
 ; the low health alarm and prevents it from reactivating until the next battle.
 	xor a
 	ld [wLowHealthAlarm], a ; turn off low health alarm
-	ld [wChannelSoundIDs + Ch5], a
+	ld [wChannelSoundIDs + CHAN5], a
 	inc a
 	ld [wLowHealthAlarmDisabled], a ; prevent it from reactivating
 	ret
@@ -1864,7 +1864,7 @@ DrawPlayerHUDAndHPBar:
 	ld [hl], $0
 	ret z
 	xor a
-	ld [wChannelSoundIDs + Ch5], a
+	ld [wChannelSoundIDs + CHAN5], a
 	ret
 .setLowHealthAlarm
 	ld hl, wLowHealthAlarm
@@ -2493,9 +2493,9 @@ MoveSelectionMenu:
 	   ; so it is necessary to put the di ei block to not cause tearing
 	call TextBoxBorder
 	hlcoord 4, 12
-	ld [hl], $7a
+	ld [hl], "─"
 	hlcoord 10, 12
-	ld [hl], $7e
+	ld [hl], "┘"
 	ei
 	hlcoord 6, 13
 	call .writemoves
@@ -2557,11 +2557,12 @@ MoveSelectionMenu:
 	ld a, [wLinkState]
 	cp LINK_STATE_BATTLING
 	jr z, .matchedkeyspicked
+	; Disable left, right, and START buttons in regular battles.
 	ld a, [wFlags_D733]
 	bit BIT_TEST_BATTLE, a
 	ld b, D_UP | D_DOWN | A_BUTTON | B_BUTTON | SELECT
 	jr z, .matchedkeyspicked
-	ld b, $ff
+	ld b, D_UP | D_DOWN | D_LEFT | D_RIGHT | A_BUTTON | B_BUTTON | SELECT | START
 .matchedkeyspicked
 	ld a, b
 	ld [hli], a ; wMenuWatchedKeys
@@ -2585,8 +2586,12 @@ SelectMenuItem:
 	call PlaceString
 	jr .select
 .battleselect
+	; Hide move swap cursor in TestBattle.
 	ld a, [wFlags_D733]
 	bit BIT_TEST_BATTLE, a
+	; This causes PrintMenuItem to not run in TestBattle.
+	; MoveSelectionMenu still draws part of its window, an issue
+	; which did not seem to exist in the Japanese versions.
 	jr nz, .select
 	call PrintMenuItem
 	ld a, [wMenuItemToSwap]
@@ -2648,8 +2653,9 @@ SelectMenuItem:
 	jr z, .disabled
 	ld a, [wPlayerBattleStatus3]
 	bit 3, a ; transformed
-	jr nz, .dummy ; game freak derp
-.dummy
+	jr nz, .transformedMoveSelected
+.transformedMoveSelected ; pointless
+	; Allow moves copied by Transform to be used.
 	ld a, [wCurrentMenuItem]
 	ld hl, wBattleMonMoves
 	ld c, a
@@ -2934,7 +2940,7 @@ SelectEnemyMove:
 	and (1 << CHARGING_UP) | (1 << THRASHING_ABOUT) ; using a charging move or thrash/petal dance
 	ret nz
 	ld a, [wEnemyMonStatus]
-	and SLP | 1 << FRZ ; sleeping or frozen
+	and (1 << FRZ) | SLP_MASK
 	ret nz
 	ld a, [wEnemyBattleStatus1]
 	and (1 << USING_TRAPPING_MOVE) | (1 << STORING_ENERGY) ; using a trapping move like wrap or bide
@@ -3275,7 +3281,7 @@ PrintGhostText:
 	and a
 	jr nz, .Ghost
 	ld a, [wBattleMonStatus] ; player's turn
-	and SLP | (1 << FRZ)
+	and (1 << FRZ) | SLP_MASK
 	ret nz
 	ld hl, ScaredText
 	call PrintText
@@ -3302,7 +3308,7 @@ IsGhostBattle:
 	ld a, [wCurMap]
 	cp POKEMON_TOWER_1F
 	jr c, .next
-	cp MR_FUJIS_HOUSE
+	cp POKEMON_TOWER_7F + 1
 	jr nc, .next
 	ld b, SILPH_SCOPE
 	call IsItemInBag
@@ -3317,7 +3323,7 @@ IsGhostBattle:
 CheckPlayerStatusConditions:
 	ld hl, wBattleMonStatus
 	ld a, [hl]
-	and SLP ; sleep mask
+	and SLP_MASK
 	jr z, .FrozenCheck
 ; sleeping
 	dec a
@@ -3327,7 +3333,7 @@ CheckPlayerStatusConditions:
 ; fast asleep
 	xor a
 	ld [wAnimationType], a
-	ld a, SLP_ANIM - 1
+	ld a, SLP_PLAYER_ANIM
 	call PlayMoveAnimation
 	ld hl, FastAsleepText
 	call PrintText
@@ -3411,7 +3417,7 @@ CheckPlayerStatusConditions:
 	call PrintText
 	xor a
 	ld [wAnimationType], a
-	ld a, CONF_ANIM - 1
+	ld a, CONF_PLAYER_ANIM
 	call PlayMoveAnimation
 	call BattleRandom
 	cp 50 percent + 1 ; chance to hurt itself
@@ -4029,7 +4035,7 @@ CheckForDisobedience:
 	call BattleRandom
 	add a
 	swap a
-	and SLP ; sleep mask
+	and SLP_MASK
 	jr z, .monNaps ; keep trying until we get at least 1 turn of sleep
 	ld [wBattleMonStatus], a
 	ld hl, BeganToNapText
@@ -5144,12 +5150,13 @@ MetronomePickMove:
 ; values for enemy turn
 	ld de, wEnemyMoveNum
 	ld hl, wEnemySelectedMove
-; loop to pick a random number in the range [1, $a5) to be the move used by Metronome
+; loop to pick a random number in the range of valid moves used by Metronome
 .pickMoveLoop
 	call BattleRandom
 	and a
 	jr z, .pickMoveLoop
-	cp NUM_ATTACKS ; max move number (including Struggle)
+	cp STRUGGLE
+	assert NUM_ATTACKS == STRUGGLE ; random numbers greater than STRUGGLE are not moves
 	jr nc, .pickMoveLoop
 	cp METRONOME
 	jr z, .pickMoveLoop
@@ -5362,15 +5369,15 @@ MoveHitTest:
 	cp DREAM_EATER_EFFECT
 	jr nz, .swiftCheck
 	ld a, [bc]
-	and SLP ; is the target pokemon sleeping?
+	and SLP_MASK
 	jp z, .moveMissed
 .swiftCheck
 	ld a, [de]
 	cp SWIFT_EFFECT
-	ret z ; Swift never misses (interestingly, Azure Heights lists this is a myth, but it appears to be true)
+	ret z ; Swift never misses (this was fixed from the Japanese versions)
 	call CheckTargetSubstitute ; substitute check (note that this overwrites a)
 	jr z, .checkForDigOrFlyStatus
-; This code is buggy. It's supposed to prevent HP draining moves from working on substitutes.
+; The fix for Swift broke this code. It's supposed to prevent HP draining moves from working on Substitutes.
 ; Since CheckTargetSubstitute overwrites a with either $00 or $01, it never works.
 	cp DRAIN_HP_EFFECT
 	jp z, .moveMissed
@@ -5796,7 +5803,7 @@ ExecuteEnemyMoveDone:
 CheckEnemyStatusConditions:
 	ld hl, wEnemyMonStatus
 	ld a, [hl]
-	and SLP ; sleep mask
+	and SLP_MASK
 	jr z, .checkIfFrozen
 	dec a ; decrement number of turns left
 	ld [wEnemyMonStatus], a
@@ -6084,6 +6091,7 @@ GetCurrentMove:
 	jr .selected
 .player
 	ld de, wPlayerMoveNum
+	; Apply InitBattleVariables to TestBattle.
 	ld a, [wFlags_D733]
 	bit BIT_TEST_BATTLE, a
 	ld a, [wTestBattlePlayerSelectedMove]
@@ -6327,7 +6335,7 @@ LoadPlayerBackPic:
 	ASSERT BANK(RedPicBack) == BANK(OldManPicBack)
 	call UncompressSpriteFromDE
 	predef ScaleSpriteByTwo
-	ld hl, wOAMBuffer
+	ld hl, wShadowOAM
 	xor a
 	ldh [hOAMTile], a ; initial tile number
 	ld b, $7 ; 7 columns
@@ -6767,12 +6775,12 @@ InitOpponent:
 
 DetermineWildOpponent:
 	ld a, [wd732]
-	bit 1, a
-	jr z, .asm_3ef2f
+	bit BIT_DEBUG_MODE, a
+	jr z, .notDebugMode
 	ldh a, [hJoyHeld]
-	bit BIT_B_BUTTON, a
+	bit BIT_B_BUTTON, a ; disable wild encounters
 	ret nz
-.asm_3ef2f
+.notDebugMode
 	ld a, [wNumberOfNoRandomBattleStepsLeft]
 	and a
 	ret nz
@@ -6908,7 +6916,7 @@ _LoadTrainerPic:
 	and a
 	ld a, BANK("Pics 6") ; this is where all the trainer pics are (not counting Red's)
 	jr z, .loadSprite
-	ld a, BANK(BluePicFront)
+	ld a, BANK(RedPicFront)
 .loadSprite
 	call UncompressSpriteFromDE
 	ld de, vFrontPic

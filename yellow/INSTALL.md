@@ -20,7 +20,7 @@ WSL has its own file system that's not accessible from Windows, but Windows file
 For example, if you want to store pokeyellow in **C:\Users\\*\<user>*\Desktop**, enter this command:
 
 ```bash
-cd /mnt/c/Users/gcox3/Documents/emulators...
+cd /mnt/c/Users/<user>/Desktop
 ```
 
 (The Windows `C:\` drive is called `/mnt/c/` in WSL. Replace *\<user>* in the example path with your username.)
@@ -30,6 +30,36 @@ If this works, then follow [the instructions for **Linux**](#linux) below for wh
 Otherwise, continue reading below for [the older Windows instructions](#windows).
 
 
+## Windows
+
+Download [**Cygwin**](http://cygwin.com/install.html): **setup-x86_64.exe** for 64-bit Windows, **setup-x86.exe** for 32-bit.
+
+Run setup and leave the default settings. At the "**Select Packages**" step, choose to install the following, all of which are in the "**Devel**" category:
+
+- `make`
+- `git`
+- `gcc-core`
+
+Double click on the text that says "**Skip**" next to each package to select the most recent version to install.
+
+Then follow the [**rgbds** install instructions](https://rgbds.gbdev.io/install#pre-built) for Windows with Cygwin to install **rgbds 0.6.1**.
+
+**Note:** If you already have an installed rgbds older than 0.6.0, you will need to update to 0.6.0 or 0.6.1. Ignore this if you have never installed rgbds before. If a version newer than 0.6.1 does not work, try downloading 0.6.1.
+
+Now open the **Cygwin terminal** and enter the following commands.
+
+Cygwin has its own file system that's within Windows, at **C:\cygwin64\home\\*\<user>***. If you don't want to store pokeyellow there, you'll have to change the **current working directory** every time you open Cygwin.
+
+For example, if you want to store pokeyellow in **C:\Users\\*\<user>*\Desktop**:
+
+```bash
+cd /cygdrive/c/Users/<user>/Desktop
+```
+
+(The Windows `C:\` drive is called `/cygdrive/c/` in Cygwin. Replace *\<user>* in the example path with your username.)
+
+Now you're ready to [build **pokeyellow**](#build-pokeyellow).
+
 
 ## macOS
 
@@ -37,7 +67,7 @@ Install [**Homebrew**](https://brew.sh/). Follow the official instructions.
 
 Open **Terminal** and prepare to enter commands.
 
-Then follow the [**rgbds** instructions](https://rgbds.gbdev.io/install/macos) for macOS to install **rgbds 0.5.1**.
+Then follow the [**rgbds** instructions](https://rgbds.gbdev.io/install#pre-built) for macOS to install **rgbds 0.6.1**.
 
 Now you're ready to [build **pokeyellow**](#build-pokeyellow).
 
@@ -54,10 +84,45 @@ To install the software required for **pokeyellow**:
 sudo apt-get install make gcc git
 ```
 
-Then follow the [**rgbds** instructions](https://rgbds.gbdev.io/install/source) to build **rgbds 0.5.1** from source.
+Then follow the [**rgbds** instructions](https://rgbds.gbdev.io/install#building-from-source) to build **rgbds 0.6.1** from source.
 
+### OpenSUSE
 
-If you want to compile and install **rgbds** yourself instead, then follow the [**rgbds** instructions](https://rgbds.gbdev.io/install/source) to build **rgbds 0.5.1** from source.
+To install the software required for **pokeyellow**:
+
+```bash
+sudo zypper install make gcc git
+```
+
+Then follow the [**rgbds** instructions](https://rgbds.gbdev.io/install#building-from-source) to build **rgbds 0.6.1** from source.
+
+### Arch Linux
+
+To install the software required for **pokeyellow**:
+
+```bash
+sudo pacman -S make gcc git
+```
+
+Then follow the [**rgbds** instructions](https://rgbds.gbdev.io/install#pre-built) for Arch Linux to install **rgbds 0.6.1**.
+
+If you want to compile and install **rgbds** yourself instead, then follow the [**rgbds** instructions](https://rgbds.gbdev.io/install#building-from-source) to build **rgbds 0.6.1** from source.
+
+### Termux
+
+To install the software required for **pokeyellow**:
+
+```bash
+sudo apt install make clang git sed
+```
+
+To install **rgbds**:
+
+```bash
+sudo apt install rgbds
+```
+
+If you want to compile and install **rgbds** yourself instead, then follow the [**rgbds** instructions](https://rgbds.gbdev.io/install#building-from-source) to build **rgbds 0.6.1** from source.
 
 ### Other distros
 
@@ -68,19 +133,7 @@ If your distro is not listed here, try to find the required software in its repo
 - `git`
 - `rgbds`
 
----
-
-### **Install development packages**
-```bash
-sudo apt-get install make gcc bison git libpng-dev
-```
-### **Clone and make rgbds**
-```bash
-git clone https://github.com/rednex/rgbds
-cd rgbds
-sudo make install
-cd ..
-```
+If `rgbds` is not available, you'll need to follow the [**rgbds** instructions](https://rgbds.gbdev.io/install#building-from-source) to build **rgbds 0.6.1** from source.
 
 Now you're ready to [build **pokeyellow**](#build-pokeyellow).
 
@@ -102,8 +155,8 @@ make
 
 ### Build with a local rgbds version
 
-If you have different projects that require different versions of `rgbds`, it might not be convenient to install rgbds 0.5.1 globally. Instead, you can put its files in a directory within pokeyellow, such as `pokeyellow/rgbds-0.5.1/`. Then specify it when you run `make`:
+If you have different projects that require different versions of `rgbds`, it might not be convenient to install rgbds 0.6.1 globally. Instead, you can put its files in a directory within pokeyellow, such as `pokeyellow/rgbds-0.6.1/`. Then specify it when you run `make`:
 
 ```bash
-make RGBDS=rgbds-0.5.1/
+make RGBDS=rgbds-0.6.1/
 ```

@@ -8,7 +8,7 @@ IF DEF(_RED)
 	db 29, HORSEA
 	db 31, SHELLDER
 	db 31, HORSEA
-	db 29, JYNX
+	db 29, SHELLDER
 	db 39, SEADRA
 ENDC
 IF DEF(_BLUE)
@@ -19,21 +19,11 @@ IF DEF(_BLUE)
 	db 29, KRABBY
 	db 31, STARYU
 	db 31, KRABBY
-	db 29, JYNX
+	db 29, STARYU
 	db 39, KINGLER
 ENDC
 	db 37, DEWGONG
 	end_grass_wildmons
 
-	def_water_wildmons 5 ; encounter rate
-	db 25, TENTACOOL
-	db 30, TENTACOOL
-	db 20, TENTACOOL
-	db 30, STARYU
-	db 35, TENTACOOL
-	db 30, STARYU
-	db 40, TENTACOOL
-	db 30, STARYU
-	db 30, STARYU
-	db 30, LAPRAS
+	def_water_wildmons 0 ; encounter rate
 	end_water_wildmons

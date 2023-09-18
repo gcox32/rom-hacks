@@ -9,7 +9,7 @@ Route14WildMons:
 	db 30, GLOOM
 	db 30, WEEPINBELL
 	db 27, VENONAT
-	db 30, CHANSEY
+	db 30, VENOMOTH
 	end_grass_wildmons
 
 	def_water_wildmons 0 ; encounter rate

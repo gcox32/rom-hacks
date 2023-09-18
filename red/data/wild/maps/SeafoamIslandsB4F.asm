@@ -25,15 +25,5 @@ ENDC
 	db 32, GOLBAT
 	end_grass_wildmons
 
-	def_water_wildmons 5 ; encounter rate
-	db 25, TENTACOOL
-	db 30, TENTACOOL
-	db 20, TENTACOOL
-	db 30, STARYU
-	db 35, TENTACOOL
-	db 30, STARYU
-	db 40, TENTACOOL
-	db 30, STARYU
-	db 30, STARYU
-	db 30, LAPRAS
+	def_water_wildmons 0 ; encounter rate
 	end_water_wildmons

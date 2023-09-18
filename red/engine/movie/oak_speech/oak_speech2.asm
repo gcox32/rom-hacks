@@ -20,8 +20,8 @@ ChoosePlayerName:
 	jr z, .customName
 	call ClearScreen
 	call Delay3
-	ld de, BluePicFront
-	ld b, BANK(BluePicFront)
+	ld de, RedPicFront
+	ld b, BANK(RedPicFront)
 	call IntroDisplayPicCenteredOrUpperRight
 .done
 	ld hl, YourNameIsText

@@ -936,4 +936,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-    # convert_to_2bpp(['agatha.png'])

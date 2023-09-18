@@ -9,7 +9,7 @@ PokemonTower7FWildMons:
 	db 24, CUBONE
 	db 29, GASTLY
 	db 24, HAUNTER
-	db 29, GENGAR
+	db 29, HAUNTER
 	end_grass_wildmons
 
 	def_water_wildmons 0 ; encounter rate

@@ -9,7 +9,7 @@ SeafoamIslandsB4FWildMons:
 	db 27, GOLBAT
 	db 45, ZUBAT
 	db 30, DEWGONG
-	db 34, OMANYTE
+	db 34, DEWGONG
 	end_grass_wildmons
 
 	def_water_wildmons 5 ; encounter rate
@@ -22,5 +22,5 @@ SeafoamIslandsB4FWildMons:
 	db 40, TENTACOOL
 	db 30, STARYU
 	db 30, STARYU
-	db 30, LAPRAS
+	db 30, STARYU
 	end_water_wildmons

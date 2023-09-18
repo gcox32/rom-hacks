@@ -7,9 +7,9 @@ PokemonMansion2FWildMons:
 	db 40, RATTATA
 	db 40, RATICATE
 	db 32, GRIMER
-	db 35, MAGMAR
+	db 35, GRIMER
 	db 35, MUK
-	db 38, WEEZING
+	db 38, MUK
 	end_grass_wildmons
 
 	def_water_wildmons 0 ; encounter rate

@@ -15,18 +15,18 @@ SpecialTrainerMoves:
 
 	db BROCK, 1
 	db 2, 3, BIND
-	db 2, 4, ROCK_THROW
+	db 2, 4, BIDE
 	db 0
 
 	db MISTY, 1
-	db 4, 4, BUBBLEBEAM
+	db 2, 4, BUBBLEBEAM
 	db 0
 
 	db LT_SURGE, 1
 	db 1, 1, THUNDERBOLT
 	db 1, 2, MEGA_PUNCH
 	db 1, 3, MEGA_KICK
-	db 1, 4, BODY_SLAM
+	db 1, 4, GROWL
 	db 0
 
 	db ERIKA, 1
@@ -37,6 +37,7 @@ SpecialTrainerMoves:
 
 	db KOGA, 1
 	db 1, 1, TOXIC
+	db 1, 2, TACKLE
 	db 2, 1, TOXIC
 	db 2, 3, SUPERSONIC
 	db 3, 1, TOXIC
@@ -50,12 +51,16 @@ SpecialTrainerMoves:
 	db BLAINE, 1
 	db 1, 1, FLAMETHROWER
 	db 1, 4, CONFUSE_RAY
+	db 3, 1, FLAMETHROWER
+	db 3, 2, FIRE_BLAST
+	db 3, 3, REFLECT
 	db 0
 
 	db SABRINA, 1
 	db 1, 1, FLASH
-	db 1, 2, PSYCHIC_M
 	db 2, 1, KINESIS
+	db 2, 4, PSYWAVE
+	db 3, 1, PSYWAVE
 	db 0
 
 	db GIOVANNI, 3
@@ -64,10 +69,9 @@ SpecialTrainerMoves:
 	db 3, 1, EARTHQUAKE
 	db 3, 3, THUNDER
 	db 4, 1, EARTHQUAKE
+	db 4, 2, LEER
 	db 4, 3, THUNDER
 	db 5, 1, ROCK_SLIDE
-	db 5, 2, HORN_DRILL
-	db 5, 3, FISSURE
 	db 5, 4, EARTHQUAKE
 	db 0
 
@@ -89,8 +93,8 @@ SpecialTrainerMoves:
 	db 3, 1, DOUBLE_KICK
 	db 3, 2, MEGA_KICK
 	db 3, 4, DOUBLE_TEAM
-	db 4, 2, HORN_DRILL
-	db 4, 3, FISSURE
+	db 4, 1, ROCK_SLIDE
+	db 4, 2, SCREECH
 	db 4, 4, EARTHQUAKE
 	db 5, 2, KARATE_CHOP
 	db 5, 3, STRENGTH
@@ -111,6 +115,9 @@ SpecialTrainerMoves:
 	db 1, 1, DRAGON_RAGE
 	db 2, 1, THUNDER_WAVE
 	db 2, 3, THUNDERBOLT
+	db 3, 1, BUBBLEBEAM
+	db 3, 2, WRAP
+	db 3, 3, ICE_BEAM
 	db 4, 1, WING_ATTACK
 	db 4, 2, SWIFT
 	db 4, 3, FLY
@@ -121,44 +128,33 @@ SpecialTrainerMoves:
 
 	db RIVAL3, 1
 	db 1, 3, EARTHQUAKE
-	db 2, 4, EARTHQUAKE
-	db 3, 3, FIRE_BLAST
-	db 3, 4, DRAGON_RAGE
-	db 4, 1, ICE_PUNCH
-	db 5, 1, DOUBLE_EDGE
-	db 5, 4, ROCK_SLIDE
-	db 6, 1, SURF
-	db 6, 2, EARTHQUAKE
-	db 6, 3, BLIZZARD
-	db 6, 4, HYDRO_PUMP
+	db 2, 4, KINESIS
+	db 3, 4, LEECH_SEED
+	db 4, 1, ICE_BEAM
+	db 5, 1, CONFUSE_RAY
+	db 5, 4, FIRE_SPIN
+	db 6, 3, QUICK_ATTACK
 	db 0
 
 	db RIVAL3, 2
 	db 1, 3, EARTHQUAKE
-	db 2, 4, EARTHQUAKE
-	db 3, 3, FIRE_BLAST
-	db 3, 4, DRAGON_RAGE
-	db 4, 1, ICE_PUNCH
-	db 5, 1, DOUBLE_EDGE
-	db 5, 4, ROCK_SLIDE
-	db 6, 1, SURF
-	db 6, 2, EARTHQUAKE
-	db 6, 3, BLIZZARD
-	db 6, 4, HYDRO_PUMP
+	db 2, 4, KINESIS
+	db 3, 4, LEECH_SEED
+	db 4, 1, THUNDERBOLT
+	db 5, 1, ICE_BEAM
+	db 6, 2, REFLECT
+	db 6, 3, QUICK_ATTACK
 	db 0
 
 	db RIVAL3, 3
 	db 1, 3, EARTHQUAKE
-	db 2, 4, EARTHQUAKE
-	db 3, 3, FIRE_BLAST
-	db 3, 4, DRAGON_RAGE
-	db 4, 1, ICE_PUNCH
-	db 5, 1, DOUBLE_EDGE
-	db 5, 4, ROCK_SLIDE
-	db 6, 1, SURF
-	db 6, 2, EARTHQUAKE
-	db 6, 3, BLIZZARD
-	db 6, 4, HYDRO_PUMP
+	db 2, 4, KINESIS
+	db 3, 4, LEECH_SEED
+	db 4, 1, CONFUSE_RAY
+	db 4, 4, FIRE_SPIN
+	db 5, 1, THUNDERBOLT
+	db 6, 1, AURORA_BEAM
+	db 6, 3, QUICK_ATTACK
 	db 0
 
 	db -1 ; end

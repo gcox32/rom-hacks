@@ -1,15 +1,26 @@
 Route9WildMons:
 	def_grass_wildmons 15 ; encounter rate
-	db 16, NIDORAN_M
-	db 16, NIDORAN_F
-	db 18, RATTATA
-	db 18, NIDORAN_M
-	db 18, NIDORAN_F
+	db 16, RATTATA
+	db 16, SPEAROW
+	db 14, RATTATA
+IF DEF(_RED)
+	db 11, EKANS
+	db 13, SPEAROW
+	db 15, EKANS
+	db 17, RATTATA
 	db 17, SPEAROW
-	db 18, NIDORINO
-	db 18, NIDORINA
-	db 20, RATICATE
-	db 19, FEAROW
+	db 13, EKANS
+	db 17, EKANS
+ENDC
+IF DEF(_BLUE)
+	db 11, SANDSHREW
+	db 13, SPEAROW
+	db 15, SANDSHREW
+	db 17, RATTATA
+	db 17, SPEAROW
+	db 13, SANDSHREW
+	db 17, SANDSHREW
+ENDC
 	end_grass_wildmons
 
 	def_water_wildmons 0 ; encounter rate

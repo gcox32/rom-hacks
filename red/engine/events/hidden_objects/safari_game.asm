@@ -37,7 +37,7 @@ SafariZoneGameOver:
 	ld a, SFX_SAFARI_ZONE_PA
 	call PlayMusic
 .waitForMusicToPlay
-	ld a, [wChannelSoundIDs + Ch5]
+	ld a, [wChannelSoundIDs + CHAN5]
 	cp SFX_SAFARI_ZONE_PA
 	jr nz, .waitForMusicToPlay
 	ld a, TEXT_SAFARI_GAME_OVER
@@ -49,7 +49,7 @@ SafariZoneGameOver:
 	ldh [hWarpDestinationMap], a
 	ld a, $3
 	ld [wDestinationWarpID], a
-	ld a, $5
+	ld a, SCRIPT_SAFARIZONEGATE_LEAVING_SAFARI
 	ld [wSafariZoneGateCurScript], a
 	SetEvent EVENT_SAFARI_GAME_OVER
 	ld a, 1

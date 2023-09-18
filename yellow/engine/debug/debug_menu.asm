@@ -2,12 +2,14 @@ DebugMenu:
 IF DEF(_DEBUG)
 	call ClearScreen
 
-	ld hl, DebugPlayerName
+	; These debug names are used for TestBattle.
+	; StartNewGameDebug uses the debug names from PrepareOakSpeech.
+	ld hl, DebugBattlePlayerName
 	ld de, wPlayerName
 	ld bc, NAME_LENGTH
 	call CopyData
 
-	ld hl, DebugRivalName
+	ld hl, DebugBattleRivalName
 	ld de, wRivalName
 	ld bc, NAME_LENGTH
 	call CopyData
@@ -25,7 +27,7 @@ IF DEF(_DEBUG)
 	ld de, DebugMenuOptions
 	call PlaceString
 
-	ld a, 3 ; medium speed
+	ld a, TEXT_DELAY_MEDIUM
 	ld [wOptions], a
 
 	ld a, A_BUTTON | B_BUTTON | START
@@ -58,10 +60,10 @@ IF DEF(_DEBUG)
 	ld hl, StartNewGameDebug
 	ret
 
-DebugPlayerName:
+DebugBattlePlayerName:
 	db "Tom@"
 
-DebugRivalName:
+DebugBattleRivalName:
 	db "Juerry@"
 
 DebugMenuOptions:

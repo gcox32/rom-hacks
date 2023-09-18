@@ -17,7 +17,7 @@
 	tmhm TOXIC,        BODY_SLAM,    TAKE_DOWN,    DOUBLE_EDGE,  BUBBLEBEAM,   \
 	     WATER_GUN,    ICE_BEAM,     BLIZZARD,     HYPER_BEAM,   RAGE,         \
 	     THUNDERBOLT,  THUNDER,      DIG,          MIMIC,        DOUBLE_TEAM,  \
-	              SWIFT,        SKULL_BASH,   REST,         SUBSTITUTE
+	     BIDE,         SWIFT,        SKULL_BASH,   REST,         SUBSTITUTE
 	; end
 
 	db 0 ; padding

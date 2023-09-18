@@ -5,7 +5,7 @@ SuperRodData:
 	dbw VIRIDIAN_CITY,       .Group1
 	dbw CERULEAN_CITY,       .Group3
 	dbw VERMILION_CITY,      .Group4
-	dbw CELADON_CITY,        .Group11
+	dbw CELADON_CITY,        .Group5
 	dbw FUCHSIA_CITY,        .Group10
 	dbw CINNABAR_ISLAND,     .Group8
 	dbw ROUTE_4,             .Group3
@@ -58,7 +58,7 @@ SuperRodData:
 .Group4:
 	db 2
 	db 15, KRABBY
-	db 15, SQUIRTLE
+	db 15, SHELLDER
 
 .Group5:
 	db 2
@@ -67,8 +67,8 @@ SuperRodData:
 
 .Group6:
 	db 4
-	db 18, DRATINI
-	db 21, DRATINI
+	db 15, DRATINI
+	db 15, KRABBY
 	db 15, PSYDUCK
 	db 15, SLOWPOKE
 
@@ -99,8 +99,3 @@ SuperRodData:
 	db 15, KRABBY
 	db 15, GOLDEEN
 	db 15, MAGIKARP
-
-.Group11:
-	db 2
-	db 20, GRIMER
-	db 22, GRIMER

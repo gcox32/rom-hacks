@@ -1,4 +1,5 @@
 PlayPikachuSoundClip::
+	vc_hook Unknown_PlayPikachuSoundClip_start
 	ld a, e
 	ld e, a
 	ld d, $0
@@ -39,7 +40,13 @@ PlayPikachuSoundClip::
 	ld a, l
 	cp $40 ; end of wave data
 	jr nz, .saveWaveDataLoop
+	vc_patch Unknown_PlayPikachuSoundClip_end
+IF DEF(_YELLOW_VC)
+	ld a, 0
+ELSE
 	ld a, $80
+ENDC
+	vc_patch_end
 	ldh [rNR30], a
 	ldh a, [rNR51]
 	or $44
@@ -77,10 +84,10 @@ PlayPikachuSoundClip::
 	and $bb
 	ldh [rNR51], a
 	xor a
-	ld [wChannelSoundIDs + Ch5], a
-	ld [wChannelSoundIDs + Ch6], a
-	ld [wChannelSoundIDs + Ch7], a
-	ld [wChannelSoundIDs + Ch8], a
+	ld [wChannelSoundIDs + CHAN5], a
+	ld [wChannelSoundIDs + CHAN6], a
+	ld [wChannelSoundIDs + CHAN7], a
+	ld [wChannelSoundIDs + CHAN8], a
 	ldh a, [hLoadedROMBank]
 	ei
 	ret

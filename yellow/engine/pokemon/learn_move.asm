@@ -154,7 +154,7 @@ TryingToLearn:
 	call LoadScreenTilesFromBuffer1
 	pop af
 	pop hl
-	bit 1, a ; pressed b
+	bit BIT_B_BUTTON, a
 	jr nz, .cancel
 	push hl
 	ld a, [wCurrentMenuItem]
@@ -164,7 +164,7 @@ TryingToLearn:
 	ld a, [hl]
 	push af
 	push bc
-	; call IsMoveHM
+	call IsMoveHM
 	pop bc
 	pop de
 	ld a, d

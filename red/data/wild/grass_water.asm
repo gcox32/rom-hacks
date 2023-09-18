@@ -158,8 +158,7 @@ WildDataPointers:
 	dw NothingWildMons
 	dw NothingWildMons
 	dw NothingWildMons
-	; dw NothingWildMons
-	dw FuchsiaGymWildMons ; addition
+	dw NothingWildMons
 	dw SeafoamIslandsB1FWildMons
 	dw SeafoamIslandsB2FWildMons
 	dw SeafoamIslandsB3FWildMons
@@ -303,9 +302,6 @@ INCLUDE "data/wild/maps/SafariZoneEast.asm"
 INCLUDE "data/wild/maps/SafariZoneNorth.asm"
 INCLUDE "data/wild/maps/SafariZoneWest.asm"
 INCLUDE "data/wild/maps/SeaRoutes.asm"
-
-INCLUDE "data/wild/maps/FuchsiaGym.asm"
-
 INCLUDE "data/wild/maps/SeafoamIslands1F.asm"
 INCLUDE "data/wild/maps/SeafoamIslandsB1F.asm"
 INCLUDE "data/wild/maps/SeafoamIslandsB2F.asm"

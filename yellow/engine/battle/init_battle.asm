@@ -12,11 +12,11 @@ InitOpponent:
 DetermineWildOpponent:
 	ld a, [wd732]
 	bit 1, a
-	jr z, .asm_3ef2f
+	jr z, .notDebug
 	ldh a, [hJoyHeld]
-	bit 1, a ; B button pressed?
+	bit BIT_B_BUTTON, a
 	ret nz
-.asm_3ef2f
+.notDebug
 	ld a, [wNumberOfNoRandomBattleStepsLeft]
 	and a
 	ret nz
@@ -160,7 +160,7 @@ _LoadTrainerPic:
 	and a
 	ld a, BANK("Pics 6") ; this is where all the trainer pics are (not counting Red's)
 	jr z, .loadSprite
-	ld a, BANK(BluePicFront)
+	ld a, BANK(RedPicFront)
 .loadSprite
 	call UncompressSpriteFromDE
 	ld de, vFrontPic

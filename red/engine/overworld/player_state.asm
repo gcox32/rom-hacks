@@ -56,12 +56,12 @@ CheckForceBikeOrSurf::
 	jr nz, .loop ; incorrect x-coord, check next item
 	ld a, [wCurMap]
 	cp SEAFOAM_ISLANDS_B3F
-	ld a, $2
+	ld a, SCRIPT_SEAFOAMISLANDSB3F_MOVE_OBJECT
 	ld [wSeafoamIslandsB3FCurScript], a
 	jr z, .forceSurfing
 	ld a, [wCurMap]
 	cp SEAFOAM_ISLANDS_B4F
-	ld a, $2
+	ld a, SCRIPT_SEAFOAMISLANDSB4F_MOVE_OBJECT
 	ld [wSeafoamIslandsB4FCurScript], a
 	jr z, .forceSurfing
 	;force bike riding
@@ -101,10 +101,10 @@ IsPlayerFacingEdgeOfMap::
 	ld b, a
 	ld a, [wXCoord]
 	ld c, a
-	ld de, .asm_c41e
+	ld de, .return
 	push de
 	jp hl
-.asm_c41e
+.return
 	pop bc
 	pop de
 	pop hl
@@ -239,11 +239,11 @@ PrintSafariZoneSteps::
 	call PlaceString
 	ld a, [wNumSafariBalls]
 	cp 10
-	jr nc, .asm_c56d
+	jr nc, .tenOrMore
 	hlcoord 5, 3
 	ld a, " "
 	ld [hl], a
-.asm_c56d
+.tenOrMore
 	hlcoord 6, 3
 	ld de, wNumSafariBalls
 	lb bc, 1, 2

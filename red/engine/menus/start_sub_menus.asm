@@ -476,8 +476,8 @@ StartMenu_TrainerInfo::
 
 ; loads tile patterns and draws everything except for gym leader faces / badges
 DrawTrainerInfo:
-	ld de, BluePicFront
-	lb bc, BANK(BluePicFront), $01
+	ld de, RedPicFront
+	lb bc, BANK(RedPicFront), $01
 	predef DisplayPicCenteredOrUpperRight
 	call DisableLCD
 	hlcoord 0, 2
@@ -677,7 +677,7 @@ SwitchPartyMon_ClearGfx:
 	dec c
 	jr nz, .clearMonBGLoop
 	pop af
-	ld hl, wOAMBuffer
+	ld hl, wShadowOAM
 	ld bc, $10
 	call AddNTimes
 	ld de, $4
