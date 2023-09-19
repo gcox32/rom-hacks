@@ -15,7 +15,7 @@ jobs:
 
       - name: Write to S3
         run: |
-          ./write_to_s3.sh
+          .github/write_to_s3.sh
         env:
             AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
             AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}

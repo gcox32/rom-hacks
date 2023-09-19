@@ -9,7 +9,7 @@
 
 # roms
 *.gbc
-*.gb
+# *.gb
 
 # rgbds extras
 *.sym
