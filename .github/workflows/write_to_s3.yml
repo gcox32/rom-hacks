@@ -15,7 +15,7 @@ jobs:
       
       - name: Write to S3
         run: |
-          aws s3 cp blug/pokeblue.gbc s3://letmedemo-assets/gameboy/carts/blue.gbc
+          aws s3 cp blue/pokeblue.gbc s3://letmedemo-assets/gameboy/carts/blue.gbc
           aws s3 cp red/pokered.gbc s3://letmedemo-assets/gameboy/carts/red.gbc
           aws s3 cp yellow/pokeyellow.gbc s3://letmedemo-assets/gameboy/carts/yellow.gbc
           aws s3 cp green/pokegreen.gb s3://letmedemo-assets/gameboy/carts/green.gb
