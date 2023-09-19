@@ -20,6 +20,7 @@ jobs:
           cp red/pokered.gbc $GITHUB_WORKSPACE/
           cp yellow/pokeyellow.gbc $GITHUB_WORKSPACE/
           cp green/pokegreen.gb $GITHUB_WORKSPACE/
+        working-directory: ./
       
       - name: Write to S3
         run: |
