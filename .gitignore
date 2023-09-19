@@ -18,6 +18,9 @@ red/pokeblue.gbc
 */pokeyellow_debug.gbc
 *.patch
 
+# yellow extras
+*.pcm
+
 # rgbds extras
 *.map
 *.sym
