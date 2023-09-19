@@ -10,6 +10,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Display AWS CLI Configuration
+        run: |
+          aws configure list
+
       - name: Checkout code
         uses: actions/checkout@v4
 

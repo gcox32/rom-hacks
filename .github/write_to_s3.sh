@@ -4,6 +4,5 @@ FILES=("blue/pokeblue.gbc:blue.gbc" "red/pokered.gbc:red.gbc" "yellow/pokeyellow
 for FILE_MAPPING in "${FILES[@]}"; do
     SOURCE_FILE="${FILE_MAPPING%%:*}"    # Get the source file (before ":")
     TARGET_FILE="${FILE_MAPPING#*:}"    # Get the target file (after ":")
-    result=$(aws s3 cp "$SOURCE_FILE" "s3://${S3_BUCKET}/$TARGET_FILE")
-    echo "Result: $result"
+    aws s3 cp "$SOURCE_FILE" "s3://${S3_BUCKET}/$TARGET_FILE"
 done
