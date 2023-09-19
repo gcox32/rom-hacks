@@ -16,6 +16,7 @@ jobs:
       - name: Copy files into Github Workspace
         run: |
           mkdir -p $GITHUB_WORKSPACE
+          ls
           cp blue/pokeblue.gbc $GITHUB_WORKSPACE/
           cp red/pokered.gbc $GITHUB_WORKSPACE/
           cp yellow/pokeyellow.gbc $GITHUB_WORKSPACE/
