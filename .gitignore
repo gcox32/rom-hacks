@@ -1,1 +1,3 @@
-pureRGB
+.aws/
+.vscode/
+write_to_s3.sh
