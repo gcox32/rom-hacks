@@ -20,5 +20,4 @@ jobs:
         run: |
           export AWS_DEFAULT_REGION=us-east-1
           .github/write_to_s3.sh
-
         working-directory: ./
