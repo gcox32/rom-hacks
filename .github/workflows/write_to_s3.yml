@@ -10,10 +10,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Display AWS CLI Configuration
+      - name: Configure AWS CLI
         run: |
-          aws configure list
-
+          aws configure
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      
       - name: Checkout code
         uses: actions/checkout@v4
 
