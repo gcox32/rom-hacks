@@ -27,6 +27,8 @@ jobs:
 
       - name: Remove files from repo
         run: |
+          git config user.email "gcoxexcel@gmail.com"
+          git config user.name "gcox32"
           git rm --cached blue/pokeblue.gbc red/pokered.gbc yellow/pokeyellow.gbc green/pokegreen.gb
           git commit -m "Remove file.txt from repository"
           git push
