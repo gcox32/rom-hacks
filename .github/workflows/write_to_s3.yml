@@ -13,9 +13,20 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      - name: Copy files into Github Workspace
+        run: |
+          mkdir -p $GITHUB_WORKSPACE
+          cp blue/pokeblue.gbc $GITHUB_WORKSPACE/
+          cp red/pokered.gbc $GITHUB_WORKSPACE/
+          cp yellow/pokeyellow.gbc $GITHUB_WORKSPACE/
+          cp green/pokegreen.gb $GITHUB_WORKSPACE/
+      
       - name: Write to S3
         run: |
-          .github/write_to_s3.sh
+          aws s3 $GITHUB_WORKSPACE/pokeblue.gbc s3://letmedemo-assets/gameboy/carts/blue.gbc
+          aws s3 $GITHUB_WORKSPACE/pokered.gbc s3://letmedemo-assets/gameboy/carts/red.gbc
+          aws s3 $GITHUB_WORKSPACE/pokeyellow.gbc s3://letmedemo-assets/gameboy/carts/yellow.gbc
+          aws s3 $GITHUB_WORKSPACE/pokegreen.gb s3://letmedemo-assets/gameboy/carts/green.gb
         env:
             AWS_REGION: us-east-1
             AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
