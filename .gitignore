@@ -10,7 +10,7 @@ write_to_s3.sh
 *.2bpp
 *.pic
 
-# compiled roms
+# select compiled roms
 blue/pokered.gbc
 red/pokeblue.gbc
 */pokered_debug.gbc

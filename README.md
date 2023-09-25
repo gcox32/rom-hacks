@@ -1,5 +1,6 @@
 # Gen I Rom Hacks
 
+
 ## True Blue
 The goal was to give the player a chance to play as Blue. This can be as simple as swapping the overworld sprites or as complicated as rewriting all the dialogue and refactoring the rival interactions. A lot of this is simple text replacement, but the Assembly modifications on some of the overworld stuff is hairy. [The Changelog](https://github.com/gcox32/rom-hacks/blob/main/blue/CHANGELOG.md) is not up-to-date. Check out specifics [here](https://github.com/gcox32/rom-hacks/blob/main/blue/README.md).
 
