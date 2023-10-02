@@ -148,7 +148,7 @@ AttackAnimationPointers:
 	dw DizzyPunchAnim
 	dw SporeAnim
 	dw FlashAnim
-	dw PsywaveAnim
+	dw WillowispAnim
 	dw SplashAnim
 	dw AcidArmorAnim
 	dw CrabHammerAnim
@@ -1072,7 +1072,7 @@ FlashAnim:
 	battle_anim NO_MOVE, SE_RESET_SCREEN_PALETTE
 	db -1 ; end
 
-PsywaveAnim:
+WillowispAnim:
 	battle_anim SUPERSONIC, SUBANIM_31, 0, 6
 	battle_anim CONFUSION, SE_WAVY_SCREEN
 	db -1 ; end

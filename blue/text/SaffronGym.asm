@@ -63,10 +63,9 @@ _ReceivedTM46Text::
 _TM46ExplanationText::
 	text_start
 
-	para "TM46 is PSYWAVE!"
-	line "It uses powerful"
-	cont "psychic waves to"
-	cont "inflict damage!"
+	para "TM46 is WILLOWISP!"
+	line "It v spooky..."
+	cont "v spooky indeed."
 	done
 
 _TM46NoRoomText::

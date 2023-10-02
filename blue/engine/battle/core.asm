@@ -4781,12 +4781,7 @@ ApplyAttackToEnemyPokemon:
 	ld b, DRAGON_RAGE_DAMAGE ; 40
 	cp DRAGON_RAGE
 	jr z, .storeDamage
-; Psywave
-	ld a, [hl]
-	ld b, a
-	srl a
-	add b
-	ld b, a ; b = level * 1.5
+
 ; loop until a random number in the range [1, b) is found
 .loop
 	call BattleRandom
@@ -4900,15 +4895,9 @@ ApplyAttackToPlayerPokemon:
 	ld b, DRAGON_RAGE_DAMAGE
 	cp DRAGON_RAGE
 	jr z, .storeDamage
-; Psywave
-	ld a, [hl]
-	ld b, a
-	srl a
-	add b
-	ld b, a ; b = attacker's level * 1.5
+
 ; loop until a random number in the range [0, b) is found
 ; this differs from the range when the player attacks, which is [1, b)
-; it's possible for the enemy to do 0 damage with Psywave, but the player always does at least 1 damage
 .loop
 	call BattleRandom
 	cp b

@@ -1871,7 +1871,7 @@ CopyTempPicToMonPic:
 	jp CopyVideoData
 
 AnimationWavyScreen:
-; used in Psywave/Psychic etc.
+; used in Psychic etc.
 	ld hl, vBGMap0
 	call BattleAnimCopyTileMapToVRAM
 	call Delay3

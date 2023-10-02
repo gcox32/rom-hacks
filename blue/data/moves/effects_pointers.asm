@@ -90,5 +90,6 @@ MoveEffectPointerTable:
 	dw DisableEffect             ; DISABLE_EFFECT
 	dw SpeedEvasionDownEffect    ; SPEED_EVASION_DOWN1_EFFECT (new STRING_SHOT)
 	dw TriAttackEffect			 ; TRIATTACK_EFFECT
+	dw FreezeBurnParalyzeEffect	 ; BURN_EFFECT
 	
 	assert_table_length NUM_MOVE_EFFECTS

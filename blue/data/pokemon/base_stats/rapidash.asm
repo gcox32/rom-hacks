@@ -1,6 +1,6 @@
 	db DEX_RAPIDASH ; pokedex id
 
-	db  65, 100,  70, 120,  80
+	db  65, 100,  70, 130,  80
 	;   hp  atk  def  spd  spc
 
 	db FIRE, FIRE ; type

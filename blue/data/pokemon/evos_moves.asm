@@ -442,7 +442,7 @@ ArcanineEvosMoves:
 	db 33, DRAGON_RAGE
 	db 39, FLAMETHROWER
 	db 44, HYPER_FANG
-	db 48, BONEMERANG
+	db 48, HYPER_BEAM
 	db 55, FIRE_BLAST
 
 MewEvosMoves:
@@ -614,7 +614,7 @@ GrowlitheEvosMoves:
 	db 35, AGILITY
 	db 39, FLAMETHROWER
 	db 44, HYPER_FANG
-	db 48, BONEMERANG
+	db 48, DIG
 	db 55, FIRE_BLAST
 	db 0
 
@@ -2266,10 +2266,10 @@ CharizardEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
-	db 9, EMBER
+	db 9,  EMBER
 	db 15, BITE
 	db 24, FLAMETHROWER
-	db 36, WING_ATTACK
+	db 36, FLY
 	db 42, SEISMIC_TOSS
 	db 46, FIRE_BLAST
 	db 55, FIRE_SPIN

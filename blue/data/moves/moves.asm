@@ -158,7 +158,7 @@ Moves:
 	move DIZZY_PUNCH,  CONFUSION_SIDE_EFFECT,       70, NORMAL,       100, 10
 	move SPORE,        SLEEP_EFFECT,                 0, GRASS,        100, 15
 	move FLASH,        ACCURACY_DOWN2_EFFECT,        0, NORMAL,       100, 20
-	move PSYWAVE,      SPECIAL_DAMAGE_EFFECT,        1, PSYCHIC_TYPE,  80, 15 ; TODO swap this WILLOWISP
+	move WILLOWISP,    BURN_EFFECT,        			 1, FIRE,           0, 15 ; TODO swap this WILLOWISP
 	move SPLASH,       SPLASH_EFFECT,                0, WATER,        100, 40
 	move ACID_ARMOR,   DEFENSE_UP2_EFFECT,           0, POISON,       100, 40
 	move CRABHAMMER,   NO_ADDITIONAL_EFFECT,        90, WATER,         90, 10
