@@ -11,8 +11,6 @@
 
 ## Introduction
 
-Welcome to the **Project Name** repository! This project aims to [briefly describe the project's goal or purpose]. It [mention a key benefit or highlight].
-
 ![Project Screenshot](link_to_screenshot)
 
 ## Updates
