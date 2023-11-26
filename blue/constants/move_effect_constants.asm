@@ -95,5 +95,5 @@
 	const SPEED_EVASION_DOWN1_EFFECT ; $58 ; ADDED: new effect
 	const TRIATTACK_EFFECT			 ; $59 ; ADDED: new effect
 	const BURN_EFFECT				 ; $5B ; ADDED: new effect, used in willowisp
-	const DEFENSE_SPEED_UP1_EFFECT	 ; $5A ; ADDED: new effect, used in defense curl
+	const DEFENSE_SPEED_UP1_EFFECT   ; $5A ; ADDED: new effect, used in defense curl
 DEF NUM_MOVE_EFFECTS EQU const_value - 1

@@ -376,11 +376,11 @@ NidoranFEvosMoves:
 	db EV_LEVEL, 16, NIDORINA
 	db 0
 ; Learnset
-	db 8, SCRATCH
+	db 8, POISON_STING
 	db 12, DOUBLE_KICK
-	db 17, POISON_STING
+	db 17, BITE
 	db 21, PIN_MISSILE
-	db 30, BITE
+	db 30, TAKE_DOWN
 	db 38, FURY_SWIPES
 	db 43, HYPER_FANG
 	db 0
@@ -745,7 +745,7 @@ HitmonleeEvosMoves:
 	db 0
 ; Learnset
 	db 33, ROLLING_KICK
-	db 38, JUMP_KICK
+	db 38, SUBMISSION
 	db 43, COUNTER
 	db 48, HI_JUMP_KICK
 	db 53, MEGA_KICK
@@ -869,7 +869,7 @@ ElectabuzzEvosMoves:
 ; Learnset
 	db 34, THUNDERPUNCH
 	db 37, SCREECH
-	db 42, ICE_PUNCH
+	db 42, SUBMISSION
 	db 49, LIGHT_SCREEN
 	db 54, THUNDER
 	db 0
@@ -910,14 +910,13 @@ MankeyEvosMoves:
 	db EV_LEVEL, 28, PRIMEAPE
 	db 0
 ; Learnset
-	db 9, LOW_KICK
+	db 9,  LOW_KICK
 	db 15, KARATE_CHOP
 	db 21, FURY_SWIPES
-	db 27, JUMP_KICK
-	db 33, SEISMIC_TOSS
+	db 27, SCREECH
+	db 33, SUBMISSION
 	db 39, THRASH
-	db 41, SUBMISSION
-	db 45, SCREECH
+	db 41, HI_JUMP_KICK
 	db 0
 
 SeelEvosMoves:
@@ -1042,7 +1041,7 @@ DoduoEvosMoves:
 	db 20, GROWL
 	db 24, FURY_ATTACK
 	db 30, DRILL_PECK
-	db 36, SCRATCH
+	db 36, DOUBLE_KICK
 	db 40, TRI_ATTACK
 	db 44, AGILITY
 	db 0
@@ -1581,7 +1580,7 @@ DodrioEvosMoves:
 	db 20, GROWL
 	db 24, FURY_ATTACK
 	db 30, DRILL_PECK
-	db 39, SCRATCH
+	db 39, DOUBLE_KICK
 	db 45, TRI_ATTACK
 	db 51, AGILITY
 	db 0
@@ -1593,12 +1592,11 @@ PrimeapeEvosMoves:
 	db 9,  LOW_KICK
 	db 15, KARATE_CHOP
 	db 21, FURY_SWIPES
-	db 27, JUMP_KICK
-	db 28, THRASH
-	db 37, SEISMIC_TOSS
-	db 41, SUBMISSION
-	db 46, SCREECH
-	db 54, HYPER_BEAM
+	db 27, SCREECH
+	db 28, SUBMISSION
+	db 37, THRASH
+	db 41, HI_JUMP_KICK
+	db 46, HYPER_BEAM
 	db 0
 
 DugtrioEvosMoves:
@@ -2137,8 +2135,8 @@ GeodudeEvosMoves:
 	db EV_LEVEL, 25, GRAVELER
 	db 0
 ; Learnset
-	db 9,  ROLL_TACKLE
-	db 11, DEFENSE_CURL
+	db 9,  DEFENSE_CURL
+	db 11, ROLL_TACKLE
 	db 16, ROCK_THROW
 	db 21, SELFDESTRUCT
 	db 26, ROLL_TACKLE

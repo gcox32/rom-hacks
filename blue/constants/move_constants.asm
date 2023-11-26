@@ -121,8 +121,8 @@
 	const LIGHT_SCREEN ; 71
 	const HAZE         ; 72
 	const REFLECT      ; 73
-	const SHADOW_BALL  ; 74 ; FOCUS_ENERGY
-	const ROLL_TACKLE  ; 75 ; BIDE
+	const SHADOW_BALL  ; 74 ; formerly FOCUS_ENERGY
+	const ROLL_TACKLE  ; 75 ; formerly BIDE
 	const METRONOME    ; 76
 	const MIRROR_MOVE  ; 77
 	const SELFDESTRUCT ; 78

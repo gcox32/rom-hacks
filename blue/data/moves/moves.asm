@@ -120,7 +120,7 @@ Moves:
 	move SMOKESCREEN,  ACCURACY_DOWN1_EFFECT,        0, POISON,       100, 20
 	move CONFUSE_RAY,  CONFUSION_EFFECT,             0, GHOST,        100, 10
 	move WITHDRAW,     HEAL_EFFECT,                  0, WATER,        100, 20 ; update ; balancing
-	move DEFENSE_CURL, DEFENSE_UP1_EFFECT,           0, NORMAL,       100, 40
+	move DEFENSE_CURL, DEFENSE_SPEED_UP1_EFFECT,     0, NORMAL,       100, 40
 	move BARRIER,      DEFENSE_UP2_EFFECT,           0, PSYCHIC_TYPE, 100, 30
 	move LIGHT_SCREEN, LIGHT_SCREEN_EFFECT,          0, PSYCHIC_TYPE, 100, 30
 	move HAZE,         HAZE_EFFECT,                  0, POISON,       100, 30

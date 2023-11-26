@@ -506,6 +506,31 @@ AccuracyAttackUpEffect:
 	ld [de], a
 	ret
 
+; PureRGBnote: ADDED: increases both accuracy and attack as a move effect, used with sharpen
+DefenseSpeedUpEffect:
+	;values for the enemy's turn
+	ld de, wPlayerMoveEffect
+	ldh a, [hWhoseTurn]
+	and a
+	jr z, .next
+	; values for the player's turn
+	ld de, wEnemyMoveEffect
+.next
+	ld a, DEFENSE_UP1_EFFECT
+	ld [de], a
+	push de
+	call StatModifierUpEffect ; stat modifier raising function
+	pop de
+	ld a, SPEED_UP_SIDE_EFFECT
+	ld [de], a ; we do the side effect for the second stat because it won't run the animation
+	push de
+	call StatModifierUpEffect ; stat modifier raising function
+	pop de
+	ld a, DEFENSE_SPEED_UP1_EFFECT
+	ld [de], a
+	ret
+
+
 SpeedEvasionDownEffect:
 	;values for the enemy's turn
 	ld de, wPlayerMoveEffect

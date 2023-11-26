@@ -157,15 +157,15 @@ MACRO add_tm
 ENDM
 
 DEF TM01 EQU const_value
-	add_tm THUNDERPUNCH ; $C9 ; MEGA_PUNCH
+	add_tm THUNDERPUNCH ; $C9 ; formerly MEGA_PUNCH
 	add_tm RAZOR_WIND   ; $CA
 	add_tm SWORDS_DANCE ; $CB
 	add_tm WHIRLWIND    ; $CC ; ROOST
-	add_tm ICE_PUNCH    ; $CD ; MEGA_KICK
+	add_tm ICE_PUNCH    ; $CD ; formerly MEGA_KICK
 	add_tm TOXIC        ; $CE
 	add_tm HORN_DRILL   ; $CF
 	add_tm BODY_SLAM    ; $D0
-	add_tm FIRE_PUNCH   ; $D1 ; TAKE_DOWN
+	add_tm FIRE_PUNCH   ; $D1 ; formerly TAKE_DOWN
 	add_tm DOUBLE_EDGE  ; $D2
 	add_tm BUBBLEBEAM   ; $D3
 	add_tm WATER_GUN    ; $D4
@@ -190,7 +190,7 @@ DEF TM01 EQU const_value
 	add_tm MIMIC        ; $E7
 	add_tm DOUBLE_TEAM  ; $E8
 	add_tm REFLECT      ; $E9
-	add_tm ROLL_TACKLE  ; $EA ; BIDE
+	add_tm ROLL_TACKLE  ; $EA ; formerly BIDE
 	add_tm METRONOME    ; $EB
 	add_tm SELFDESTRUCT ; $EC
 	add_tm EGG_BOMB     ; $ED
@@ -202,7 +202,7 @@ DEF TM01 EQU const_value
 	add_tm SKY_ATTACK   ; $F3
 	add_tm REST         ; $F4
 	add_tm THUNDER_WAVE ; $F5
-	add_tm WILLOWISP    ; $F6
+	add_tm WILLOWISP    ; $F6 ; formerly PSYWAVE
 	add_tm EXPLOSION    ; $F7
 	add_tm ROCK_SLIDE   ; $F8
 	add_tm TRI_ATTACK   ; $F9
