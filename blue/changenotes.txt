@@ -2,3 +2,4 @@
 - Viridian MART; "Hey you're the PROF's grandson, right?"
 - Route 22 Red battle: "Wait, is that the Elite 4?" or something to that effect
 - Route 22 Red battle: text overflow "destined to be a Pokemon champion one day"
+- Replace TM 12 (water gun) with a better move

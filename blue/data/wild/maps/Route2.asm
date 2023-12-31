@@ -3,7 +3,7 @@ Route2WildMons:
 	db  3, RATTATA
 	db  3, PIDGEY
 	db  4, CATERPIE
-	db  4, RATTATA
+	db  4, MANKEY
 	db  5, PIDGEY
 IF DEF(_RED)
 	db  3, WEEDLE
@@ -15,7 +15,7 @@ ENDC
 IF DEF(_BLUE)
 	db  3, CATERPIE
 	db  2, WEEDLE
-	db  5, RATTATA
+	db  5, MANKEY
 	db  4, NIDORAN_F
 	db  5, NIDORAN_M
 ENDC
